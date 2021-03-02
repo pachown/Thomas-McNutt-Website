@@ -9,6 +9,7 @@ const Layout = ({children}) => {
     <div className={styles.container} >
       <main className={styles.main} >
     {children}
+    <img className={styles.mug} src="mug-shot.jpeg"></img>
       </main>
     <Footer />
     </div>

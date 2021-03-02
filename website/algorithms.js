@@ -5,7 +5,7 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
-  'Leet283': [
+  '3/2/2021': [
     'Given an array of numbers, write a function to move all the 0\'s to the end while maintaining the relative order of the non-zero elements',
     `Solution: Var moveZeroes = function(nums) {\n
       let count = 0\n

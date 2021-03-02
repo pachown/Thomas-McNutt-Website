@@ -11,9 +11,6 @@ const Nav = ({children}) => {
             <Link href='/'>Home</Link>
           </li>
           <li>
-            <Link href='/about'>About Me</Link>
-          </li>
-          <li>
             <Link href='/casino'>Casino (projects)</Link>
           </li>
           <li>

@@ -12,13 +12,13 @@ const Algorithms = ({ children }) => {
   return (
     <div className={styles.algos}>
       {data !== null && (
-          Object.keys(data).map((algo, i) =>
+          Object.keys(data).map((algo) =>
             <div className="algo-a-day">
-              <div>{`Day ${i+1}`}</div>
+              <div>{algo}</div>
               <div>{data[algo][0]}</div>
-              <div>{data[algo][1]}</div>
+              <div className={styles.code}>{data[algo][1]}</div>
               <div>{data[algo][2]}</div>
-              <div>{data[algo][3]}</div>
+              <div className={styles.code}>{data[algo][3]}</div>
             </div>
           )
       )}

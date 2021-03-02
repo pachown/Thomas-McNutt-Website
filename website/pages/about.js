@@ -16,7 +16,6 @@ export default function About() {
         <a href="Thomas McNutt Resume.pdf" download>Download My Resume</a>
         <p className={Layout.aboutPar}></p>
       </main>
-     <img className={Layout.mug} src="mug-shot.jpeg"></img>
     </div>
   )
 }
