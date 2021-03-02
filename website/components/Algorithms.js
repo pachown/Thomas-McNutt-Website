@@ -14,10 +14,10 @@ const Algorithms = ({ children }) => {
       {data !== null && (
           Object.keys(data).map((algo) =>
             <div className="algo-a-day">
-              <div>{algo}</div>
-              <div>{data[algo][0]}</div>
+              <div className={styles.date}>{algo}</div>
+              <div className={styles.date}>{data[algo][0]}</div>
               <div className={styles.code}>{data[algo][1]}</div>
-              <div>{data[algo][2]}</div>
+              <div className={styles.date}>{data[algo][2]}</div>
               <div className={styles.code}>{data[algo][3]}</div>
             </div>
           )

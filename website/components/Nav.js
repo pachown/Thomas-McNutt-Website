@@ -4,6 +4,7 @@ import Link from 'next/link'
 const Nav = ({children}) => {
   return (
     <nav className={navStyles.nav}>
+      <img className={navStyles.mug} src="mug-shot.jpeg"></img>
       <img className={navStyles.logo} src="/logo-dark.png"></img>
       <div className={navStyles.mainListDiv} className={navStyles.main_list}>
         <ul className={navStyles.navLinks}>

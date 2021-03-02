@@ -7,9 +7,8 @@ const Layout = ({children}) => {
     <>
     <Nav />
     <div className={styles.container} >
-      <main className={styles.main} >
+      <main >
     {children}
-    <img className={styles.mug} src="mug-shot.jpeg"></img>
       </main>
     <Footer />
     </div>
