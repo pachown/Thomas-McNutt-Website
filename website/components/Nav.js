@@ -1,7 +1,7 @@
 import navStyles from '../styles/Nav.module.css'
 import Link from 'next/link'
 
-const Nav = () => {
+const Nav = ({children}) => {
   return (
     <nav className={navStyles.nav}>
       <img className={navStyles.logo} src="/logo-dark.png"></img>

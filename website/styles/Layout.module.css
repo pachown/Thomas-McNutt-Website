@@ -83,6 +83,15 @@
   background: rgba(0, 0, 0, 0.5);
 }
 
+.algos {
+  border-top: 25px;
+  color: black;
+  border  : 1px solid black;
+  margin: 25px;
+  font-size: 1.2rem;
+  background: rgba(255, 255, 255, 0.5);
+}
+
 @media (max-width: 600px) {
   .grid {
     width: 100%;

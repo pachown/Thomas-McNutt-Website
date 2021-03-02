@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Layout from '../styles/Layout.module.css'
+import algoData from '../algorithms.js'
+import Algorithms from '../components/Algorithms.js'
 
 
 export default function Algos() {
@@ -11,6 +13,7 @@ export default function Algos() {
         <meta name="keywords" content="web development, programming" />
       </Head>
       <main className={Layout.main}>
+        <Algorithms />
       </main>
     </div>
   )
