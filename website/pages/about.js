@@ -13,6 +13,7 @@ export default function About() {
       <main className={Layout.main}>
         <div></div>
         <p className={Layout.aboutPar}>Thomas McNutt - A Software Engineer based out of Denver, CO.</p>
+        <a href="Thomas McNutt Resume.pdf" download>Download My Resume</a>
         <p className={Layout.aboutPar}></p>
       </main>
      <img className={Layout.mug} src="mug-shot.jpeg"></img>
