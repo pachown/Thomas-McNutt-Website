@@ -137,6 +137,43 @@ Memory Usage: 38.9 MB, less than 17.07% of JavaScript online submissions for Fin
   return Math.max(0,...gain)
 };
 `
-]
+],
+'3/4/2021': `// Given an array of non-negative integers, you are initially positioned at the first index of the array. Each element in the array represents your maximum jump length at that position.
+
+// Determine if you are able to reach the last index.
+
+// Example #1
+
+// Input: [2,3,1,1,4]
+// Output: true
+// Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
+// Example #2
+
+// Input: [3,2,1,0,4]
+// Output: false
+// Explanation: You will always arrive at index 3 no matter what. Its maximum
+//              jump length is 0, which makes it impossible to reach the last index.
+
+let jumpToLastIndex = (arr) => {
+  let traverse = false;
+
+  let recurseTraverse = (position) => {
+    console.log(position);
+    if (position === arr.length - 1) {
+      traverse = true;
+      return;
+    }
+    for (var i = 1; i <= arr[position]; i++) {
+      recurseTraverse(position + i)
+    }
+  }
+  recurseTraverse(0);
+
+  return traverse;
+}
+
+console.log(jumpToLastIndex([2,3,1,1,4]))
+
+console.log(jumpToLastIndex([3,2,1,0,4]))`
 };
 module.exports = algos;
