@@ -3,41 +3,50 @@
 /* Navbar section */
 
 .nav {
-    width: 100%;
-    height: 65px;
+    width: 99%;
+    height: 145px;
     position: fixed;
-    line-height: 65px;
-    text-align: center;
+    /* text-align: center; */
     color: black;
+    background:
+		linear-gradient(-135deg, rgba(90, 134, 216, 0.4) 10%, transparent),
+		repeating-linear-gradient(45deg, rgba(127, 131, 139, 0.4) 0%, rgba(31, 48, 94, 0.6) 5%, transparent 5%, transparent 10%),
+		repeating-linear-gradient(-45deg, rgba(92, 137, 219, 0.4) 0%, rgba(31, 48, 94, 0.5) 5%, transparent 5%, transparent 10%);
+	background-color: rgba(104, 140, 207, 0.25);
+    display: inline-flex;
+    flex-direction: row;
+    /* justify-content: space-between; */
+    border-right: 25px;
 }
 
 .nav div.logo {
-    float: left;
     width: auto;
     height: auto;
-    padding-left: 3rem;
+    flex-direction: row;
+    left: -25px;
 }
 
-.nav div.logo a {
-    text-decoration: none;
-    color: rgb(212, 28, 28);
-    font-size: 2.5rem;
-}
-
-.nav div.logo a:hover {
-    color: #00E676;
+.mug {
+  height: 100px;
+  width: auto;
+  border-radius: 50px;
+  flex-direction: row;
+  padding-left: 50px;
+  padding-right: -25px;
 }
 
 .nav div.main_list {
+  flex-direction: row;
     height: 65px;
-    float: right;
 }
 
 .nav div.main_list ul {
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: space-between;
+  list-style: none;
     width: 100%;
     height: 65px;
-    display: flex;
-    list-style: none;
     margin: 0;
     padding: 0;
 }
@@ -51,22 +60,17 @@
 
 .nav div.main_list ul li a {
     text-decoration: none;
-    color: #18181B;
+    color: #cdcde4;
     line-height: 65px;
-    font-size: 2.4rem;
+    font-size: 2rem;
+    font-weight: 800;
 }
 
 .nav div.main_list ul li a:hover {
     color: #313669;
 }
 
-
 /* Home section */
-
-
-.navTrigger {
-    display: none;
-}
 
 .nav {
     padding-top: 20px;
@@ -77,7 +81,7 @@
 
 
 /* Media qurey section */
-
+/*
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .container {
         margin: 0;
@@ -96,8 +100,8 @@
         height: 0;
         overflow: hidden;
     }
-    .nav div.show_list {
-        height: auto;
+    .nav div.show_list { */
+        /* height: auto;
         display: none;
     }
     .nav div.main_list ul {
@@ -109,7 +113,7 @@
         bottom: 0;
         background-color: #111;
         /*same background color of navbar*/
-        background-position: center top;
+        /* background-position: center top;
     }
     .nav div.main_list ul li {
         width: 100%;
@@ -123,194 +127,13 @@
     }
     .nav div.media_button {
         display: block;
-    }
-}
+    } */
+/* } */
 
 
 /* Animation */
 /* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
 
-.navTrigger {
-    cursor: pointer;
-    width: 30px;
-    height: 25px;
-    margin: auto;
-    position: absolute;
-    right: 30px;
-    top: 0;
-    bottom: 0;
-}
-
-.mug {
-  float: left;
-  align-items: left;
-  height: 150px;
-  width: auto;
-  border-radius: 50px;
-  align-self: initial;
-}
-
-.navTrigger i {
-    background-color: #fff;
-    border-radius: 2px;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 4px;
-}
-
-@-webkit-keyframes inM {
-    50% {
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(45deg);
-    }
-}
-
-@keyframes inM {
-    50% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(45deg);
-    }
-}
-
-@-webkit-keyframes outM {
-    50% {
-        -webkit-transform: rotate(0deg);
-    }
-    100% {
-        -webkit-transform: rotate(45deg);
-    }
-}
-
-@keyframes outM {
-    50% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(45deg);
-    }
-}
-
-@-webkit-keyframes inT {
-    0% {
-        -webkit-transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        -webkit-transform: translateY(9px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(9px) rotate(135deg);
-    }
-}
-
-@keyframes inT {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(9px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(9px) rotate(135deg);
-    }
-}
-
-@-webkit-keyframes outT {
-    0% {
-        -webkit-transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        -webkit-transform: translateY(9px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(9px) rotate(135deg);
-    }
-}
-
-@keyframes outT {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(9px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(9px) rotate(135deg);
-    }
-}
-
-@-webkit-keyframes inBtm {
-    0% {
-        -webkit-transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        -webkit-transform: translateY(-9px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(-9px) rotate(135deg);
-    }
-}
-
-@keyframes inBtm {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-9px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(-9px) rotate(135deg);
-    }
-}
-
-@-webkit-keyframes outBtm {
-    0% {
-        -webkit-transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        -webkit-transform: translateY(-9px) rotate(0deg);
-    }
-    100% {
-        -webkit-transform: translateY(-9px) rotate(135deg);
-    }
-}
-
-@keyframes outBtm {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-    50% {
-        transform: translateY(-9px) rotate(0deg);
-    }
-    100% {
-        transform: translateY(-9px) rotate(135deg);
-    }
-}
-
-.affix {
-    padding: 0;
-    background-color: #111;
-}
-
-
-
-
-
-
-.myH2 {
-  text-align:center;
-  font-size: 4rem;
-}
-.myP {
-  text-align: justify;
-  padding-left:15%;
-  padding-right:15%;
-  font-size: 20px;
-}
 @media all and (max-width:700px){
   .myP {
     padding:2%;

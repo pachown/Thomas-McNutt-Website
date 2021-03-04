@@ -8,7 +8,7 @@ export default function Algos() {
     <div className={Layout.container}>
       <Head>
         <title>Thomas McNutt Website</title>
-        <link rel="icon" href="/logo-dark.png" />
+        <link rel="icon" href="/logo-dark-plain.png" />
         <meta name="keywords" content="web development, programming" />
       </Head>
       <main className={Layout.main}>

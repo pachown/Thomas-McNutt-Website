@@ -1,11 +1,13 @@
-html, body {
+html{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: "Quicksand", sans-serif;
   font-size: 62.5%;
   font-size: 10px;
-  background-color: black;
+  background-color: rgb(20, 124, 243);
+  background-image: url("/wood-background.jpeg");
+  background-size: contain;
 }
 
 /* a {
