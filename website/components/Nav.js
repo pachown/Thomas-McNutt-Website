@@ -10,7 +10,7 @@ const Nav = ({ children }) => {
             <img className={navStyles.mug} src="mug-shot.jpeg"></img>
           </li>
           <li>
-            <img className={navStyles.logo} src="/logo-dark-plain.png"></img>
+            <img className={navStyles.logo} src="/logo-2.png"></img>
           </li>
         </ul>
         <ul className={navStyles.navLinks}>

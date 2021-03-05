@@ -13,9 +13,9 @@ export default function About() {
       <main className={Layout.main}>
         <div className={Layout.about}>
           <h2 className={Layout.aboutPar}>Hello! I'm Thomas McNutt, a Software Engineer based out of Denver, CO</h2>
-          <p className={Layout.aboutPar}>Coding passions include website design, casino game building and web security.</p>
-          <p className={Layout.aboutPar}>Most-mastered skills include Javascript, CSS, React, and AWS Deployment</p>
-          <p className={Layout.aboutPar}>I'm available to work on open source projects so feel free to send me an email with any proposals.</p>
+          <p className={Layout.aboutPar}>Coding passions include <u>website design</u>, <u>casino game</u> building and <u>web security</u>.</p>
+          <p className={Layout.aboutPar}>Most-mastered skills include <u>Javascript</u>, <u>CSS</u>, <u>React</u>, and AWS Deployment</p>
+          <p className={Layout.aboutPar}>Check out my algos section for my solution to LeetCode problems as well as a found solution</p>
           <a className={Layout.download} href="Thomas McNutt Resume.pdf" download>Download My Resume</a>
         </div>
       </main>

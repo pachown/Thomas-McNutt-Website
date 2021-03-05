@@ -1,5 +1,5 @@
 .container {
-  min-height: 125vh;
+  min-height: 75vh;
   padding: 0 0.5rem;
   display: flex;
   flex-direction: column;
@@ -8,27 +8,26 @@
 }
 
 .main {
-  /* background-image: url("/wood-background.jpeg"); */
-  background-size: contain;
-  /* background-repeat: repeat-y; */
-  padding-top:150px;
+  margin-top:150px;
+  width: auto;
   padding: 5rem 0;
-  flex: 1;
   display: flex;
-  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  height: auto;
 }
 
 .download {
   font-size: 2.2rem;
-  color: rgb(62, 147, 187);
   text-shadow: 2px 2px #d7d8eb;
-  justify-items: center;
   text-align: center;
-  justify-content: center;
   color: white;
-  text-shadow: 2px 2px rgba(8, 57, 148, 0.5);
+  text-shadow: 2px 2px rgba(4, 21, 53, 0.5);
+  background:rgba(8, 57, 148, 0.5);
+  border-radius: 25px;
+  padding: 5px;
+  border-top: 2px solid white;
+  border-bottom: 2px solid rgb(129, 111, 228);
+  padding: 8px;
 }
 
 .download:hover {
@@ -49,6 +48,10 @@
   color: whitesmoke;
   font-size: 1.4em;
   padding: 10px;
+  border-top: 2px solid white;
+  border-bottom: 3px solid rgb(129, 111, 228);
+  border-radius: 25px;
+  margin: 5px;
 }
 
 .footer img {
@@ -113,9 +116,7 @@
 }
 
 .algos {
-  padding-top:150px;
   color: black;
-  border  : 1px solid black;
   margin: 25px;
   font-size: 1.2rem;
   background: rgba(255, 255, 255, 0.5);
@@ -123,11 +124,14 @@
 }
 
 .date {
+  text-shadow: 1px 1px rgba(8, 57, 148, 0.5);
   border: 2px solid rgb(129, 111, 228);
   justify-content: center;
   text-align: center;
-  border: 5px;
+  border-radius: 25px;
   font-size: 2.2em;
+  border-top: 2px solid rgb(4, 0, 0, 90%);
+  border-style: double;
 }
 .algoinfo {
   border: 2px solid rgb(129, 111, 228);
