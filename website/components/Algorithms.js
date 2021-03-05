@@ -1,6 +1,7 @@
 import styles from '../styles/Layout.module.css'
 import algoData from '../algorithms.js'
 import React, { useState, useEffect } from 'react'
+import PrismAsyncLight from 'react-syntax-highlighter'
 
 const Algorithms = ({ children }) => {
   const [data, setData] = useState(null);
@@ -14,11 +15,17 @@ const Algorithms = ({ children }) => {
       {data !== null && (
           Object.keys(data).map((algo) =>
             <div className="algo-a-day">
-              <div className={styles.date}>{algo}</div>
-              <div className={styles.date}>{data[algo][0]}</div>
-              <div className={styles.code}>{data[algo][1]}</div>
-              <div className={styles.date}>{data[algo][2]}</div>
-              <div className={styles.code}>{data[algo][3]}</div>
+              <div className={styles.date}> {algo}</div>
+              <div className={styles.algoinfo}>Prompt: {data[algo][0]}</div>
+              <PrismAsyncLight
+              language="javascript">
+                {data[algo][1]}
+              </PrismAsyncLight>
+              <div className={styles.algoinfo}>Result: {data[algo][2]}</div>
+              <PrismAsyncLight
+              language="javascript">
+               {data[algo][3]}
+              </PrismAsyncLight>
             </div>
           )
       )}

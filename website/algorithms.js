@@ -7,7 +7,7 @@
 let algos = {
   '3/2/2021-1': [
     'Given an array of numbers, write a function to move all the 0\'s to the end while maintaining the relative order of the non-zero elements',
-    `Solution: Var moveZeroes = function(nums) {\n
+    `My Solution: Var moveZeroes = function(nums) {\n
       let count = 0\n
       for (let i = 0; i < nums.length; i++) {\n
         if (nums[i] === 0) {\n
@@ -138,22 +138,22 @@ Memory Usage: 38.9 MB, less than 17.07% of JavaScript online submissions for Fin
 };
 `
 ],
-'3/4/2021': `// Given an array of non-negative integers, you are initially positioned at the first index of the array. Each element in the array represents your maximum jump length at that position.
+'3/4/2021': [` Given an array of non-negative integers, you are initially positioned at the first index of the array. Each element in the array represents your maximum jump length at that position.
 
-// Determine if you are able to reach the last index.
+ Determine if you are able to reach the last index.
 
-// Example #1
+ Example #1
 
-// Input: [2,3,1,1,4]
-// Output: true
-// Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
-// Example #2
+ Input: [2,3,1,1,4]
+ Output: true
+ Explanation: Jump 1 step from index 0 to 1, then 3 steps to the last index.
+ Example #2
 
-// Input: [3,2,1,0,4]
-// Output: false
-// Explanation: You will always arrive at index 3 no matter what. Its maximum
-//              jump length is 0, which makes it impossible to reach the last index.
-
+Input: [3,2,1,0,4]
+ Output: false
+ Explanation: You will always arrive at index 3 no matter what. Its maximum
+              jump length is 0, which makes it impossible to reach the last index.`,
+`
 let jumpToLastIndex = (arr) => {
   let traverse = false;
 
@@ -174,6 +174,7 @@ let jumpToLastIndex = (arr) => {
 
 console.log(jumpToLastIndex([2,3,1,1,4]))
 
-console.log(jumpToLastIndex([3,2,1,0,4]))`
+console.log(jumpToLastIndex([3,2,1,0,4]))
+`, 'N/A', 'N/A'],
 };
 module.exports = algos;
