@@ -22,9 +22,20 @@
 
 .download {
   font-size: 2.2rem;
-  color: rgb(71, 183, 235);
-  text-shadow: 2px 2px #000000;
+  color: rgb(62, 147, 187);
+  text-shadow: 2px 2px #d7d8eb;
   justify-items: center;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  text-shadow: 2px 2px rgba(8, 57, 148, 0.5);
+}
+
+.download:hover {
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  padding:5px;
+  color: white;
 }
 
 .footer {
@@ -93,8 +104,11 @@
 .aboutPar {
   width: auto;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   background: rgba(0, 0, 0, 0.5);
+  border: 5px solid rgba(0, 0, 0, 0.5);
+  border-radius: 25px;
+  padding:6px;
 }
 
 .algos {
