@@ -6,7 +6,6 @@
     width: 99%;
     height: 145px;
     position: fixed;
-    /* text-align: center; */
     color: black;
     background:
 		linear-gradient(-135deg, rgba(147, 171, 216, 0.4) 10%, transparent),
@@ -16,6 +15,7 @@
     display: inline-flex;
     flex-direction: row;
     justify-content: space-between;
+    /* max-width: 800px; */
 }
 
 .nav div.logo {

@@ -9,7 +9,7 @@
 
 .main {
   margin-top:150px;
-  width: auto;
+  max-width: 800;
   padding: 5rem 0;
   display: flex;
   justify-content: center;
@@ -48,7 +48,8 @@
   align-items: center;
   color: whitesmoke;
   font-size: 1.4em;
-  padding: 10px;
+  padding-left: 10px;
+  padding-top: 10px;
   border-top: 2px solid white;
   border-bottom: 3px solid rgb(129, 111, 228);
   border-radius: 25px;
@@ -56,16 +57,12 @@
   text-align: center;
 }
 
-.footer img {
-  margin-left: 0.5rem;
-}
-
 .footer a {
   /* display: flex; */
   justify-content: center;
   align-items: center;
   color: white;
-  padding: 2px;
+  padding: 5px;
   border: 2px;
 }
 
