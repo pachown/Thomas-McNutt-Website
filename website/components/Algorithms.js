@@ -12,6 +12,10 @@ const Algorithms = ({ children }) => {
   }, [])
   return (
     <div className={styles.algos}>
+        <h2 className="algo-a-day">
+        <em>Welcome to my algorithm a day blog!</em></h2>
+        <h2><em> I list the prompt, my solution, and the results from the Leetcode solution. This will help me keep a record of my toy problem improvement over time.</em>
+          </h2>
       {data !== null && (
           Object.keys(data).map((algo) =>
             <div className="algo-a-day">
@@ -22,10 +26,6 @@ const Algorithms = ({ children }) => {
                 {data[algo][1]}
               </PrismAsyncLight>
               <div className={styles.algoinfo}>Result: {data[algo][2]}</div>
-              <PrismAsyncLight
-              language="javascript">
-               {data[algo][3]}
-              </PrismAsyncLight>
             </div>
           )
       )}

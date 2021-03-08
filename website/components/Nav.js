@@ -7,7 +7,7 @@ const Nav = ({ children }) => {
       <div className={navStyles.mainListDiv} className={navStyles.main_list}>
         <ul className={navStyles.navLinks}>
           <li>
-            <img className={navStyles.mug} src="mug-shot.jpeg"></img>
+            <img className={navStyles.mug} src="Thomas-McNutt-Photo.png"></img>
           </li>
           <li>
             <img className={navStyles.logo} src="/logo-2.png"></img>

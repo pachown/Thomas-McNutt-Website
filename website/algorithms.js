@@ -25,19 +25,7 @@ let algos = {
     `,
     `Test Input = [0,1,0,3,12]\n
     Test Output = [1,3,12,0,0]\n
-    passes 98% faster & 87% less memory`,
-    `Different Solution: Var moveZeroes = function(nums) {\n
-      let z = 0\n
-      for (let i = 0; i < nums.length; i++) {\n
-        if (nums[i] !== 0) {\n
-          let tmp = nums[z];\n
-          nums[z] = nums[i];\n
-          nums[i] = tmp;\n
-          z++;\n
-        }\n
-      }\n
-    };\n
-  `
+    passes 98% faster & 87% less memory`
   ],
   '3/2/2021-2': [ `In a 2 dimensional array grid, each value grid[i][j] represents the height of a building located there. We are allowed to increase the height of any number of buildings, by any amount (the amounts can be different for different buildings). Height 0 is considered to be a building as well.
 
@@ -84,20 +72,7 @@ let algos = {
   `
   Runtime: 220 ms, faster than 5.68% of JavaScript online submissions for Max Increase to Keep City Skyline.
   Memory Usage: 40 MB, less than 43.67% of JavaScript online submissions for Max Increase to Keep City Skyline.
-  `,
-  `Another Solution: var maxIncreaseKeepingSkyline = function(grid) {
-    var cols = grid[0].map((x,i)=>grid.reduce((a,b)=>Math.max(a,b[i]),0))
-    var rows = grid.map(x=>x.reduce((a,b)=>Math.max(a,b)))
-    var ret = 0
-    for(var i in grid){
-        var line = grid[i]
-        for(var j in line){
-            var block = line[j]
-            ret += Math.min(cols[j],rows[i])-block
-        }
-    }
-    return ret
-}`],
+  `],
 '3/3/2021-1': [
   `A country is big if it has an area of bigger than 3 million square km or a population of more than 25 million.
   Write a SQL solution to output big countries name, population and area.`,
@@ -130,13 +105,7 @@ let algos = {
     return highest;
 };`,
 `Runtime: 80 ms, faster than 61.27% of JavaScript online submissions for Find the Highest Altitude.
-Memory Usage: 38.9 MB, less than 17.07% of JavaScript online submissions for Find the Highest Altitude.`,
-`Spread operator solution: var largestAltitude = function(gain) {
-  for(let i=1;i < gain.length;i++) gain[i] += gain[i-1]
-
-  return Math.max(0,...gain)
-};
-`
+Memory Usage: 38.9 MB, less than 17.07% of JavaScript online submissions for Find the Highest Altitude.`
 ],
 '3/4/2021': [` Given an array of non-negative integers, you are initially positioned at the first index of the array. Each element in the array represents your maximum jump length at that position.
 
@@ -175,6 +144,6 @@ let jumpToLastIndex = (arr) => {
 console.log(jumpToLastIndex([2,3,1,1,4]))
 
 console.log(jumpToLastIndex([3,2,1,0,4]))
-`, 'N/A', 'N/A'],
+`, 'N/A'],
 };
 module.exports = algos;
