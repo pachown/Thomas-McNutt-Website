@@ -10,7 +10,9 @@ const Nav = ({ children }) => {
             <img className={navStyles.mug} src="Thomas-McNutt-Photo.png"></img>
           </li>
           <li>
-            <img className={navStyles.logo} src="/logo-2.png"></img>
+            <p className={navStyles.name}>
+              {'!!Thomas R McNutt'}
+              </p>
           </li>
         </ul>
         <ul className={navStyles.navLinks}>
