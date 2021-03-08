@@ -161,8 +161,6 @@ My Solution: var lengthOfLastWord = function(s) {
   }
     return 0;
 };`,
-
-
   `Runtime: 76 ms, faster than 79.20% of JavaScript online submissions for Length of Last Word.
   Memory Usage: 38.6 MB, less than 68.68% of JavaScript online submissions for Length of Last Word.`,
 ],

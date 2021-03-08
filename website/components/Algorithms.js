@@ -18,7 +18,7 @@ const Algorithms = ({ children }) => {
           </h2>
       {data !== null && (
           Object.keys(data).map((algo) =>
-            <div className="algo-a-day">
+            <div className={styles.algoaday}>
               <div className={styles.date}> {algo}</div>
               <div className={styles.algoinfo}>Prompt: {data[algo][0]}</div>
               <PrismAsyncLight

@@ -123,10 +123,16 @@
   background: rgba(255, 255, 255, 0.5);
   border-radius: 25px;
 }
+.algoaday {
+ padding-bottom: 30px;
+ border-top: 2px solid rgb(129, 111, 228);
+ border-style: outset;
+ padding-top: 25px;
+}
 
 .date {
   text-shadow: 1px 1px rgba(8, 57, 148, 0.5);
-  border: 2px solid rgb(129, 111, 228);
+  border: 2px dotted rgb(129, 111, 228);
   justify-content: center;
   text-align: center;
   border-radius: 25px;
