@@ -5,7 +5,7 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
-  '3/2/2021-1': [
+  'LeetCode #283': [
     'Given an array of numbers, write a function to move all the 0\'s to the end while maintaining the relative order of the non-zero elements',
     `My Solution: Var moveZeroes = function(nums) {\n
       let count = 0\n
@@ -27,13 +27,13 @@ let algos = {
     Test Output = [1,3,12,0,0]\n
     passes 98% faster & 87% less memory`
   ],
-  '3/2/2021-2': [ `In a 2 dimensional array grid, each value grid[i][j] represents the height of a building located there. We are allowed to increase the height of any number of buildings, by any amount (the amounts can be different for different buildings). Height 0 is considered to be a building as well.
+  'LeetCode #807': [ `In a 2 dimensional array grid, each value grid[i][j] represents the height of a building located there. We are allowed to increase the height of any number of buildings, by any amount (the amounts can be different for different buildings). Height 0 is considered to be a building as well.
 
   At the end, the "skyline" when viewed from all four directions of the grid, i.e. top, bottom, left, and right, must be the same as the skyline of the original grid. A city's skyline is the outer contour of the rectangles formed by all the buildings when viewed from a distance. See the following example.
 
   What is the maximum total sum that the height of the buildings can be increased?`
   ,
-  `var maxIncreaseKeepingSkyline = function (grid) {
+  `My Solution: var maxIncreaseKeepingSkyline = function (grid) {
     //find maximums from side and top
     let sideView = new Array(grid.length);
     sideView.fill(0);
@@ -73,27 +73,19 @@ let algos = {
   Runtime: 220 ms, faster than 5.68% of JavaScript online submissions for Max Increase to Keep City Skyline.
   Memory Usage: 40 MB, less than 43.67% of JavaScript online submissions for Max Increase to Keep City Skyline.
   `],
-'3/3/2021-1': [
+'LeetCode #595': [
   `A country is big if it has an area of bigger than 3 million square km or a population of more than 25 million.
   Write a SQL solution to output big countries name, population and area.`,
+  `My Solution: SELECT name, population, area FROM world
+  WHERE population > 25000000 OR area > 3000000`,
   `Runtime: 220 ms, faster than 87.37% of MySQL online submissions for Big Countries.
   Memory Usage: 0B, less than 100.00% of MySQL online submissions for Big Countries.`,
-  `SELECT name, population, area FROM world
-  WHERE population > 25000000 OR area > 3000000`,
-  `This solution uses UNION:
-  SELECT name, population, area
-  FROM World
-  WHERE area > 3000000
-  UNION
-  SELECT name, population, area
-  FROM World
-  WHERE population > 25000000`
 ],
-'3/3/2021-2': [
+'LeetCode #1732': [
   `There is a biker going on a road trip. The road trip consists of n + 1 points at different altitudes. The biker starts his trip on point 0 with altitude equal 0.
 
   You are given an integer array gain of length n where gain[i] is the net gain in altitude between points i​​​​​​ and i + 1 for all (0 <= i < n). Return the highest altitude of a point.`,
-  `var largestAltitude = function(gain) {
+  `My Solution: var largestAltitude = function(gain) {
     let highest = 0;
     let current = 0;
     for (var i = 0; i < gain.length; i++) {
@@ -107,7 +99,7 @@ let algos = {
 `Runtime: 80 ms, faster than 61.27% of JavaScript online submissions for Find the Highest Altitude.
 Memory Usage: 38.9 MB, less than 17.07% of JavaScript online submissions for Find the Highest Altitude.`
 ],
-'3/4/2021': [` Given an array of non-negative integers, you are initially positioned at the first index of the array. Each element in the array represents your maximum jump length at that position.
+'LeetCode #55': [` Given an array of non-negative integers, you are initially positioned at the first index of the array. Each element in the array represents your maximum jump length at that position.
 
  Determine if you are able to reach the last index.
 
@@ -123,7 +115,7 @@ Input: [3,2,1,0,4]
  Explanation: You will always arrive at index 3 no matter what. Its maximum
               jump length is 0, which makes it impossible to reach the last index.`,
 `
-let jumpToLastIndex = (arr) => {
+My Solution: let jumpToLastIndex = (arr) => {
   let traverse = false;
 
   let recurseTraverse = (position) => {
@@ -144,6 +136,35 @@ let jumpToLastIndex = (arr) => {
 console.log(jumpToLastIndex([2,3,1,1,4]))
 
 console.log(jumpToLastIndex([3,2,1,0,4]))
-`, 'N/A'],
+`],
+'Leetcode #58': [`Given a string s consists of some words separated by spaces, return the length of the last word in the string. If the last word does not exist, return 0.
+
+A word is a maximal substring consisting of non-space characters only.`,`
+// I - string of words
+// O - length of last word
+// C - N/A
+// E - No words in string
+My Solution: var lengthOfLastWord = function(s) {
+    //return 0 if empty
+    if (s.length === 0) {
+        return 0;
+    }
+    //separate words into array
+
+    let words = s.split(" ")
+
+    // check for empty last element in array that isn't a space
+  for (var i = words.length-1; i >= 0; i--) {
+      if (words[i].length > 0) {
+          return words[i].length
+      }
+  }
+    return 0;
+};`,
+
+
+  `Runtime: 76 ms, faster than 79.20% of JavaScript online submissions for Length of Last Word.
+  Memory Usage: 38.6 MB, less than 68.68% of JavaScript online submissions for Length of Last Word.`,
+],
 };
 module.exports = algos;
