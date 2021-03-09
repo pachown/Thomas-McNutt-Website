@@ -164,5 +164,70 @@ My Solution: var lengthOfLastWord = function(s) {
   `Runtime: 76 ms, faster than 79.20% of JavaScript online submissions for Length of Last Word.
   Memory Usage: 38.6 MB, less than 68.68% of JavaScript online submissions for Length of Last Word.`,
 ],
+'LeetCode #14 Longest Common Prefix': [`Write a function to find the longest common prefix string amongst an array of strings.
+
+If there is no common prefix, return an empty string "".`, `   // I - array of strings
+// O - longest shared prefix from strings
+// C - N/A
+// E - no shared prefix, empty array, single string
+var longestCommonPrefix = function(strs) {
+
+//if empty array, or array.length = 1 or no matching prefix, return empty string
+if (strs.length === 0) {
+    return '';
+}
+//loop through all, starting with the second index. Compare to first until characters are not matching. Then splice the characters that were matching and use that as the comparison for the next index. Cut the comparison string to match the size of smaller elements so the loop logic still works.
+let compare = strs[0];
+
+for (var i = 1; i < strs.length; i++) {
+    compare = compare.slice(0, strs[i].length)
+    for(var j = 0; j < strs[i].length; j++) {
+        if (compare[j] !== strs[i][j]) {
+            console.log(strs[i][j])
+            compare = strs[i].slice(0, j)
+            break;
+        }
+    }
+}
+//return the remaining comparison once all is done
+return compare;
+};`, `Runtime: 92 ms, faster than 43.37% of JavaScript online submissions for Longest Common Prefix.
+Memory Usage: 40.8 MB, less than 19.62% of JavaScript online submissions for Longest Common Prefix.`],
+'LeetCode #53 Maximum Subarray': [`Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.`,
+`// I-array of nums
+// O-largest sum of contiguous nums
+// C-N/A
+// E-empty or 1 element
+var maxSubArray = function(nums) {
+    //if empty return 0
+    if (nums.length === 0) {
+        return undefined;
+    }
+    if (nums.length === 1) {
+        return nums[0];
+    }
+    //if single element return element
+    let max = nums[0];
+    let current;
+    //nested for loop in another for loop to find all possibilities
+    for (var i = 0; i < nums.length; i++) {
+        current = nums[i];
+        for (var j = i; j < nums.length; j++) {
+            // console.log(current, i, j)
+            if (i !== j) {
+               current += nums[j]
+            }
+                if (current > max) {
+                max = current;
+
+            }
+        }
+    }
+    //second loop starts looping at the index of the first so its always contiguous.
+    //compare current running total to max total and change if larger
+    //return max total
+    return max;
+};`,`Runtime: 220 ms, faster than 6.02% of JavaScript online submissions for Maximum Subarray.
+Memory Usage: 39.2 MB, less than 65.96% of JavaScript online submissions for Maximum Subarray.`]
 };
 module.exports = algos;
