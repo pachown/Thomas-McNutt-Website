@@ -2,7 +2,7 @@
 
 <br>
 
-_Portfolio Website made with Next.js, React, Javascript
+Portfolio Website made with Next.js, React, Javascript
 
 <br>
 
