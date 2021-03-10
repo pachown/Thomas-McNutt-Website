@@ -10,7 +10,7 @@ See it deployed on Vercel [here](https://thomas-mcnutt-website.vercel.app/)
 
 <br>
 
-<image src="https://github.com/pachown/Thomas-McNutt-Website/tree/main/website/public/WebsiteView.png">
+<image src="https://github.com/pachown/Thomas-McNutt-Website/blob/main/website/public/WebsiteView.png">
 
 ## Summary
 
