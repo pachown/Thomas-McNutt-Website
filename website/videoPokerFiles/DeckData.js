@@ -1,4 +1,3 @@
-var Shuffle = require('shuffle');
 const deck = [
   {"code": "KH", "image": "https://deckofcardsapi.com/static/img/KH.png"},
   {"code": "3C", "image": "https://deckofcardsapi.com/static/img/3C.png"},
