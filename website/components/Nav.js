@@ -19,10 +19,10 @@ const Nav = ({ children }) => {
           <li>
             <Link href='/'>Home</Link>
           </li>
-          {/* <li>
-            <Link href='/casino'>Casino</Link>
-          </li>
           <li>
+            <Link href='/casino/videoPoker'>Casino</Link>
+          </li>
+          {/* <li>
             <Link href='/blog'>Blog</Link>
           </li> */}
           <li>

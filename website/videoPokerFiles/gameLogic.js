@@ -29,4 +29,4 @@ var victoryPoints = {
   'Jacks or Better': 1,
 }
 
-module.exports = {start, winner,};
+module.exports = {start, winner};
