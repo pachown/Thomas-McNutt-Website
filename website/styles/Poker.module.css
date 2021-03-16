@@ -110,7 +110,6 @@ border-bottom:2px solid rgb(12, 170, 12);
 }
 
 .betBar {
-  padding-top: 75px;
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
