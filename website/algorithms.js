@@ -228,6 +228,13 @@ var maxSubArray = function(nums) {
     //return max total
     return max;
 };`,`Runtime: 220 ms, faster than 6.02% of JavaScript online submissions for Maximum Subarray.
-Memory Usage: 39.2 MB, less than 65.96% of JavaScript online submissions for Maximum Subarray.`]
+Memory Usage: 39.2 MB, less than 65.96% of JavaScript online submissions for Maximum Subarray.`],
+'LeetCode #69': [`Given a non-negative integer x, compute and return the square root of x.
+
+Since the return type is an integer, the decimal digits are truncated, and only the integer part of the result is returned.`,
+`var mySqrt = function(x) {
+  return Math.floor(Math.sqrt(x))
+};`,`Runtime: 88 ms, faster than 95.01% of JavaScript online submissions for Sqrt(x).
+Memory Usage: 39.8 MB, less than 83.57% of JavaScript online submissions for Sqrt(x).`]
 };
 module.exports = algos;
