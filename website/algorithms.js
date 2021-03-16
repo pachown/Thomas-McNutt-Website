@@ -235,6 +235,6 @@ Since the return type is an integer, the decimal digits are truncated, and only 
 `var mySqrt = function(x) {
   return Math.floor(Math.sqrt(x))
 };`,`Runtime: 88 ms, faster than 95.01% of JavaScript online submissions for Sqrt(x).
-Memory Usage: 39.8 MB, less than 83.57% of JavaScript online submissions for Sqrt(x).`]
+Memory Usage: 39.8 MB, less than 83.57% of JavaScript online submissions for Sqrt(x).`],
 };
 module.exports = algos;
