@@ -1,14 +1,18 @@
 import Head from 'next/head';
 import PokerStyles from '../../styles/Poker.module.css';
 import {useState} from 'react';
+import {start, winner} from '../../videoPokerFiles/gameLogic.js';
 
 
 export default function Casino() {
 
   const [money,setMoney] = useState(100);
-  const [cards, setCards] = useState(['https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg','https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg','https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg','https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg','https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg']);
+  const [cards, setCards] = useState([['https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', undefined],['https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', undefined],['https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', undefined],['https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', undefined],['https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', undefined]]);
   const [bet, setBet] = useState(1);
   const [held, setHeld] = useState(0);
+  const [betMade, setBetMade] = useState(undefined);
+  const [deck, setDeck] = useState(undefined);
+  const [handInfo, setHandInfo] = useState(['Full House Jacks full of threes', 10]);
 
   let handleBet = (num) => {
     if (bet+num >= 6) {
@@ -19,6 +23,17 @@ export default function Casino() {
       setBet(bet+num)
     }
   };
+
+  let handleStart = () => {
+    // get new deck
+    // use handleDeal for each slot in cards array
+    // reset card holding
+    // disable betting
+  }
+
+  let handleDeal = () => {
+    //deal one card off the deck
+  }
 
   return (
     <div className={PokerStyles.container}>
@@ -34,12 +49,15 @@ export default function Casino() {
         </div>
         <div className={PokerStyles.cardTable}>
           <div className={PokerStyles.cards}>
-            <img className={PokerStyles.card} src={cards[0]} />
-            <img className={PokerStyles.card} src={cards[1]} />
-            <img className={PokerStyles.card} src={cards[2]} />
-            <img className={PokerStyles.card} src={cards[3]} />
-            <img className={PokerStyles.card} src={cards[4]} />
+            <img className={PokerStyles.card} src={cards[0][0]} />
+            <img className={PokerStyles.card} src={cards[1][0]} />
+            <img className={PokerStyles.card} src={cards[2][0]} />
+            <img className={PokerStyles.card} src={cards[3][0]} />
+            <img className={PokerStyles.card} src={cards[4][0]} />
           </div>
+        </div>
+        <div className={PokerStyles.handInfo}>
+          Last Hand: {handInfo[0]} Won: {handInfo[1]}
         </div>
         <div className={PokerStyles.holdbtns}>
           <button className={PokerStyles.holdbtn}>HOLD</button>
