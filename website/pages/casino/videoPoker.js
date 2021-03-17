@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import PokerStyles from '../../styles/Poker.module.css';
 import {useState} from 'react';
-import {start, winner} from '../../videoPokerFiles/gameLogic.js';
+import {Start, Winner} from '../../videoPokerFiles/gameLogic.js';
 
 
 export default function Casino() {
@@ -10,9 +10,9 @@ export default function Casino() {
   const [cards, setCards] = useState([['https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', undefined],['https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', undefined],['https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', undefined],['https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', undefined],['https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', undefined]]);
   const [bet, setBet] = useState(1);
   const [held, setHeld] = useState(0);
-  const [betMade, setBetMade] = useState(undefined);
   const [deck, setDeck] = useState(undefined);
   const [handInfo, setHandInfo] = useState(['Full House Jacks full of threes', 10]);
+  const [betRound, setBetRound] = useState(false);
 
   let handleBet = (num) => {
     if (bet+num >= 6) {
@@ -20,12 +20,18 @@ export default function Casino() {
     } else if (bet+num <= 0) {
       setBet(1);
     } else {
-      setBet(bet+num)
+      setBet(bet+num);
     }
   };
 
   let handleStart = () => {
+    //set bet round to disable bet controls
+    setBetRound = (true);
+    // subtract bet from money
+      setMoney = (money - bet);
     // get new deck
+      setDeck = (Start());
+      console.log(deck);
     // use handleDeal for each slot in cards array
     // reset card holding
     // disable betting
@@ -33,6 +39,16 @@ export default function Casino() {
 
   let handleDeal = () => {
     //deal one card off the deck
+  }
+
+  let handleEnd = () => {
+    //calculate final hand and winnings
+
+    //add winnings to money(if any)
+
+    //display final hand to DOM
+
+    //re-enable bet controls
   }
 
   return (
@@ -71,12 +87,13 @@ export default function Casino() {
           <button className={PokerStyles.betBtn} onClick={() => handleBet(1)}>+</button>
           <button className={PokerStyles.betBtn} onClick={() => handleBet(-1)}>-</button>
           <button className={PokerStyles.betBtn} onClick={() => handleBet(5)}>MAX BET</button>
-          <button className={PokerStyles.betBtn}>New Round</button>
+          <button className={PokerStyles.betBtn} onClick={() => handleStart()}>New Round</button>
           <div className={PokerStyles.betAmt}>Bet {bet}</div>
         </div>
       </main>
       <main className={PokerStyles.info}>
         <table className={PokerStyles.table}>
+          <tbody>
           <tr className={PokerStyles.tr}>
             <th className={PokerStyles.th}> Hand Rank</th>
             <th className={PokerStyles.th}>Winnings</th>
@@ -117,6 +134,7 @@ export default function Casino() {
             <th className={PokerStyles.th}>JACK PAIR OR BETTER</th>
             <th className={PokerStyles.th}>1</th>
           </tr>
+          </tbody>
         </table>
       </main>
     </div>
