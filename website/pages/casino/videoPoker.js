@@ -1,8 +1,25 @@
-import Head from 'next/head'
-import PokerStyles from '../../styles/Poker.module.css'
+import Head from 'next/head';
+import PokerStyles from '../../styles/Poker.module.css';
+import {useState} from 'react';
 
 
 export default function Casino() {
+
+  const [money,setMoney] = useState(100);
+  const [cards, setCards] = useState(['https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg','https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg','https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg','https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg','https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg']);
+  const [bet, setBet] = useState(1);
+  const [held, setHeld] = useState(0);
+
+  let handleBet = (num) => {
+    if (bet+num >= 6) {
+      setBet(5);
+    } else if (bet+num <= 0) {
+      setBet(1);
+    } else {
+      setBet(bet+num)
+    }
+  };
+
   return (
     <div className={PokerStyles.container}>
       <Head>
@@ -12,16 +29,16 @@ export default function Casino() {
       </Head>
       <main className={PokerStyles.main}>
         <div className={PokerStyles.topBar}>
-          <div className={PokerStyles.money}>$518</div>
+          <div className={PokerStyles.money}>Cash: ${money}</div>
           <div className={PokerStyles.gametype}>JACKS OR BETTER TO WIN!</div>
         </div>
         <div className={PokerStyles.cardTable}>
           <div className={PokerStyles.cards}>
-            <img className={PokerStyles.card} src={"https://deckofcardsapi.com/static/img/9D.png"} />
-            <img className={PokerStyles.card} src={"https://deckofcardsapi.com/static/img/9D.png"} />
-            <img className={PokerStyles.card} src={"https://deckofcardsapi.com/static/img/9D.png"} />
-            <img className={PokerStyles.card} src={"https://deckofcardsapi.com/static/img/9D.png"} />
-            <img className={PokerStyles.card} src={"https://deckofcardsapi.com/static/img/9D.png"} />
+            <img className={PokerStyles.card} src={cards[0]} />
+            <img className={PokerStyles.card} src={cards[1]} />
+            <img className={PokerStyles.card} src={cards[2]} />
+            <img className={PokerStyles.card} src={cards[3]} />
+            <img className={PokerStyles.card} src={cards[4]} />
           </div>
         </div>
         <div className={PokerStyles.holdbtns}>
@@ -33,10 +50,11 @@ export default function Casino() {
         </div>
         <div className={PokerStyles.betBar}>
           <button className={PokerStyles.betBtn}>BET</button>
-          <button className={PokerStyles.betBtn}>+</button>
-          <button className={PokerStyles.betBtn}>-</button>
-          <button className={PokerStyles.betBtn}>MAX BET</button>
-          <div className={PokerStyles.betAmt}>5</div>
+          <button className={PokerStyles.betBtn} onClick={() => handleBet(1)}>+</button>
+          <button className={PokerStyles.betBtn} onClick={() => handleBet(-1)}>-</button>
+          <button className={PokerStyles.betBtn} onClick={() => handleBet(5)}>MAX BET</button>
+          <button className={PokerStyles.betBtn}>New Round</button>
+          <div className={PokerStyles.betAmt}>Bet {bet}</div>
         </div>
       </main>
       <main className={PokerStyles.info}>
