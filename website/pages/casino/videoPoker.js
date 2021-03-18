@@ -7,7 +7,7 @@ import {Start, Winner} from '../../videoPokerFiles/gameLogic.js';
 export default function Casino() {
 
   const [money,setMoney] = useState(100);
-  const [cards, setCards] = useState([['https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', undefined],['https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', undefined],['https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', undefined],['https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', undefined],['https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', undefined]]);
+  const [cards, setCards] = useState([{image: 'https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', code: undefined},{image: 'https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', code: undefined},{ image: 'https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', code: undefined},{ image: 'https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', code: undefined},{image: 'https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', code: undefined}]);
   const [bet, setBet] = useState(1);
   const [held, setHeld] = useState(0);
   const [deck, setDeck] = useState(undefined);
@@ -31,13 +31,12 @@ export default function Casino() {
       setMoney = (money - bet);
     // get new deck
       setDeck = (Start());
-      console.log(deck);
     // use handleDeal for each slot in cards array
     // reset card holding
     // disable betting
   }
 
-  let handleDeal = () => {
+  let handleDeal = (deck) => {
     //deal one card off the deck
   }
 
@@ -65,11 +64,11 @@ export default function Casino() {
         </div>
         <div className={PokerStyles.cardTable}>
           <div className={PokerStyles.cards}>
-            <img className={PokerStyles.card} src={cards[0][0]} />
-            <img className={PokerStyles.card} src={cards[1][0]} />
-            <img className={PokerStyles.card} src={cards[2][0]} />
-            <img className={PokerStyles.card} src={cards[3][0]} />
-            <img className={PokerStyles.card} src={cards[4][0]} />
+            <img className={PokerStyles.card} src={cards[0].image} />
+            <img className={PokerStyles.card} src={cards[1].image} />
+            <img className={PokerStyles.card} src={cards[2].image} />
+            <img className={PokerStyles.card} src={cards[3].image} />
+            <img className={PokerStyles.card} src={cards[4].image} />
           </div>
         </div>
         <div className={PokerStyles.handInfo}>
