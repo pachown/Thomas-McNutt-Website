@@ -117,18 +117,22 @@
 }
 
 .algos {
+  width: 1000px;
   color: black;
   margin: 25px;
+  overflow-x: visible;
   font-size: 1.2rem;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 25px;
-  width: auto;
+  padding:25px;
 }
-.algoaday {
- padding-bottom: 30px;
- border-top: 2px solid rgb(129, 111, 228);
- border-style: outset;
- padding-top: 25px;
+.blog {
+  text-align: center;
+  font-size: 2.2em;
+}
+.blog2 {
+  text-align: center;
+  font-size: 1.7em;
 }
 
 .date {
@@ -147,6 +151,14 @@
   text-align: center;
   border: 5px;
   font-size: 1.5em;
+}
+.algoaday {
+  padding-bottom: 30px;
+  border-top: 2px solid rgb(129, 111, 228);
+  border-style: outset;
+  padding-top: 25px;
+  border-left: 2px solid rgb(118, 127, 211);
+  border-right: 2px solid rgb(118, 127, 211);
 }
 
 @media (max-width: 600px) {

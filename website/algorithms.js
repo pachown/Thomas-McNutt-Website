@@ -70,7 +70,7 @@ let algos = {
   console.log(maxIncreaseKeepingSkyline([[3, 0, 8, 4], [2, 4, 5, 7], [9, 2, 6, 3], [0, 3, 1, 0]]));`
   ,
   `
-  Runtime: 220 ms, faster than 5.68% of JavaScript online submissions for Max Increase to Keep City Skyline.
+  Runtime: 220 ms, faster than 5.68% of JavaScript online submissions for Max Increase to Keep City Skyline. \n
   Memory Usage: 40 MB, less than 43.67% of JavaScript online submissions for Max Increase to Keep City Skyline.
   `],
 'LeetCode #595': [
@@ -78,7 +78,7 @@ let algos = {
   Write a SQL solution to output big countries name, population and area.`,
   `My Solution: SELECT name, population, area FROM world
   WHERE population > 25000000 OR area > 3000000`,
-  `Runtime: 220 ms, faster than 87.37% of MySQL online submissions for Big Countries.
+  `Runtime: 220 ms, faster than 87.37% of MySQL online submissions for Big Countries.\n
   Memory Usage: 0B, less than 100.00% of MySQL online submissions for Big Countries.`,
 ],
 'LeetCode #1732': [
@@ -96,7 +96,7 @@ let algos = {
     }
     return highest;
 };`,
-`Runtime: 80 ms, faster than 61.27% of JavaScript online submissions for Find the Highest Altitude.
+`Runtime: 80 ms, faster than 61.27% of JavaScript online submissions for Find the Highest Altitude.\n
 Memory Usage: 38.9 MB, less than 17.07% of JavaScript online submissions for Find the Highest Altitude.`
 ],
 'LeetCode #55': [` Given an array of non-negative integers, you are initially positioned at the first index of the array. Each element in the array represents your maximum jump length at that position.
@@ -115,55 +115,23 @@ Input: [3,2,1,0,4]
  Explanation: You will always arrive at index 3 no matter what. Its maximum
               jump length is 0, which makes it impossible to reach the last index.`,
 `
-My Solution: let jumpToLastIndex = (arr) => {
+My Solution: var canJump = function(nums) {
   let traverse = false;
 
-  let recurseTraverse = (position) => {
-    console.log(position);
-    if (position === arr.length - 1) {
-      traverse = true;
-      return;
-    }
-    for (var i = 1; i <= arr[position]; i++) {
-      recurseTraverse(position + i)
-    }
-  }
-  recurseTraverse(0);
-
-  return traverse;
+let recurseTraverse = (position) => {
+if (position === nums.length - 1) {
+  traverse = true;
+  return;
 }
+for (var i = 1; i <= nums[position]; i++) {
+  recurseTraverse(position + i)
+}
+}
+recurseTraverse(0);
 
-console.log(jumpToLastIndex([2,3,1,1,4]))
-
-console.log(jumpToLastIndex([3,2,1,0,4]))
-`],
-'Leetcode #58': [`Given a string s consists of some words separated by spaces, return the length of the last word in the string. If the last word does not exist, return 0.
-
-A word is a maximal substring consisting of non-space characters only.`,`
-// I - string of words
-// O - length of last word
-// C - N/A
-// E - No words in string
-My Solution: var lengthOfLastWord = function(s) {
-    //return 0 if empty
-    if (s.length === 0) {
-        return 0;
-    }
-    //separate words into array
-
-    let words = s.split(" ")
-
-    // check for empty last element in array that isn't a space
-  for (var i = words.length-1; i >= 0; i--) {
-      if (words[i].length > 0) {
-          return words[i].length
-      }
-  }
-    return 0;
-};`,
-  `Runtime: 76 ms, faster than 79.20% of JavaScript online submissions for Length of Last Word.
-  Memory Usage: 38.6 MB, less than 68.68% of JavaScript online submissions for Length of Last Word.`,
-],
+return traverse;
+};
+`,`Time limit exceeded`],
 'LeetCode #14 Longest Common Prefix': [`Write a function to find the longest common prefix string amongst an array of strings.
 
 If there is no common prefix, return an empty string "".`, `   // I - array of strings
@@ -191,7 +159,7 @@ for (var i = 1; i < strs.length; i++) {
 }
 //return the remaining comparison once all is done
 return compare;
-};`, `Runtime: 92 ms, faster than 43.37% of JavaScript online submissions for Longest Common Prefix.
+};`, `Runtime: 92 ms, faster than 43.37% of JavaScript online submissions for Longest Common Prefix.\n
 Memory Usage: 40.8 MB, less than 19.62% of JavaScript online submissions for Longest Common Prefix.`],
 'LeetCode #53 Maximum Subarray': [`Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.`,
 `// I-array of nums
@@ -227,14 +195,14 @@ var maxSubArray = function(nums) {
     //compare current running total to max total and change if larger
     //return max total
     return max;
-};`,`Runtime: 220 ms, faster than 6.02% of JavaScript online submissions for Maximum Subarray.
+};`,`Runtime: 220 ms, faster than 6.02% of JavaScript online submissions for Maximum Subarray.\n
 Memory Usage: 39.2 MB, less than 65.96% of JavaScript online submissions for Maximum Subarray.`],
 'LeetCode #69': [`Given a non-negative integer x, compute and return the square root of x.
 
 Since the return type is an integer, the decimal digits are truncated, and only the integer part of the result is returned.`,
 `var mySqrt = function(x) {
   return Math.floor(Math.sqrt(x))
-};`,`Runtime: 88 ms, faster than 95.01% of JavaScript online submissions for Sqrt(x).
+};`,`Runtime: 88 ms, faster than 95.01% of JavaScript online submissions for Sqrt(x).\n
 Memory Usage: 39.8 MB, less than 83.57% of JavaScript online submissions for Sqrt(x).`],
 };
 module.exports = algos;

@@ -5,16 +5,15 @@ import PrismAsyncLight from 'react-syntax-highlighter'
 
 const Algorithms = ({ children }) => {
   const [data, setData] = useState(null);
-  let algoItems = [];
 
   useEffect(() => {
     setData(algoData);
   }, [])
+
   return (
     <div className={styles.algos}>
-        <h2 className="algo-a-day">
-        <em>Welcome to my algorithm a day blog!</em></h2>
-        <h2><em> I list the prompt, my solution, and the results from the Leetcode solution. This will help me keep a record of my toy problem improvement over time.</em>
+        <h2 className={styles.blog}><em>Welcome to my algorithm a day blog!</em></h2>
+        <h2 className={styles.blog2}><em> I list the prompt, my solution, and the results from the Leetcode solution.</em>
           </h2>
       {data !== null && (
           Object.keys(data).map((algo) =>
