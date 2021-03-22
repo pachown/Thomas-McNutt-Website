@@ -2,11 +2,11 @@
 
 <br>
 
-Portfolio Website made with Next.js, React, Javascript
+This is the repo for my portfolio website made with Next.js, React, Javascript
 
 <br>
 
-See it deployed on Vercel [here](https://thomas-mcnutt-website.vercel.app/)
+See it deployed on Vercel [here](https://thomas-mcnutt-website.vercel.app/) !
 
 <br>
 
@@ -19,7 +19,6 @@ This is my Portfolio website. It currently has an about index page and an algori
 ***Curtain Raise Reveal*** Come check out my website and see how I nailed (or didn't nail) different LeetCode problems!
 
 TODO: Add casino page with casino game apps. 
-Add blog. 
 Make top bar change to a solid color when scrolling.
 
 ## Author
