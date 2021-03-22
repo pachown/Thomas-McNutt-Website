@@ -1,8 +1,8 @@
-# My Portfolio Website!
+# Thomas McNutt's Website!
 
 <br>
 
-This is the repo for my portfolio website made with Next.js, React, Javascript
+This is the repo for my portfolio website made mainly with Next.js, React, Javascript
 
 <br>
 
@@ -14,9 +14,7 @@ See it deployed on Vercel [here](https://thomas-mcnutt-website.vercel.app/) !
 
 ## Summary
 
-This is my Portfolio website. It currently has an about index page and an algorithms page where I post my solutions and results to different Leetcode problems.
-
-***Curtain Raise Reveal*** 
+This is my Portfolio website. It currently has an about index page, an algorithms page where I post my solutions and results to different Leetcode problems, and a casino that currently includes one Video Poker game.
 
 Come check out my website and see how I nailed (or didn't nail) different LeetCode problems!
 
