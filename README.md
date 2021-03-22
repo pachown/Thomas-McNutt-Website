@@ -20,7 +20,9 @@ This is my Portfolio website. It currently has an about index page and an algori
 
 Come check out my website and see how I nailed (or didn't nail) different LeetCode problems!
 
-TODO: Add casino page with casino game apps. 
+TODO: 
+Finish logic for poker game
+Put all pages in a hamburger menu
 Make top bar change to a solid color when scrolling.
 
 ## Author
