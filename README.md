@@ -16,7 +16,9 @@ See it deployed on Vercel [here](https://thomas-mcnutt-website.vercel.app/) !
 
 This is my Portfolio website. It currently has an about index page and an algorithms page where I post my solutions and results to different Leetcode problems.
 
-***Curtain Raise Reveal*** Come check out my website and see how I nailed (or didn't nail) different LeetCode problems!
+***Curtain Raise Reveal*** 
+
+Come check out my website and see how I nailed (or didn't nail) different LeetCode problems!
 
 TODO: Add casino page with casino game apps. 
 Make top bar change to a solid color when scrolling.
