@@ -232,6 +232,40 @@ It is guaranteed that the node to be deleted is not a tail node in the list.`,
     node.next = node.next.next;
 };`,
 `Runtime: 88 ms, faster than 68.33% of JavaScript online submissions for Delete Node in a Linked List.
-Memory Usage: 40.4 MB, less than 74.28% of JavaScript online submissions for Delete Node in a Linked List.`]
+Memory Usage: 40.4 MB, less than 74.28% of JavaScript online submissions for Delete Node in a Linked List.`],
+  'LeetCode #203 Remove Linked List Elements': [`Given the head of a linked list and an integer val, remove all the nodes of the linked list that has Node.val == val, and return the new head.`,
+                                                `var removeElements = function(head, val) {
+    if (head === null) {
+        return head;
+    }
+   let node = head;
+    while (head.val === val) {
+        if (head.next === null) {
+            head.val = null
+            return null;
+        }
+        head = head.next;
+    }
+  
+    let recurse = (node) => {
+        if (!node) {
+            return;
+        }
+        if (node.next === null) {
+            return;
+        }
+        if (node.next.val === val) {
+            node.next = node.next.next
+            recurse(node)
+        } else {
+            recurse(node.next)   
+        }
+    }
+    recurse(head);
+    
+    return head;
+};`,
+ `Runtime: 100 ms, faster than 55.45% of JavaScript online submissions for Remove Linked List Elements. \n
+Memory Usage: 44.5 MB, less than 5.67% of JavaScript online submissions for Remove Linked List Elements.`],
 };
 module.exports = algos;
