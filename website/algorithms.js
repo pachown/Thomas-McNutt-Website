@@ -204,7 +204,7 @@ Since the return type is an integer, the decimal digits are truncated, and only 
   return Math.floor(Math.sqrt(x))
 };`,`Runtime: 88 ms, faster than 95.01% of JavaScript online submissions for Sqrt(x).\n
 Memory Usage: 39.8 MB, less than 83.57% of JavaScript online submissions for Sqrt(x).`],
-  'LeetCode # 704 Binary Search' [`Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.`,
+  'LeetCode #704 Binary Search': [`Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.`,
   `var search = function(nums, target) {
 let left = 0
 let right = nums.length -1
@@ -224,5 +224,14 @@ return -1
 };`,
   `Runtime: 80 ms, faster than 80.58% of JavaScript online submissions for Binary Search.\n
   Memory Usage: 42.8 MB, less than 9.15% of JavaScript online submissions for Binary Search.`],
+  'LeetCode #237 Delete Node in a Linked List without head' : [`Write a function to delete a node in a singly-linked list. 
+You will not be given access to the head of the list, instead you will be given access to the node to be deleted directly.
+It is guaranteed that the node to be deleted is not a tail node in the list.`,
+`var deleteNode = function(node) {
+    node.val = node.next.val;
+    node.next = node.next.next;
+};`,
+`Runtime: 88 ms, faster than 68.33% of JavaScript online submissions for Delete Node in a Linked List.
+Memory Usage: 40.4 MB, less than 74.28% of JavaScript online submissions for Delete Node in a Linked List.`]
 };
 module.exports = algos;
