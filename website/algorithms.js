@@ -204,5 +204,25 @@ Since the return type is an integer, the decimal digits are truncated, and only 
   return Math.floor(Math.sqrt(x))
 };`,`Runtime: 88 ms, faster than 95.01% of JavaScript online submissions for Sqrt(x).\n
 Memory Usage: 39.8 MB, less than 83.57% of JavaScript online submissions for Sqrt(x).`],
+  'LeetCode # 704 Binary Search' [`Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.`,
+  `var search = function(nums, target) {
+let left = 0
+let right = nums.length -1
+while (left <= right) {
+    let pivot = Math.floor((left+right)/2)
+    if (nums[pivot] === target) {
+        return pivot;
+    }
+    if (target < nums[pivot]) {
+        right = pivot - 1
+    } else {
+       left = pivot + 1   
+    }
+    
+}
+return -1
+};`,
+  `Runtime: 80 ms, faster than 80.58% of JavaScript online submissions for Binary Search.\n
+  Memory Usage: 42.8 MB, less than 9.15% of JavaScript online submissions for Binary Search.`],
 };
 module.exports = algos;
