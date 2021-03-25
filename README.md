@@ -1,12 +1,12 @@
-# Thomas-McNutt-Website
+# Thomas McNutt's Website!
 
 <br>
 
-Portfolio Website made with Next.js, React, Javascript
+This is the repo for my portfolio website made mainly with Next.js, React, Javascript
 
 <br>
 
-See it deployed on Vercel [here](https://thomas-mcnutt-website.vercel.app/)
+See it deployed on Vercel [here](https://thomas-mcnutt-website.vercel.app/) !
 
 <br>
 
@@ -14,12 +14,13 @@ See it deployed on Vercel [here](https://thomas-mcnutt-website.vercel.app/)
 
 ## Summary
 
-This is my Portfolio website. It currently has an about index page and an algorithms page where I post my solutions and results to different Leetcode problems.
+This is my Portfolio website. It currently has an about index page, an algorithms page where I post my solutions and results to different Leetcode problems, and a casino that currently includes one Video Poker game.
 
-***Curtain Raise Reveal*** Come check out my website and see how I nailed (or didn't nail) different LeetCode problems!
+Come check out my website and see how I nailed (or didn't nail) different LeetCode problems!
 
-TODO: Add casino page with casino game apps. 
-Add blog. 
+TODO: 
+Finish logic for poker game
+Put all pages in a hamburger menu
 Make top bar change to a solid color when scrolling.
 
 ## Author

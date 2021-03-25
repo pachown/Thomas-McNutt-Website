@@ -204,5 +204,68 @@ Since the return type is an integer, the decimal digits are truncated, and only 
   return Math.floor(Math.sqrt(x))
 };`,`Runtime: 88 ms, faster than 95.01% of JavaScript online submissions for Sqrt(x).\n
 Memory Usage: 39.8 MB, less than 83.57% of JavaScript online submissions for Sqrt(x).`],
+  'LeetCode #704 Binary Search': [`Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.`,
+  `var search = function(nums, target) {
+let left = 0
+let right = nums.length -1
+while (left <= right) {
+    let pivot = Math.floor((left+right)/2)
+    if (nums[pivot] === target) {
+        return pivot;
+    }
+    if (target < nums[pivot]) {
+        right = pivot - 1
+    } else {
+       left = pivot + 1   
+    }
+    
+}
+return -1
+};`,
+  `Runtime: 80 ms, faster than 80.58% of JavaScript online submissions for Binary Search.\n
+  Memory Usage: 42.8 MB, less than 9.15% of JavaScript online submissions for Binary Search.`],
+  'LeetCode #237 Delete Node in a Linked List without head' : [`Write a function to delete a node in a singly-linked list. 
+You will not be given access to the head of the list, instead you will be given access to the node to be deleted directly.
+It is guaranteed that the node to be deleted is not a tail node in the list.`,
+`var deleteNode = function(node) {
+    node.val = node.next.val;
+    node.next = node.next.next;
+};`,
+`Runtime: 88 ms, faster than 68.33% of JavaScript online submissions for Delete Node in a Linked List.
+Memory Usage: 40.4 MB, less than 74.28% of JavaScript online submissions for Delete Node in a Linked List.`],
+  'LeetCode #203 Remove Linked List Elements': [`Given the head of a linked list and an integer val, remove all the nodes of the linked list that has Node.val == val, and return the new head.`,
+                                                `var removeElements = function(head, val) {
+    if (head === null) {
+        return head;
+    }
+   let node = head;
+    while (head.val === val) {
+        if (head.next === null) {
+            head.val = null
+            return null;
+        }
+        head = head.next;
+    }
+  
+    let recurse = (node) => {
+        if (!node) {
+            return;
+        }
+        if (node.next === null) {
+            return;
+        }
+        if (node.next.val === val) {
+            node.next = node.next.next
+            recurse(node)
+        } else {
+            recurse(node.next)   
+        }
+    }
+    recurse(head);
+    
+    return head;
+};`,
+ `Runtime: 100 ms, faster than 55.45% of JavaScript online submissions for Remove Linked List Elements. \n
+Memory Usage: 44.5 MB, less than 5.67% of JavaScript online submissions for Remove Linked List Elements.`],
 };
 module.exports = algos;
