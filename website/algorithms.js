@@ -5,7 +5,7 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
-  'LeetCode #283': [
+  'LeetCode #283 Move Zeroes': [
     'Given an array of numbers, write a function to move all the 0\'s to the end while maintaining the relative order of the non-zero elements',
     `My Solution: Var moveZeroes = function(nums) {\n
       let count = 0\n
@@ -27,7 +27,7 @@ let algos = {
     Test Output = [1,3,12,0,0]\n
     passes 98% faster & 87% less memory`
   ],
-  'LeetCode #807': [ `In a 2 dimensional array grid, each value grid[i][j] represents the height of a building located there. We are allowed to increase the height of any number of buildings, by any amount (the amounts can be different for different buildings). Height 0 is considered to be a building as well.
+  'LeetCode #807 Max Increase To Keep City Skylines': [ `In a 2 dimensional array grid, each value grid[i][j] represents the height of a building located there. We are allowed to increase the height of any number of buildings, by any amount (the amounts can be different for different buildings). Height 0 is considered to be a building as well.
 
   At the end, the "skyline" when viewed from all four directions of the grid, i.e. top, bottom, left, and right, must be the same as the skyline of the original grid. A city's skyline is the outer contour of the rectangles formed by all the buildings when viewed from a distance. See the following example.
 
@@ -73,7 +73,7 @@ let algos = {
   Runtime: 220 ms, faster than 5.68% of JavaScript online submissions for Max Increase to Keep City Skyline. \n
   Memory Usage: 40 MB, less than 43.67% of JavaScript online submissions for Max Increase to Keep City Skyline.
   `],
-'LeetCode #595': [
+'LeetCode #595 Big Countries': [
   `A country is big if it has an area of bigger than 3 million square km or a population of more than 25 million.
   Write a SQL solution to output big countries name, population and area.`,
   `My Solution: SELECT name, population, area FROM world
@@ -81,7 +81,7 @@ let algos = {
   `Runtime: 220 ms, faster than 87.37% of MySQL online submissions for Big Countries.\n
   Memory Usage: 0B, less than 100.00% of MySQL online submissions for Big Countries.`,
 ],
-'LeetCode #1732': [
+'LeetCode #1732 Find The Highest Altitude': [
   `There is a biker going on a road trip. The road trip consists of n + 1 points at different altitudes. The biker starts his trip on point 0 with altitude equal 0.
 
   You are given an integer array gain of length n where gain[i] is the net gain in altitude between points i​​​​​​ and i + 1 for all (0 <= i < n). Return the highest altitude of a point.`,
@@ -99,7 +99,7 @@ let algos = {
 `Runtime: 80 ms, faster than 61.27% of JavaScript online submissions for Find the Highest Altitude.\n
 Memory Usage: 38.9 MB, less than 17.07% of JavaScript online submissions for Find the Highest Altitude.`
 ],
-'LeetCode #55': [` Given an array of non-negative integers, you are initially positioned at the first index of the array. Each element in the array represents your maximum jump length at that position.
+'LeetCode #55 Jump Game': [` Given an array of non-negative integers, you are initially positioned at the first index of the array. Each element in the array represents your maximum jump length at that position.
 
  Determine if you are able to reach the last index.
 
