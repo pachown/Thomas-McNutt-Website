@@ -216,15 +216,15 @@ while (left <= right) {
     if (target < nums[pivot]) {
         right = pivot - 1
     } else {
-       left = pivot + 1   
+       left = pivot + 1
     }
-    
+
 }
 return -1
 };`,
   `Runtime: 80 ms, faster than 80.58% of JavaScript online submissions for Binary Search.\n
   Memory Usage: 42.8 MB, less than 9.15% of JavaScript online submissions for Binary Search.`],
-  'LeetCode #237 Delete Node in a Linked List without head' : [`Write a function to delete a node in a singly-linked list. 
+  'LeetCode #237 Delete Node in a Linked List without head' : [`Write a function to delete a node in a singly-linked list.
 You will not be given access to the head of the list, instead you will be given access to the node to be deleted directly.
 It is guaranteed that the node to be deleted is not a tail node in the list.`,
 `var deleteNode = function(node) {
@@ -246,7 +246,7 @@ Memory Usage: 40.4 MB, less than 74.28% of JavaScript online submissions for Del
         }
         head = head.next;
     }
-  
+
     let recurse = (node) => {
         if (!node) {
             return;
@@ -258,14 +258,28 @@ Memory Usage: 40.4 MB, less than 74.28% of JavaScript online submissions for Del
             node.next = node.next.next
             recurse(node)
         } else {
-            recurse(node.next)   
+            recurse(node.next)
         }
     }
     recurse(head);
-    
+
     return head;
 };`,
  `Runtime: 100 ms, faster than 55.45% of JavaScript online submissions for Remove Linked List Elements. \n
 Memory Usage: 44.5 MB, less than 5.67% of JavaScript online submissions for Remove Linked List Elements.`],
+'217. Contains Duplicate': [`Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.`,
+`var containsDuplicate = function(nums) {
+  let uniqs = {};
+  for(var i = 0; i < nums.length; i++) {
+      if (uniqs[nums[i]] === undefined) {
+          uniqs[nums[i]] += 1;
+      } else {
+          return true;
+      }
+  }
+  return false;
+};`,
+`Runtime: 92 ms, faster than 56.36% of JavaScript online submissions for Contains Duplicate.\n
+Memory Usage: 47.5 MB, less than 11.06% of JavaScript online submissions for Contains Duplicate.`]
 };
 module.exports = algos;

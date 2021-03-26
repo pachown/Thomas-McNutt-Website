@@ -9,7 +9,7 @@ export default function About() {
         <title>Thomas McNutt Website</title>
         <link rel="icon" href="/logo-dark-plain.png" />
         <meta name="keywords" content="web development, programming" />
-      </Head>
+        </Head>
       <main className={Layout.main}>
         <div className={Layout.about}>
           <h2 className={Layout.aboutPar}>Hello! I'm Thomas McNutt, a Software Engineer based out of Denver, CO</h2>
