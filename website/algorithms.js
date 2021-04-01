@@ -281,7 +281,7 @@ Memory Usage: 44.5 MB, less than 5.67% of JavaScript online submissions for Remo
 };`,
 `Runtime: 92 ms, faster than 56.36% of JavaScript online submissions for Contains Duplicate.\n
 Memory Usage: 47.5 MB, less than 11.06% of JavaScript online submissions for Contains Duplicate.`],
-  'Leetcode #292 Nim Game': [`You are playing the following Nim Game with your friend:
+  'LeetCode #292 Nim Game': [`You are playing the following Nim Game with your friend:
 
 Initially, there is a heap of stones on the table.
 You and your friend will alternate taking turns, and you go first.
@@ -292,6 +292,39 @@ Given n, the number of stones in the heap, return true if you can win the game a
     return n%4 !== 0
 };`,
 `Runtime: 68 ms, faster than 95.36% of JavaScript online submissions for Nim Game.\n
-Memory Usage: 38.4 MB, less than 44.37% of JavaScript online submissions for Nim Game.`]
+Memory Usage: 38.4 MB, less than 44.37% of JavaScript online submissions for Nim Game.`],
+  'LeetCode #100 Same Tree': [`Given the roots of two binary trees p and q, write a function to check if they are the same or not.
+
+Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.`,
+`var isSameTree = function(p, q) {
+    //traverse tree the same way with both trees at the same time. If anything isn't identical, return. 
+    let same = true;
+    
+    let searchTree = (pNode, qNode) => {
+  console.log(pNode, qNode)
+        if (pNode === null && qNode !== null) {
+            same = false;
+            return;
+        }
+        if (pNode !== null && qNode === null) {
+            same = false;
+            return;
+        }
+        if (pNode === null && qNode === null) {
+            return;
+        }
+      
+        if (pNode.val !== qNode.val) {
+            same = false;
+            return;
+        }
+        searchTree(pNode.left, qNode.left);
+        searchTree(pNode.right, qNode.right)
+    }
+    searchTree(p, q);
+    return same;
+};`,
+`Runtime: 100 ms, faster than 5.84% of JavaScript online submissions for Same Tree.\n
+Memory Usage: 42.1 MB, less than 6.59% of JavaScript online submissions for Same Tree.`]
 };
 module.exports = algos;
