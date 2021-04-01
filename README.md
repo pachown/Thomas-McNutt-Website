@@ -2,7 +2,7 @@
 
 <br>
 
-This is the repo for my portfolio website made mainly with Next.js, React, Javascript
+This is my portfolio website made with Next.js, React, and Javascript.
 
 <br>
 
@@ -22,6 +22,8 @@ TODO:
 Finish logic for poker game
 Put all pages in a hamburger menu
 Make top bar change to a solid color when scrolling.
+Add analytics
+
 
 ## Author
 
