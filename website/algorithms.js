@@ -348,6 +348,26 @@ Memory Usage: 42.1 MB, less than 6.59% of JavaScript online submissions for Same
     }
 }`,
                                      `ThomasMcNutt solved Find Local Peaks in 17ms in javascript — faster than 93.75%`],
+  'Binary Search Kth Smallest in a Binary Search Tree': [`Given a binary search tree root, and k return the kth (0-indexed) smallest value in root. It is guaranteed that the tree has at least k + 1 nodes.`,
+                                                         `class Solution {
+    solve(root, k) {
+        let vals = [];
+
+        let traverse = (node) => {
+            if(!node){
+                return;
+            }
+            vals.push(node.val);
+            traverse(node.left);
+            traverse(node.right);
+        }
+        traverse(root);
+
+        vals.sort(function(a,b){return a-b});
+        return vals[k];
+    }
+}`,
+                                                         `ThomasMcNutt solved Kth Smallest in a Binary Search Tree in 2ms in javascript — faster than 45.45%`]
   
 };
 module.exports = algos;
