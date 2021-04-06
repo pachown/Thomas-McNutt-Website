@@ -325,6 +325,29 @@ Two binary trees are considered the same if they are structurally identical, and
     return same;
 };`,
 `Runtime: 100 ms, faster than 5.84% of JavaScript online submissions for Same Tree.\n
-Memory Usage: 42.1 MB, less than 6.59% of JavaScript online submissions for Same Tree.`]
+Memory Usage: 42.1 MB, less than 6.59% of JavaScript online submissions for Same Tree.`],
+  'Binary Search Find Local Peaks': [`You are given a list of integers nums. Return the index of every peak in the list, sorted in ascending order. An index i is called a peak if`,
+                                     `class Solution {
+    solve(nums) {
+        if(nums.length === 0 || nums.length === 1) {
+            return [];
+        }
+        let peaks = [];
+        for(let i = 0; i < nums.length; i++) {
+            if (i === 0 && nums[i] > nums[i+1]){
+                peaks.push(i);
+            } else if (i === nums.length-1 && nums[i] > nums[i-1]){
+                peaks.push(i);
+            } else if (nums[i-1] < nums[i] && nums[i] > nums[i+1]) {
+                peaks.push(i)
+            }
+
+        }
+        return peaks;
+
+    }
+}`,
+                                     `ThomasMcNutt solved Find Local Peaks in 17ms in javascript — faster than 93.75%`],
+  
 };
 module.exports = algos;
