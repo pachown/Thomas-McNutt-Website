@@ -1,4 +1,4 @@
-const deck = [
+const Deck = [
   {"code": "KH", "image": "https://deckofcardsapi.com/static/img/KH.png"},
   {"code": "3C", "image": "https://deckofcardsapi.com/static/img/3C.png"},
   {"code": "TS", "image": "https://deckofcardsapi.com/static/img/0S.png"},
@@ -56,9 +56,8 @@ const deck = [
 
 let shuffled = [];
 module.exports = {
-  deck,
-  shuffled: function(deck1) {
-    let shuffled = deck1
+  shuffled: function() {
+    let shuffled = Deck.slice()
     .map((a) => ({ sort: Math.random(), value: a}))
     .sort((a, b) => a.sort - b.sort)
     .map((a) => a.value);

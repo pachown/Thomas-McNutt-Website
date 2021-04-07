@@ -26,22 +26,36 @@ export default function Casino() {
 
   let handleStart = () => {
     //set bet round to disable bet controls
-    setBetRound = (true);
+    setBetRound(true);
     // subtract bet from money
-      setMoney = (money - bet);
+    setMoney(money - bet);
     // get new deck
-      setDeck = (Start());
-    // use handleDeal for each slot in cards array
-    // reset card holding
-    // disable betting
+    let hand, tempDeck = Start();
+    // use handleDeal to draw 5 cards
+    [hand, tempDeck] = handleDeal(5, tempDeck);
+    setCards(hand);
+    setDeck(tempDeck);
   }
 
-  let handleDeal = (deck) => {
-    //deal one card off the deck
+  let handleDeal = (cardsToDraw, deck) => {
+    let cards = [];
+    let tempDeck = deck.slice();
+    for(var i = 0; i < cardsToDraw; i++) {
+      cards.push(tempDeck.pop())
+    }
+    setDeck(tempDeck);
+    return [cards, deck];
+  }
+
+  let handleDraw = () => {
+    //draw one card for every not-held position in the array
+    //insert new cards in the not-held card slots
+    //send hand to handleEnd function
   }
 
   let handleEnd = () => {
     //calculate final hand and winnings
+      //send final hand and bet amt to solver
 
     //add winnings to money(if any)
 
@@ -75,11 +89,11 @@ export default function Casino() {
           Last Hand: {handInfo[0]} Won: {handInfo[1]}
         </div>
         <div className={PokerStyles.holdbtns}>
-          <button className={PokerStyles.holdbtn}>HOLD</button>
-          <button className={PokerStyles.holdbtn}>HOLD</button>
-          <button className={PokerStyles.holdbtn}>HOLD</button>
-          <button className={PokerStyles.holdbtn}>HOLD</button>
-          <button className={PokerStyles.holdbtn}>HOLD</button>
+          <button className={PokerStyles.holdbtn} onClick={()=> handleHold(0)}>HOLD</button>
+          <button className={PokerStyles.holdbtn} onClick={()=> handleHold(1)}>HOLD</button>
+          <button className={PokerStyles.holdbtn} onClick={()=> handleHold(2)}>HOLD</button>
+          <button className={PokerStyles.holdbtn} onClick={()=> handleHold(3)}>HOLD</button>
+          <button className={PokerStyles.holdbtn} onClick={()=> handleHold(4)}>HOLD</button>
         </div>
         <div className={PokerStyles.betBar}>
           <button className={PokerStyles.betBtn}>BET</button>

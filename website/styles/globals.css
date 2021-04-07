@@ -9,6 +9,7 @@ html{
   /* background-image: url("/wood-background.jpeg"); */
   background-size: contain;
 }
+button:focus {outline:0;}
 
 /* a {
   color: inherit;

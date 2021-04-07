@@ -3,7 +3,8 @@ const Deck = require('./DeckData.js');
 
 //use deck function to create a deck and send it back to the client
 var Start = () => {
-  return Deck.shuffled;
+
+  return Deck.shuffled();
 }
 
 //drawing will be done client-side, randomly out of the deck
@@ -13,10 +14,14 @@ var Start = () => {
 var Winner = (hand, multiplier) => {
   //Solved hand - Lots of data to parse through
   let solvedHand = Hand.solve(hand);
+
   //Will need to rewrite this later with accurate data parsing
   let description = solvedHand.description;
+  console.log(solvedHand);
+
   //Find winnings by comparing hand name to known winning hands
   let winnings = victoryPoints[description] * multiplier;
+
   //pits given hand against best possible hand that isn't a pair of jacks [10,10,A,K,Q]
   //if given hand is worse, return 0 and the hand title
 
