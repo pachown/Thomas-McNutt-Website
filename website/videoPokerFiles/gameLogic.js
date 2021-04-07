@@ -13,11 +13,17 @@ var Start = () => {
 //after the second round, the client will ping this algo with the hand, asking for a winner
 var Winner = (hand, multiplier) => {
   //Solved hand - Lots of data to parse through
-  let solvedHand = Hand.solve(hand);
+  let parsedHand = [];
+  hand.forEach((card)=>{parsedHand.push(card.code)})
+  let solvedHand = Hand.solve(parsedHand);
+  let info = {
+    winnings: 0,
+    description: 'none',
+  }
 
   //Will need to rewrite this later with accurate data parsing
   let description = solvedHand.description;
-  console.log(solvedHand);
+  console.log('solved hand',solvedHand, description);
 
   //Find winnings by comparing hand name to known winning hands
   let winnings = victoryPoints[description] * multiplier;
@@ -27,6 +33,7 @@ var Winner = (hand, multiplier) => {
 
   //if given hand is victor, compare that hand's title to the victoryPoints array
     //return the score times multiplier and the hand title
+
 }
 
 var victoryPoints = {

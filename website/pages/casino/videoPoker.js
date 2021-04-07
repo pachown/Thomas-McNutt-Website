@@ -9,7 +9,7 @@ export default function Casino() {
   const [money,setMoney] = useState(100);
   const [cards, setCards] = useState([{image: 'https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', code: undefined},{image: 'https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', code: undefined},{ image: 'https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', code: undefined},{ image: 'https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', code: undefined},{image: 'https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', code: undefined}]);
   const [bet, setBet] = useState(1);
-  const [held, setHeld] = useState(0);
+  const [held, setHeld] = useState([false, false, false, false, false]);
   const [deck, setDeck] = useState(undefined);
   const [handInfo, setHandInfo] = useState(['Full House Jacks full of threes', 10]);
   const [betRound, setBetRound] = useState(false);
@@ -30,38 +30,56 @@ export default function Casino() {
     // subtract bet from money
     setMoney(money - bet);
     // get new deck
-    let hand, tempDeck = Start();
+    let tempDeck = Start();
     // use handleDeal to draw 5 cards
-    [hand, tempDeck] = handleDeal(5, tempDeck);
+    let hand = handleDeal(5, tempDeck);
     setCards(hand);
-    setDeck(tempDeck);
   }
 
-  let handleDeal = (cardsToDraw, deck) => {
+  let handleDeal = (cardsToDraw, tempDeck) => {
     let cards = [];
-    let tempDeck = deck.slice();
     for(var i = 0; i < cardsToDraw; i++) {
       cards.push(tempDeck.pop())
     }
     setDeck(tempDeck);
-    return [cards, deck];
+    return cards;
   }
 
   let handleDraw = () => {
     //draw one card for every not-held position in the array
+    let tempCards = cards.slice();
+    let tempDeck = deck.slice();
+    let tempHeld = held.slice();
     //insert new cards in the not-held card slots
-    //send hand to handleEnd function
+   for(var i = 0; i < 5; i++) {
+    console.log(tempDeck);
+    if (tempHeld[i] === false) {
+      tempCards[i] = tempDeck.pop();
+    }
+   }
+   setCards(tempCards);
+   //send hand to handleEnd function
+   handleEnd(tempCards);
   }
 
-  let handleEnd = () => {
+  let handleHold = (cardPosition) => {
+    let tempHeld = held.slice();
+    tempHeld[cardPosition] = !tempHeld[cardPosition];
+    setHeld(tempHeld);
+  }
+
+  let handleEnd = (hand) => {
     //calculate final hand and winnings
-      //send final hand and bet amt to solver
+
+    //send final hand and bet amt to solver
+    let info = Winner(hand, bet);
 
     //add winnings to money(if any)
 
     //display final hand to DOM
 
     //re-enable bet controls
+    setBetRound(false);
   }
 
   return (
@@ -95,6 +113,7 @@ export default function Casino() {
           <button className={PokerStyles.holdbtn} onClick={()=> handleHold(3)}>HOLD</button>
           <button className={PokerStyles.holdbtn} onClick={()=> handleHold(4)}>HOLD</button>
         </div>
+        {betRound === false &&
         <div className={PokerStyles.betBar}>
           <button className={PokerStyles.betBtn}>BET</button>
           <button className={PokerStyles.betBtn} onClick={() => handleBet(1)}>+</button>
@@ -103,6 +122,12 @@ export default function Casino() {
           <button className={PokerStyles.betBtn} onClick={() => handleStart()}>New Round</button>
           <div className={PokerStyles.betAmt}>Bet {bet}</div>
         </div>
+        }
+        {betRound === true &&
+        <div className={PokerStyles.betBar}>
+          <button className={PokerStyles.holdbtn} onClick={() => handleDraw()}>DRAW</button>
+        </div>
+        }
       </main>
       <main className={PokerStyles.info}>
         <table className={PokerStyles.table}>
