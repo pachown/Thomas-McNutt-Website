@@ -52,7 +52,6 @@ export default function Casino() {
     let tempHeld = held.slice();
     //insert new cards in the not-held card slots
    for(var i = 0; i < 5; i++) {
-    console.log(tempDeck);
     if (tempHeld[i] === false) {
       tempCards[i] = tempDeck.pop();
     }
@@ -73,6 +72,7 @@ export default function Casino() {
 
     //send final hand and bet amt to solver
     let info = Winner(hand, bet);
+    console.log(info);
 
     //add winnings to money(if any)
 
@@ -80,6 +80,7 @@ export default function Casino() {
 
     //re-enable bet controls
     setBetRound(false);
+    setHeld([false, false, false, false, false]);
   }
 
   return (

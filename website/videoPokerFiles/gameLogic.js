@@ -16,17 +16,18 @@ var Winner = (hand, multiplier) => {
   let parsedHand = [];
   hand.forEach((card)=>{parsedHand.push(card.code)})
   let solvedHand = Hand.solve(parsedHand);
-  let info = {
-    winnings: 0,
-    description: 'none',
-  }
 
   //Will need to rewrite this later with accurate data parsing
-  let description = solvedHand.description;
-  console.log('solved hand',solvedHand, description);
+  let description = solvedHand.descr;
+  // console.log('solved hand',solvedHand);
 
   //Find winnings by comparing hand name to known winning hands
-  let winnings = victoryPoints[description] * multiplier;
+  let bestWin = '';
+  for(var i = 0; i < handsToBeat.length; i++) {
+    // console.log(handsToBeat[i].hand, solvedHand);
+    let winner = Hand.winners([solvedHand, handsToBeat[i].hand]);
+    console.log(winner);
+  }
 
   //pits given hand against best possible hand that isn't a pair of jacks [10,10,A,K,Q]
   //if given hand is worse, return 0 and the hand title
@@ -34,7 +35,20 @@ var Winner = (hand, multiplier) => {
   //if given hand is victor, compare that hand's title to the victoryPoints array
     //return the score times multiplier and the hand title
 
+  // return [description, winnings * multiplier];
 }
+
+var handsToBeat = [
+  {name: 'Royal Flush', hand: Hand.solve(['9H','TH','JH','QH','KH'])},
+  {name: 'Strait Flush', hand: Hand.solve(['2H','3H','4H','5H','6H'])},
+  {name: 'Four of a kind', hand: Hand.solve(['AH','AS','AC','KH','KS'])},
+  {name: 'Full House', hand: Hand.solve(['AH','KH','QH','JH','9H'])},
+  {name: 'Flush', hand: Hand.solve(['AH','KS','QD','JH','TH'])},
+  {name: 'Strait', hand: Hand.solve(['AH','AS','AC','KH','QH'])},
+  {name: 'Three of a Kind', hand: Hand.solve(['AH','AC','KH','KC','QH'])},
+  {name: 'Two Pair', hand: Hand.solve(['AH','AC','KH','QH','JH'])},
+  {name: 'Jacks or Better', hand: Hand.solve(['TH','TS','AH','KH','QH'])},
+]
 
 var victoryPoints = {
   'Royal Flush': 250,
@@ -46,6 +60,7 @@ var victoryPoints = {
   'Three of a Kind': 3,
   'Two Pair': 2,
   'Jacks or Better': 1,
+  'High Card': 0,
 }
 
 module.exports = {Start, Winner};
