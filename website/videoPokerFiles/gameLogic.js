@@ -17,25 +17,27 @@ var Winner = (hand, multiplier) => {
   hand.forEach((card)=>{parsedHand.push(card.code)})
   let solvedHand = Hand.solve(parsedHand);
 
-  //Will need to rewrite this later with accurate data parsing
-  let description = solvedHand.descr;
-  // console.log('solved hand',solvedHand);
-
   //Find winnings by comparing hand name to known winning hands
-  let bestWin = '';
+  let points = 0;
   for(var i = 0; i < handsToBeat.length; i++) {
     // console.log(handsToBeat[i].hand, solvedHand);
     let winner = Hand.winners([solvedHand, handsToBeat[i].hand]);
-    console.log(winner);
+    if (winner[0].cardPool === solvedHand.cardPool) {
+      points = victoryPoints[handsToBeat[i].name];
+      break;
+    }
   }
-
+  console.log(solvedHand.descr, points);
   //pits given hand against best possible hand that isn't a pair of jacks [10,10,A,K,Q]
   //if given hand is worse, return 0 and the hand title
 
   //if given hand is victor, compare that hand's title to the victoryPoints array
     //return the score times multiplier and the hand title
 
-  // return [description, winnings * multiplier];
+  return {
+    description: solvedHand.descr,
+    pts: points * multiplier
+  };
 }
 
 var handsToBeat = [

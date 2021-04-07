@@ -11,7 +11,7 @@ export default function Casino() {
   const [bet, setBet] = useState(1);
   const [held, setHeld] = useState([false, false, false, false, false]);
   const [deck, setDeck] = useState(undefined);
-  const [handInfo, setHandInfo] = useState(['Full House Jacks full of threes', 10]);
+  const [handInfo, setHandInfo] = useState(['No Hand Played Yet', 0]);
   const [betRound, setBetRound] = useState(false);
 
   let handleBet = (num) => {
@@ -72,11 +72,11 @@ export default function Casino() {
 
     //send final hand and bet amt to solver
     let info = Winner(hand, bet);
-    console.log(info);
 
     //add winnings to money(if any)
-
+    setMoney(money + info.pts);
     //display final hand to DOM
+    setHandInfo([info.description, info.pts]);
 
     //re-enable bet controls
     setBetRound(false);
