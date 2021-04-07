@@ -325,6 +325,49 @@ Two binary trees are considered the same if they are structurally identical, and
     return same;
 };`,
 `Runtime: 100 ms, faster than 5.84% of JavaScript online submissions for Same Tree.\n
-Memory Usage: 42.1 MB, less than 6.59% of JavaScript online submissions for Same Tree.`]
+Memory Usage: 42.1 MB, less than 6.59% of JavaScript online submissions for Same Tree.`],
+  'Binary Search Find Local Peaks': [`You are given a list of integers nums. Return the index of every peak in the list, sorted in ascending order. An index i is called a peak if`,
+                                     `class Solution {
+    solve(nums) {
+        if(nums.length === 0 || nums.length === 1) {
+            return [];
+        }
+        let peaks = [];
+        for(let i = 0; i < nums.length; i++) {
+            if (i === 0 && nums[i] > nums[i+1]){
+                peaks.push(i);
+            } else if (i === nums.length-1 && nums[i] > nums[i-1]){
+                peaks.push(i);
+            } else if (nums[i-1] < nums[i] && nums[i] > nums[i+1]) {
+                peaks.push(i)
+            }
+
+        }
+        return peaks;
+
+    }
+}`,
+                                     `ThomasMcNutt solved Find Local Peaks in 17ms in javascript — faster than 93.75%`],
+  'Binary Search Kth Smallest in a Binary Search Tree': [`Given a binary search tree root, and k return the kth (0-indexed) smallest value in root. It is guaranteed that the tree has at least k + 1 nodes.`,
+                                                         `class Solution {
+    solve(root, k) {
+        let vals = [];
+
+        let traverse = (node) => {
+            if(!node){
+                return;
+            }
+            vals.push(node.val);
+            traverse(node.left);
+            traverse(node.right);
+        }
+        traverse(root);
+
+        vals.sort(function(a,b){return a-b});
+        return vals[k];
+    }
+}`,
+                                                         `ThomasMcNutt solved Kth Smallest in a Binary Search Tree in 2ms in javascript — faster than 45.45%`]
+  
 };
 module.exports = algos;
