@@ -160,15 +160,15 @@ export default function Casino() {
           </tr>
           <tr className={PokerStyles.tr}>
             <th className={PokerStyles.th}>STRAIT</th>
-            <th className={PokerStyles.th}>4</th>
+            <th className={PokerStyles.th}>5</th>
           </tr>
           <tr className={PokerStyles.tr}>
             <th className={PokerStyles.th}>THREE OF A KIND</th>
-            <th className={PokerStyles.th}>3</th>
+            <th className={PokerStyles.th}>4</th>
           </tr>
           <tr className={PokerStyles.tr}>
             <th className={PokerStyles.th}>TWO PAIR</th>
-            <th className={PokerStyles.th}>2</th>
+            <th className={PokerStyles.th}>3</th>
           </tr>
           <tr className={PokerStyles.tr}>
             <th className={PokerStyles.th}>JACK PAIR OR BETTER</th>
