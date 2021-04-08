@@ -115,7 +115,7 @@ export default function Casino() {
           <button className={held[3] ? PokerStyles.clickedHoldBtn : PokerStyles.holdbtn} onClick={()=> handleHold(3)}>HOLD</button>
           <button className={held[4] ? PokerStyles.clickedHoldBtn : PokerStyles.holdbtn} onClick={()=> handleHold(4)}>HOLD</button>
         </div>
-        {betRound === false &&
+        {!betRound &&
         <div className={PokerStyles.betBar}>
           <button className={PokerStyles.betBtn}>BET</button>
           <button className={PokerStyles.betBtn} onClick={() => handleBet(1)}>+</button>
@@ -125,7 +125,7 @@ export default function Casino() {
           <div className={PokerStyles.betAmt}>Bet {bet}</div>
         </div>
         }
-        {betRound === true &&
+        {betRound &&
         <div className={PokerStyles.betBar}>
           <button className={PokerStyles.holdbtn} onClick={() => handleDraw()}>DRAW</button>
         </div>
