@@ -15,8 +15,8 @@ export default function Casino() {
   const [betRound, setBetRound] = useState(false);
 
   let handleBet = (num) => {
-    if (bet+num >= 16) {
-      setBet(15);
+    if (bet+num >= 51) {
+      setBet(50);
     } else if (bet+num <= 0) {
       setBet(1);
     } else {
@@ -120,7 +120,7 @@ export default function Casino() {
           <button className={PokerStyles.betBtn}>BET</button>
           <button className={PokerStyles.betBtn} onClick={() => handleBet(1)}>+</button>
           <button className={PokerStyles.betBtn} onClick={() => handleBet(-1)}>-</button>
-          <button className={PokerStyles.betBtn} onClick={() => handleBet(15)}>MAX BET</button>
+          <button className={PokerStyles.betBtn} onClick={() => handleBet(50)}>MAX BET</button>
           <button className={PokerStyles.betBtn} onClick={() => handleStart()}>New Round</button>
           <div className={PokerStyles.betAmt}>Bet {bet}</div>
         </div>
