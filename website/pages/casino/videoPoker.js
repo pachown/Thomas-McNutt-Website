@@ -33,6 +33,7 @@ export default function Casino() {
     let tempDeck = Start();
     // use handleDeal to draw 5 cards
     let hand = handleDeal(5, tempDeck);
+     setHeld([false, false, false, false, false]);
     setCards(hand);
   }
 
@@ -58,7 +59,6 @@ export default function Casino() {
    }
    setCards(tempCards);
     //reset hold options
-    setHeld([false, false, false, false, false]);
    //send hand to handleEnd function
    handleEnd(tempCards);
   }
