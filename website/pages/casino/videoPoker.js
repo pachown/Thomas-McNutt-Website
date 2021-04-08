@@ -57,6 +57,8 @@ export default function Casino() {
     }
    }
    setCards(tempCards);
+    //reset hold options
+    setHeld([false, false, false, false, false]);
    //send hand to handleEnd function
    handleEnd(tempCards);
   }
@@ -80,7 +82,6 @@ export default function Casino() {
 
     //re-enable bet controls
     setBetRound(false);
-    setHeld([false, false, false, false, false]);
   }
 
   return (
