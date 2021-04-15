@@ -368,7 +368,7 @@ Memory Usage: 42.1 MB, less than 6.59% of JavaScript online submissions for Same
     }
 }`,
 `ThomasMcNutt solved Kth Smallest in a Binary Search Tree in 2ms in javascript — faster than 45.45%`],
-'LeetCode #303. Range Sum Query - Immutable' : [`Given an integer array nums, find the sum of the elements between indices left and right inclusive, where (left <= right).`,
+'LeetCode #303 Range Sum Query - Immutable' : [`Given an integer array nums, find the sum of the elements between indices left and right inclusive, where (left <= right).`,
 `var NumArray = function(nums) {
   this.nums = nums;
 };
@@ -380,7 +380,25 @@ NumArray.prototype.sumRange = function(left, right) {
   }
   return total;
 };`,`Runtime: 172 ms, faster than 35.61% of JavaScript online submissions for Range Sum Query - Immutable. \n
-Memory Usage: 45.6 MB, less than 50.47% of JavaScript online submissions for Range Sum Query - Immutable.`]
+Memory Usage: 45.6 MB, less than 50.47% of JavaScript online submissions for Range Sum Query - Immutable.`],
+'LeetCode #1154 Day of the Year' : [`Given a string date representing a Gregorian calendar date formatted as YYYY-MM-DD, return the day number of the year.`,
+`var dayOfYear = function(date) {
+  let monthsTotaled = [0, 31, 59, 90, 120, 151, 181, 212,243,273,304,334]
+  let month = parseInt(date.slice(5,7)) -1;
+  if (month < 10){
+      month === date.slice(6,7) - 1;
+  }
+  let year = parseInt(date.slice(0,5));
+  let leapYear = year % 4 === 0 && month > 1 ? true : false;
+  if (year % 100 === 0 && year % 400 !== 0) {
+      leapYear = false;
+  }
+  let day = parseInt(date.slice(8));
+  day = leapYear ? day += 1 : day;
+  return monthsTotaled[month] + day;
+};`,
+`Runtime: 84 ms, faster than 50.49% of JavaScript online submissions for Day of the Year.\n
+Memory Usage: 38.6 MB, less than 87.38% of JavaScript online submissions for Day of the Year.`],
 
 };
 module.exports = algos;
