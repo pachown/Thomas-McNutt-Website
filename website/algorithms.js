@@ -399,6 +399,34 @@ Memory Usage: 45.6 MB, less than 50.47% of JavaScript online submissions for Ran
 };`,
 `Runtime: 84 ms, faster than 50.49% of JavaScript online submissions for Day of the Year.\n
 Memory Usage: 38.6 MB, less than 87.38% of JavaScript online submissions for Day of the Year.`],
+'LeetCode #1160 Find Words That Can Be Formed by Characters' : [`You are given an array of strings words and a string chars.
+
+A string is good if it can be formed by characters from chars (each character can only be used once).
+
+Return the sum of lengths of all good strings in words.`,`var countCharacters = function(words, chars) {
+  //create length variable
+  let len = 0;
+
+  //for loop through the words array
+  for( let i = 0; i < words.length; i++) {
+      let charsArr = chars.split('');
+      for (let j = 0; j < words[i].length; j++) {
+          let index = charsArr.indexOf(words[i][j]);
+          if(index !== -1) {
+              charsArr.splice(index, 1);
+          } else {
+              break;
+          }
+          if (j + 1 === words[i].length) {
+              console.log(words[i])
+              len += words[i].length;
+          }
+      }
+  }
+  return len;
+};`,
+`Runtime: 128 ms, faster than 70.59% of JavaScript online submissions for Find Words That Can Be Formed by Characters. \n
+Memory Usage: 46.4 MB, less than 70.29% of JavaScript online submissions for Find Words That Can Be Formed by Characters.`];
 
 };
 module.exports = algos;
