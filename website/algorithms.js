@@ -426,7 +426,43 @@ Return the sum of lengths of all good strings in words.`,`var countCharacters = 
   return len;
 };`,
 `Runtime: 128 ms, faster than 70.59% of JavaScript online submissions for Find Words That Can Be Formed by Characters. \n
-Memory Usage: 46.4 MB, less than 70.29% of JavaScript online submissions for Find Words That Can Be Formed by Characters.`];
+Memory Usage: 46.4 MB, less than 70.29% of JavaScript online submissions for Find Words That Can Be Formed by Characters.`],
+'LeetCode #1496 Path Crossing' : [`Given a string path, where path[i] = 'N', 'S', 'E' or 'W', each representing moving one unit north, south, east, or west, respectively. You start at the origin (0, 0) on a 2D plane and walk on the path specified by path.
+
+Return True if the path crosses itself at any point, that is, if at any time you are on a location you've previously visited. Return False otherwise.`,
+`var isPathCrossing = function(path) {
+  let visitedPaths = [];
+  let currX = 0;
+  let currY = 0;
+
+  while (path.length > 0) {
+          visitedPaths.push(`${currX}${currY}`);
+      if (path[0] === 'N'){
+          currY++;
+      }
+      if (path[0] === 'S') {
+          currY--;
+      }
+       if (path[0] === 'E') {
+          currX++;
+      }
+       if (path[0] === 'W') {
+          currX--;
+      }
+
+      path = path.slice(1);
+      if(path.length === 0) {
+               visitedPaths.push(`${currX}${currY}`);
+      }
+  }
+
+ const paths = [...new Set(visitedPaths)];
+     console.log(visitedPaths, paths)
+ return paths.length !== visitedPaths.length;
+};`,
+`Runtime: 108 ms, faster than 9.73% of JavaScript online submissions for Path Crossing. \n
+Memory Usage: 46.5 MB, less than 5.31% of JavaScript online submissions for Path Crossing.`]
+
 
 };
 module.exports = algos;
