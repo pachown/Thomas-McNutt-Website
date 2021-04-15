@@ -58,9 +58,9 @@ var victoryPoints = {
   'Four of a kind': 25,
   'Full House': 9,
   'Flush': 6,
-  'Strait': 4,
-  'Three of a Kind': 3,
-  'Two Pair': 2,
+  'Strait': 5,
+  'Three of a Kind': 4,
+  'Two Pair': 3,
   'Jacks or Better': 1,
   'High Card': 0,
 }
