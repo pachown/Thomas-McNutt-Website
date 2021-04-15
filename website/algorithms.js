@@ -457,11 +457,10 @@ Return True if the path crosses itself at any point, that is, if at any time you
   }
 
  const paths = [...new Set(visitedPaths)];
-     console.log(visitedPaths, paths)
  return paths.length !== visitedPaths.length;
 };`,
-`Runtime: 108 ms, faster than 9.73% of JavaScript online submissions for Path Crossing. \n
-Memory Usage: 46.5 MB, less than 5.31% of JavaScript online submissions for Path Crossing.`]
+`Runtime: 84 ms, faster than 30.09% of JavaScript online submissions for Path Crossing. \n
+Memory Usage: 42.8 MB, less than 18.58% of JavaScript online submissions for Path Crossing.`]
 
 
 };
