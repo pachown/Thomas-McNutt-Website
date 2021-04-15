@@ -297,9 +297,9 @@ Memory Usage: 38.4 MB, less than 44.37% of JavaScript online submissions for Nim
 
 Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.`,
 `var isSameTree = function(p, q) {
-    //traverse tree the same way with both trees at the same time. If anything isn't identical, return. 
+    //traverse tree the same way with both trees at the same time. If anything isn't identical, return.
     let same = true;
-    
+
     let searchTree = (pNode, qNode) => {
   console.log(pNode, qNode)
         if (pNode === null && qNode !== null) {
@@ -313,7 +313,7 @@ Two binary trees are considered the same if they are structurally identical, and
         if (pNode === null && qNode === null) {
             return;
         }
-      
+
         if (pNode.val !== qNode.val) {
             same = false;
             return;
@@ -367,7 +367,20 @@ Memory Usage: 42.1 MB, less than 6.59% of JavaScript online submissions for Same
         return vals[k];
     }
 }`,
-                                                         `ThomasMcNutt solved Kth Smallest in a Binary Search Tree in 2ms in javascript — faster than 45.45%`]
-  
+`ThomasMcNutt solved Kth Smallest in a Binary Search Tree in 2ms in javascript — faster than 45.45%`],
+'LeetCode #303. Range Sum Query - Immutable' : [`Given an integer array nums, find the sum of the elements between indices left and right inclusive, where (left <= right).`,
+`var NumArray = function(nums) {
+  this.nums = nums;
+};
+
+NumArray.prototype.sumRange = function(left, right) {
+  let total = 0;
+  for(let i = left; i <= right; i++) {
+      total += this.nums[i];
+  }
+  return total;
+};`,`Runtime: 172 ms, faster than 35.61% of JavaScript online submissions for Range Sum Query - Immutable. \n
+Memory Usage: 45.6 MB, less than 50.47% of JavaScript online submissions for Range Sum Query - Immutable.`]
+
 };
 module.exports = algos;
