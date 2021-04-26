@@ -12,9 +12,6 @@ const Footer = ({ children }) => {
         <SocialIcon url="https://github.com/pachown" />
 
         <br />
-        <a>
-          Phone: 720-840-9658
-        </a>
         <br />
         <a href="mailto:Pachown@gmail.com">
           Email Me
