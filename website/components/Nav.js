@@ -6,12 +6,12 @@ const Nav = ({ children }) => {
     <nav className={navStyles.nav}>
       <div className={navStyles.mainListDiv} className={navStyles.main_list}>
         <ul className={navStyles.navLinks}>
-          <li>
+          {/* <li>
             <img className={navStyles.mug} src="Thomas-McNutt-Photo.png"></img>
-          </li>
+          </li> */}
           <li>
             <p className={navStyles.name}>
-              {'!!Thomas R McNutt'}
+              {'Thomas R McNutt'}
               </p>
           </li>
         </ul>

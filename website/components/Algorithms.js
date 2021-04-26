@@ -12,10 +12,10 @@ const Algorithms = ({ children }) => {
 
   return (
     <div className={styles.algos}>
-        <h2 className={styles.blog}><em>Welcome to my algorithm a day blog!</em></h2>
-        <h2 className={styles.blog2}><em> I list the prompt, my solution, and the results from the Leetcode solution.</em>
+        <h2 className={styles.blog}><em>Welcome to my algorithm blog!</em></h2>
+        <h2 className={styles.blog2}><em> First the question, then MY solution, and then my results according to the website</em>
           </h2>
-      {data !== null && (
+      {data && (
           Object.keys(data).map((algo) =>
             <div className={styles.algoaday}>
               <div className={styles.date}> {algo}</div>

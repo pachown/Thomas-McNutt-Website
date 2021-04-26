@@ -436,7 +436,7 @@ Return True if the path crosses itself at any point, that is, if at any time you
   let currY = 0;
 
   while (path.length > 0) {
-          visitedPaths.push(`${currX}${currY}`);
+          visitedPaths.push('{currX}{currY}');
       if (path[0] === 'N'){
           currY++;
       }
@@ -452,7 +452,7 @@ Return True if the path crosses itself at any point, that is, if at any time you
 
       path = path.slice(1);
       if(path.length === 0) {
-               visitedPaths.push(`${currX}${currY}`);
+               visitedPaths.push('\${currX}\${currY});
       }
   }
 
@@ -460,7 +460,27 @@ Return True if the path crosses itself at any point, that is, if at any time you
  return paths.length !== visitedPaths.length;
 };`,
 `Runtime: 84 ms, faster than 30.09% of JavaScript online submissions for Path Crossing. \n
-Memory Usage: 42.8 MB, less than 18.58% of JavaScript online submissions for Path Crossing.`]
+Memory Usage: 42.8 MB, less than 18.58% of JavaScript online submissions for Path Crossing.`],
+'LeetCode #383 Ransom Note': [`Given an arbitrary ransom note string and another string containing letters from all the magazines, write a function that will return true if the ransom note can be constructed from the magazines ; otherwise, it will return false.
+
+Each letter in the magazine string can only be used once in your ransom note.`,
+`var canConstruct = function(ransomNote, magazine) {
+  ransomNote = ransomNote.split("");
+  magazine =  magazine.split("");
+
+  for(let i = 0; i < ransomNote.length; i++) {
+      let index = magazine.indexOf(ransomNote[i]);
+      if (index !== -1) {
+           magazine.splice(index, 1);
+      } else {
+          return false;
+      }
+  }
+
+      return true;
+  };`,
+  `Runtime: 92 ms, faster than 91.65% of JavaScript online submissions for Ransom Note. \n
+  Memory Usage: 42.5 MB, less than 34.61% of JavaScript online submissions for Ransom Note.`],
 
 
 };
