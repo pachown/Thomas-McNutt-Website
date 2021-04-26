@@ -12,7 +12,7 @@ export default function About() {
       </Head>
       <main className={Layout.main}>
         <div className={Layout.about}>
-          <h2 >Hello! I'm Thomas McNutt, a Software Engineer based out of Denver, CO. I build things on the internet such as this <a href="thomas-mcnutt-website.vercel.app">website</a>, this <a href="thomas-mcnutt-website.vercel.app/casino/videoPoker">casino game</a> and this <a href="thomas-mcnutt-website.vercel.app/algos">blog</a> filled with my solutions for common coding algorithms. </h2>
+          <h2 >Hello! I'm Thomas McNutt, a Software Engineer based out of Denver, CO. I build things on the internet such as this <a href="/">website</a>, this <a href="/casino/videoPoker">casino game</a> and this <a href="/algos">blog</a> filled with my solutions for common coding algorithms. </h2>
             <h3>
               <a className={Layout.download} href="Thomas McNutt Resume.pdf" download>Download My Resume</a>
             </h3>
