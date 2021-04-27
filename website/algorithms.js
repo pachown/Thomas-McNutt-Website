@@ -5,6 +5,19 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+  'LeetCode 1281 Subtract the Product and Sum of Digits of an Integer':[``,
+   `var subtractProductAndSum = function(n) {
+    let sum = 1;
+    let product = 0;
+    let separate = JSON.stringify(n).split("");
+    for(var i = 0; i < separate.length; i++) {
+        sum *= parseInt(separate[i]);
+        product += parseInt(separate[i]);
+    }
+    return sum-product;
+};`,
+   `Runtime: 84 ms, faster than 15.24% of JavaScript online submissions for Subtract the Product and Sum of Digits of an Integer. \n
+Memory Usage: 38.5 MB, less than 87.68% of JavaScript online submissions for Subtract the Product and Sum of Digits of an Integer.`],
   'LeetCode #559 Maximum Depth of N-ary Tree': [`Given a n-ary tree, find its maximum depth.
 
 The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.`,
