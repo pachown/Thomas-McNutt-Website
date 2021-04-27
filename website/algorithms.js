@@ -5,6 +5,29 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+  'LeetCode #559 Maximum Depth of N-ary Tree': [`Given a n-ary tree, find its maximum depth.
+
+The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.`,
+`var maxDepth = function(root) {
+   if (!root) {
+       return 0;
+   }
+    let max = 1;
+    
+    let searchTree = (node, curr) => {
+        if (!node || node.children.length === 0) {
+                if (curr > max) {
+                max = curr;
+            }
+        } else {
+           node.children.forEach(child => searchTree(child, curr + 1));
+        }
+    }
+    searchTree(root, max);
+    return max;
+};`,
+   `Runtime: 88 ms, faster than 86.23% of JavaScript online submissions for Maximum Depth of N-ary Tree. \n
+Memory Usage: 41.6 MB, less than 69.15% of JavaScript online submissions for Maximum Depth of N-ary Tree.`],
   'LeetCode #283 Move Zeroes': [
     'Given an array of numbers, write a function to move all the 0\'s to the end while maintaining the relative order of the non-zero elements',
     `My Solution: Var moveZeroes = function(nums) {\n
