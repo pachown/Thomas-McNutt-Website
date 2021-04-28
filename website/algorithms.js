@@ -5,6 +5,29 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+  'LeetCode 136 Single Number': [`Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+
+  Follow up: Could you implement a solution with a linear runtime complexity and without using extra memory?`,
+  `var singleNumber = function(nums) {
+    if(nums.length === 1) return nums[0];
+    let storage = {};
+    for(let i = 0; i < nums.length; i++) {
+        if (storage[nums[i]] === undefined) {
+            storage[nums[i]] = 1;
+        } else {
+            storage[nums[i]] = 2;
+        }
+    }
+
+    for(let key in storage) {
+
+        if (storage[key] === 1) {
+            return key;
+        }
+    }
+};`,
+`Runtime: 100 ms, faster than 38.20% of JavaScript online submissions for Single Number.\n
+Memory Usage: 44.2 MB, less than 33.71% of JavaScript online submissions for Single Number.`],
   'LeetCode 1281 Subtract the Product and Sum of Digits of an Integer':[``,
    `var subtractProductAndSum = function(n) {
     let sum = 1;
@@ -26,7 +49,7 @@ The maximum depth is the number of nodes along the longest path from the root no
        return 0;
    }
     let max = 1;
-    
+
     let searchTree = (node, curr) => {
         if (!node || node.children.length === 0) {
                 if (curr > max) {
