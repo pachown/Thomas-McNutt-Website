@@ -27,8 +27,8 @@ let algos = {
     }
 };`,
 `Runtime: 100 ms, faster than 38.20% of JavaScript online submissions for Single Number.\n
-Memory Usage: 44.2 MB, less than 33.71% of JavaScript online submissions for Single Number.`],
-  'LeetCode 1281 Subtract the Product and Sum of Digits of an Integer':[``,
+Memory Usage: 44.2 MB, less than 33.71% of JavaScript online submissions for Single Number.`,'Javascript'],
+  'LeetCode 1281 Subtract the Product and Sum of Digits of an Integer':[`Given an integer number n, return the difference between the product of its digits and the sum of its digits.`,
    `var subtractProductAndSum = function(n) {
     let sum = 1;
     let product = 0;
@@ -40,7 +40,7 @@ Memory Usage: 44.2 MB, less than 33.71% of JavaScript online submissions for Sin
     return sum-product;
 };`,
    `Runtime: 84 ms, faster than 15.24% of JavaScript online submissions for Subtract the Product and Sum of Digits of an Integer. \n
-Memory Usage: 38.5 MB, less than 87.68% of JavaScript online submissions for Subtract the Product and Sum of Digits of an Integer.`],
+Memory Usage: 38.5 MB, less than 87.68% of JavaScript online submissions for Subtract the Product and Sum of Digits of an Integer.`,'Javascript'],
   'LeetCode #559 Maximum Depth of N-ary Tree': [`Given a n-ary tree, find its maximum depth.
 
 The maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.`,
@@ -63,7 +63,7 @@ The maximum depth is the number of nodes along the longest path from the root no
     return max;
 };`,
    `Runtime: 88 ms, faster than 86.23% of JavaScript online submissions for Maximum Depth of N-ary Tree. \n
-Memory Usage: 41.6 MB, less than 69.15% of JavaScript online submissions for Maximum Depth of N-ary Tree.`],
+Memory Usage: 41.6 MB, less than 69.15% of JavaScript online submissions for Maximum Depth of N-ary Tree.`,'Javascript'],
   'LeetCode #283 Move Zeroes': [
     'Given an array of numbers, write a function to move all the 0\'s to the end while maintaining the relative order of the non-zero elements',
     `My Solution: Var moveZeroes = function(nums) {\n
@@ -85,7 +85,7 @@ Memory Usage: 41.6 MB, less than 69.15% of JavaScript online submissions for Max
     `Test Input = [0,1,0,3,12]\n
     Test Output = [1,3,12,0,0]\n
     passes 98% faster & 87% less memory`
-  ],
+    ,'Javascript'],
   'LeetCode #807 Max Increase To Keep City Skylines': [ `In a 2 dimensional array grid, each value grid[i][j] represents the height of a building located there. We are allowed to increase the height of any number of buildings, by any amount (the amounts can be different for different buildings). Height 0 is considered to be a building as well.
 
   At the end, the "skyline" when viewed from all four directions of the grid, i.e. top, bottom, left, and right, must be the same as the skyline of the original grid. A city's skyline is the outer contour of the rectangles formed by all the buildings when viewed from a distance. See the following example.
@@ -124,21 +124,19 @@ Memory Usage: 41.6 MB, less than 69.15% of JavaScript online submissions for Max
       }
     }
     return increases;
-  };
-
-  console.log(maxIncreaseKeepingSkyline([[3, 0, 8, 4], [2, 4, 5, 7], [9, 2, 6, 3], [0, 3, 1, 0]]));`
+  };`
   ,
   `
   Runtime: 220 ms, faster than 5.68% of JavaScript online submissions for Max Increase to Keep City Skyline. \n
   Memory Usage: 40 MB, less than 43.67% of JavaScript online submissions for Max Increase to Keep City Skyline.
-  `],
+  `,'Javascript'],
 'LeetCode #595 Big Countries': [
   `A country is big if it has an area of bigger than 3 million square km or a population of more than 25 million.
   Write a SQL solution to output big countries name, population and area.`,
   `My Solution: SELECT name, population, area FROM world
   WHERE population > 25000000 OR area > 3000000`,
   `Runtime: 220 ms, faster than 87.37% of MySQL online submissions for Big Countries.\n
-  Memory Usage: 0B, less than 100.00% of MySQL online submissions for Big Countries.`,
+  Memory Usage: 0B, less than 100.00% of MySQL online submissions for Big Countries.`,'Javascript'
 ],
 'LeetCode #1732 Find The Highest Altitude': [
   `There is a biker going on a road trip. The road trip consists of n + 1 points at different altitudes. The biker starts his trip on point 0 with altitude equal 0.
@@ -156,7 +154,8 @@ Memory Usage: 41.6 MB, less than 69.15% of JavaScript online submissions for Max
     return highest;
 };`,
 `Runtime: 80 ms, faster than 61.27% of JavaScript online submissions for Find the Highest Altitude.\n
-Memory Usage: 38.9 MB, less than 17.07% of JavaScript online submissions for Find the Highest Altitude.`
+Memory Usage: 38.9 MB, less than 17.07% of JavaScript online submissions for Find the Highest Altitude.`,
+'Javascript'
 ],
 'LeetCode #55 Jump Game': [` Given an array of non-negative integers, you are initially positioned at the first index of the array. Each element in the array represents your maximum jump length at that position.
 
@@ -190,7 +189,7 @@ recurseTraverse(0);
 
 return traverse;
 };
-`,`Time limit exceeded`],
+`,`Time limit exceeded`,'Javascript'],
 'LeetCode #14 Longest Common Prefix': [`Write a function to find the longest common prefix string amongst an array of strings.
 
 If there is no common prefix, return an empty string "".`, `   // I - array of strings
@@ -219,7 +218,7 @@ for (var i = 1; i < strs.length; i++) {
 //return the remaining comparison once all is done
 return compare;
 };`, `Runtime: 92 ms, faster than 43.37% of JavaScript online submissions for Longest Common Prefix.\n
-Memory Usage: 40.8 MB, less than 19.62% of JavaScript online submissions for Longest Common Prefix.`],
+Memory Usage: 40.8 MB, less than 19.62% of JavaScript online submissions for Longest Common Prefix.`,'Javascript'],
 'LeetCode #53 Maximum Subarray': [`Given an integer array nums, find the contiguous subarray (containing at least one number) which has the largest sum and return its sum.`,
 `// I-array of nums
 // O-largest sum of contiguous nums
@@ -255,14 +254,14 @@ var maxSubArray = function(nums) {
     //return max total
     return max;
 };`,`Runtime: 220 ms, faster than 6.02% of JavaScript online submissions for Maximum Subarray.\n
-Memory Usage: 39.2 MB, less than 65.96% of JavaScript online submissions for Maximum Subarray.`],
+Memory Usage: 39.2 MB, less than 65.96% of JavaScript online submissions for Maximum Subarray.`,'Javascript'],
 'LeetCode #69': [`Given a non-negative integer x, compute and return the square root of x.
 
 Since the return type is an integer, the decimal digits are truncated, and only the integer part of the result is returned.`,
 `var mySqrt = function(x) {
   return Math.floor(Math.sqrt(x))
 };`,`Runtime: 88 ms, faster than 95.01% of JavaScript online submissions for Sqrt(x).\n
-Memory Usage: 39.8 MB, less than 83.57% of JavaScript online submissions for Sqrt(x).`],
+Memory Usage: 39.8 MB, less than 83.57% of JavaScript online submissions for Sqrt(x).`,'Javascript'],
   'LeetCode #704 Binary Search': [`Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.`,
   `var search = function(nums, target) {
 let left = 0
@@ -282,7 +281,7 @@ while (left <= right) {
 return -1
 };`,
   `Runtime: 80 ms, faster than 80.58% of JavaScript online submissions for Binary Search.\n
-  Memory Usage: 42.8 MB, less than 9.15% of JavaScript online submissions for Binary Search.`],
+  Memory Usage: 42.8 MB, less than 9.15% of JavaScript online submissions for Binary Search.`,'Javascript'],
   'LeetCode #237 Delete Node in a Linked List without head' : [`Write a function to delete a node in a singly-linked list.
 You will not be given access to the head of the list, instead you will be given access to the node to be deleted directly.
 It is guaranteed that the node to be deleted is not a tail node in the list.`,
@@ -291,7 +290,7 @@ It is guaranteed that the node to be deleted is not a tail node in the list.`,
     node.next = node.next.next;
 };`,
 `Runtime: 88 ms, faster than 68.33% of JavaScript online submissions for Delete Node in a Linked List.
-Memory Usage: 40.4 MB, less than 74.28% of JavaScript online submissions for Delete Node in a Linked List.`],
+Memory Usage: 40.4 MB, less than 74.28% of JavaScript online submissions for Delete Node in a Linked List.`,'Javascript'],
   'LeetCode #203 Remove Linked List Elements': [`Given the head of a linked list and an integer val, remove all the nodes of the linked list that has Node.val == val, and return the new head.`,
                                                 `var removeElements = function(head, val) {
     if (head === null) {
@@ -325,7 +324,7 @@ Memory Usage: 40.4 MB, less than 74.28% of JavaScript online submissions for Del
     return head;
 };`,
  `Runtime: 100 ms, faster than 55.45% of JavaScript online submissions for Remove Linked List Elements. \n
-Memory Usage: 44.5 MB, less than 5.67% of JavaScript online submissions for Remove Linked List Elements.`],
+Memory Usage: 44.5 MB, less than 5.67% of JavaScript online submissions for Remove Linked List Elements.`,'Javascript'],
 'LeetCode #217 Contains Duplicate': [`Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.`,
 `var containsDuplicate = function(nums) {
   let uniqs = {};
@@ -339,7 +338,7 @@ Memory Usage: 44.5 MB, less than 5.67% of JavaScript online submissions for Remo
   return false;
 };`,
 `Runtime: 92 ms, faster than 56.36% of JavaScript online submissions for Contains Duplicate.\n
-Memory Usage: 47.5 MB, less than 11.06% of JavaScript online submissions for Contains Duplicate.`],
+Memory Usage: 47.5 MB, less than 11.06% of JavaScript online submissions for Contains Duplicate.`,'Javascript'],
   'LeetCode #292 Nim Game': [`You are playing the following Nim Game with your friend:
 
 Initially, there is a heap of stones on the table.
@@ -351,7 +350,7 @@ Given n, the number of stones in the heap, return true if you can win the game a
     return n%4 !== 0
 };`,
 `Runtime: 68 ms, faster than 95.36% of JavaScript online submissions for Nim Game.\n
-Memory Usage: 38.4 MB, less than 44.37% of JavaScript online submissions for Nim Game.`],
+Memory Usage: 38.4 MB, less than 44.37% of JavaScript online submissions for Nim Game.`,'Javascript'],
   'LeetCode #100 Same Tree': [`Given the roots of two binary trees p and q, write a function to check if they are the same or not.
 
 Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.`,
@@ -384,7 +383,7 @@ Two binary trees are considered the same if they are structurally identical, and
     return same;
 };`,
 `Runtime: 100 ms, faster than 5.84% of JavaScript online submissions for Same Tree.\n
-Memory Usage: 42.1 MB, less than 6.59% of JavaScript online submissions for Same Tree.`],
+Memory Usage: 42.1 MB, less than 6.59% of JavaScript online submissions for Same Tree.`,'Javascript'],
   'Binary Search Find Local Peaks': [`You are given a list of integers nums. Return the index of every peak in the list, sorted in ascending order. An index i is called a peak if`,
                                      `class Solution {
     solve(nums) {
@@ -406,7 +405,7 @@ Memory Usage: 42.1 MB, less than 6.59% of JavaScript online submissions for Same
 
     }
 }`,
-                                     `ThomasMcNutt solved Find Local Peaks in 17ms in javascript — faster than 93.75%`],
+                                     `ThomasMcNutt solved Find Local Peaks in 17ms in javascript — faster than 93.75%`,'Javascript'],
   'Binary Search Kth Smallest in a Binary Search Tree': [`Given a binary search tree root, and k return the kth (0-indexed) smallest value in root. It is guaranteed that the tree has at least k + 1 nodes.`,
                                                          `class Solution {
     solve(root, k) {
@@ -426,7 +425,7 @@ Memory Usage: 42.1 MB, less than 6.59% of JavaScript online submissions for Same
         return vals[k];
     }
 }`,
-`ThomasMcNutt solved Kth Smallest in a Binary Search Tree in 2ms in javascript — faster than 45.45%`],
+`ThomasMcNutt solved Kth Smallest in a Binary Search Tree in 2ms in javascript — faster than 45.45%`,'Javascript'],
 'LeetCode #303 Range Sum Query - Immutable' : [`Given an integer array nums, find the sum of the elements between indices left and right inclusive, where (left <= right).`,
 `var NumArray = function(nums) {
   this.nums = nums;
@@ -439,7 +438,7 @@ NumArray.prototype.sumRange = function(left, right) {
   }
   return total;
 };`,`Runtime: 172 ms, faster than 35.61% of JavaScript online submissions for Range Sum Query - Immutable. \n
-Memory Usage: 45.6 MB, less than 50.47% of JavaScript online submissions for Range Sum Query - Immutable.`],
+Memory Usage: 45.6 MB, less than 50.47% of JavaScript online submissions for Range Sum Query - Immutable.`,'Javascript'],
 'LeetCode #1154 Day of the Year' : [`Given a string date representing a Gregorian calendar date formatted as YYYY-MM-DD, return the day number of the year.`,
 `var dayOfYear = function(date) {
   let monthsTotaled = [0, 31, 59, 90, 120, 151, 181, 212,243,273,304,334]
@@ -457,7 +456,7 @@ Memory Usage: 45.6 MB, less than 50.47% of JavaScript online submissions for Ran
   return monthsTotaled[month] + day;
 };`,
 `Runtime: 84 ms, faster than 50.49% of JavaScript online submissions for Day of the Year.\n
-Memory Usage: 38.6 MB, less than 87.38% of JavaScript online submissions for Day of the Year.`],
+Memory Usage: 38.6 MB, less than 87.38% of JavaScript online submissions for Day of the Year.`,'Javascript'],
 'LeetCode #1160 Find Words That Can Be Formed by Characters' : [`You are given an array of strings words and a string chars.
 
 A string is good if it can be formed by characters from chars (each character can only be used once).
@@ -485,7 +484,7 @@ Return the sum of lengths of all good strings in words.`,`var countCharacters = 
   return len;
 };`,
 `Runtime: 128 ms, faster than 70.59% of JavaScript online submissions for Find Words That Can Be Formed by Characters. \n
-Memory Usage: 46.4 MB, less than 70.29% of JavaScript online submissions for Find Words That Can Be Formed by Characters.`],
+Memory Usage: 46.4 MB, less than 70.29% of JavaScript online submissions for Find Words That Can Be Formed by Characters.`,'Javascript'],
 'LeetCode #1496 Path Crossing' : [`Given a string path, where path[i] = 'N', 'S', 'E' or 'W', each representing moving one unit north, south, east, or west, respectively. You start at the origin (0, 0) on a 2D plane and walk on the path specified by path.
 
 Return True if the path crosses itself at any point, that is, if at any time you are on a location you've previously visited. Return False otherwise.`,
@@ -519,7 +518,7 @@ Return True if the path crosses itself at any point, that is, if at any time you
  return paths.length !== visitedPaths.length;
 };`,
 `Runtime: 84 ms, faster than 30.09% of JavaScript online submissions for Path Crossing. \n
-Memory Usage: 42.8 MB, less than 18.58% of JavaScript online submissions for Path Crossing.`],
+Memory Usage: 42.8 MB, less than 18.58% of JavaScript online submissions for Path Crossing.`,'Javascript'],
 'LeetCode #383 Ransom Note': [`Given an arbitrary ransom note string and another string containing letters from all the magazines, write a function that will return true if the ransom note can be constructed from the magazines ; otherwise, it will return false.
 
 Each letter in the magazine string can only be used once in your ransom note.`,
@@ -539,7 +538,7 @@ Each letter in the magazine string can only be used once in your ransom note.`,
       return true;
   };`,
   `Runtime: 92 ms, faster than 91.65% of JavaScript online submissions for Ransom Note. \n
-  Memory Usage: 42.5 MB, less than 34.61% of JavaScript online submissions for Ransom Note.`],
+  Memory Usage: 42.5 MB, less than 34.61% of JavaScript online submissions for Ransom Note.`,'Javascript'],
 
 
 };
