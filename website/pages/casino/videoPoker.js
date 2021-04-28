@@ -15,8 +15,8 @@ export default function Casino() {
   const [betRound, setBetRound] = useState(false);
 
   let handleBet = (num) => {
-    if (bet+num >= 11) {
-      setBet(10);
+    if (bet+num >= 51) {
+      setBet(50);
     } else if (bet+num <= 0) {
       setBet(1);
     } else {
@@ -94,7 +94,7 @@ export default function Casino() {
         <div className={PokerStyles.topBar}>
           <div className={PokerStyles.money}>Cash: ${money}</div>
           <div className={PokerStyles.gametype}>JACKS OR BETTER TO WIN!</div>
-          <div className={PokerStyles.gametype}>**Hit New Round To Start**</div>
+          <div className={PokerStyles.gametype}>**Press New Round To Start**</div>
         </div>
         <div className={PokerStyles.cardTable}>
           <div className={PokerStyles.cards}>
@@ -108,6 +108,7 @@ export default function Casino() {
         <div className={PokerStyles.handInfo}>
           Last Hand: {handInfo[0]} Won: {handInfo[1]}
         </div>
+        {betRound &&
         <div className={PokerStyles.holdbtns}>
           <button className={held[0] ? PokerStyles.clickedHoldBtn : PokerStyles.holdbtn} onClick={()=> handleHold(0)}>HOLD</button>
           <button className={held[1] ? PokerStyles.clickedHoldBtn : PokerStyles.holdbtn} onClick={()=> handleHold(1)}>HOLD</button>
@@ -115,12 +116,16 @@ export default function Casino() {
           <button className={held[3] ? PokerStyles.clickedHoldBtn : PokerStyles.holdbtn} onClick={()=> handleHold(3)}>HOLD</button>
           <button className={held[4] ? PokerStyles.clickedHoldBtn : PokerStyles.holdbtn} onClick={()=> handleHold(4)}>HOLD</button>
         </div>
-        {betRound === false &&
+        }
+        {!betRound &&
         <div className={PokerStyles.betBar}>
           <button className={PokerStyles.betBtn}>BET</button>
           <button className={PokerStyles.betBtn} onClick={() => handleBet(1)}>+</button>
           <button className={PokerStyles.betBtn} onClick={() => handleBet(-1)}>-</button>
-          <button className={PokerStyles.betBtn} onClick={() => handleBet(15)}>MAX BET</button>
+          <button className={PokerStyles.betBtn} onClick={() => {
+            handleBet(50)
+            handleStart()
+            }}>MAX BET</button>
           <button className={PokerStyles.betBtn} onClick={() => handleStart()}>New Round</button>
           <div className={PokerStyles.betAmt}>Bet {bet}</div>
         </div>
