@@ -1,18 +1,28 @@
 .main {
-  margin-top:200px;
-  width: 800px;
-  height: 600px;
+  margin-top:6em;
+  width: 35em;
+  height: 25em;
   background-color: rgb(53, 45, 45);
-  border: 1px solid white;
+  border: .1em solid white;
+  font-size: 2.2em;
+  border: .1em solid white;
+  border-radius: 1em;
+}
+.pokerHands {
+  margin-top: 6em;
+  width: 20em;
+  height: 15em;
+  background-color: rgb(53, 45, 45);
+  border: .1em solid white;
   font-size: 2.2em;
   border: 1px solid white;
-  border-radius: 35px;
+  border-radius: 5em;
 }
 
 .info {
-  margin-top: 100px;
-  width:300px;
-  height: 430px;
+  margin-top: 6em;
+  width: 15em;
+  height: 15em;
   background-color: rgb(53,45,45);
   border: 1px solid white;
   color: white;
@@ -26,9 +36,9 @@
 }
 
 .td, .th {
-  border: 1px solid white;
+  border: .1em solid white;
   text-align: left;
-  padding: 8px;
+  padding: .1em;
 }
 
 .tr:nth-child(even) {
@@ -36,7 +46,7 @@
 }
 
 .tableHeader {
-border-bottom: 2px solid white;
+border-bottom: .2em solid white;
 }
 
 .container {
@@ -49,7 +59,7 @@ border-bottom: 2px solid white;
 }
 
 .topBar {
-  padding-top: 50px;
+  padding-top: 1em;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -65,9 +75,9 @@ border-bottom: 2px solid white;
 }
 
 .cardTable {
-  height: 300px;
+  height: 12em;
   width: 100%;
-  border-radius: 150px;
+  border-radius: 5em;
   background-color: rgb(12, 170, 12);
 }
 
@@ -78,11 +88,11 @@ border-bottom: 2px solid white;
 }
 
 .card {
-padding-top: 50px;
-height: 185px;
+padding-top: 3em;
+height: 7em;
 width: auto;
-padding-left:5px;
-padding-right:5px;
+padding-left:0.2em;
+padding-right:0.2em;
 }
 
 .handInfo {
@@ -91,9 +101,9 @@ padding-right:5px;
 }
 
 .holdbtns {
-padding-top: 20px;
-padding-left: 75px;
-padding-right: 75px;
+padding-top: 1em;
+padding-left: 2em;
+padding-right: 2em;
 display: flex;
 flex-direction: row;
 justify-content: space-between;
@@ -104,12 +114,12 @@ background:rgb(53, 45, 45);
 color: white;
 font-size: 1.5em;
 background-color: rgb(53,45,45);
-border-radius: 25px;
+border-radius: 2em;
 border-color:white;
-border-top: 1.5px solid white;
-border-bottom: 2px solid rgb(12, 170, 12);
-border-right: 2px solid black;
-border-left: 2px solid black;
+border-top: .1em solid white;
+border-bottom: .1em solid rgb(12, 170, 12);
+border-right: .1em solid black;
+border-left: .1em solid black;
 }
 
 .holdbtn:hover {
@@ -120,12 +130,12 @@ border-left: 2px solid black;
   color: rgb(20, 19, 19);
   font-size: 1.5em;
   background-color: rgb(243, 234, 234);
-  border-radius: 25px;
+  border-radius: 2em;
   border-color:rgb(20, 19, 19);
-  border-top: 1.5px solid white;
-  border-bottom: 2px solid rgb(12, 170, 12);
-  border-right: 2px solid black;
-  border-left: 2px solid black;
+  border-top: .1em solid white;
+  border-bottom: .1em solid rgb(12, 170, 12);
+  border-right: .1em solid black;
+  border-left: .1em solid black;
 }
 
 .clickedHoldBtn {
@@ -136,18 +146,18 @@ border-left: 2px solid black;
 display: flex;
 flex-direction: row;
 justify-content: space-evenly;
-margin-top: 50px;
+margin-top: 3em;
 }
 
 .betBtn {
 color: white;
 font-size: 1.4em;
 background-color: rgb(53, 45, 45);
-border-radius:25px;
-border-top: 1.5px solid white;
-border-bottom: 2px solid rgb(12, 170, 12);
-border-right: 2px solid rgb(27, 26, 26);
-border-left: 2px solid black;
+border-radius: 2em;
+border-top: .1em solid white;
+border-bottom: .1em solid rgb(12, 170, 12);
+border-right: .1em solid rgb(27, 26, 26);
+border-left: .1em solid black;
 }
 .betBtn:hover {
   background-color: rgb(134, 11, 11);
@@ -157,12 +167,28 @@ border-left: 2px solid black;
   color:rgb(12, 170, 12);
   font-weight: 800;
   font-size: 1.5em;
-  border-top: 1.5px solid white;
-border-bottom:2px solid rgb(12, 170, 12);
-border-right: 2px solid rgb(27, 26, 26);
-border-left: 2px solid black;
-border-radius: 10px;
+  border-top: .1em solid white;
+border-bottom: .1em solid rgb(12, 170, 12);
+border-right: .1em solid rgb(27, 26, 26);
+border-left: .1em solid black;
+border-radius: 1em;
 }
 .betAmt:hover {
   background-color: rgb(134, 11, 11);
+}
+
+@media (max-width: 1080px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+  .main {
+    margin: 0px;
+    width: 100vh;
+    height: 100vh;
+    transform:rotate(90deg);
+  }
+  .info {
+    display: none;
+  }
 }

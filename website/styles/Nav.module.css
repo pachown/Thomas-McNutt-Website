@@ -141,8 +141,8 @@
 /* Animation */
 /* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
 
-@media all and (max-width:700px){
-  .myP {
-    padding:2%;
-  }
+@media (max-width: 1080px) {
+    .nav {
+        display: none;
+    }
 }

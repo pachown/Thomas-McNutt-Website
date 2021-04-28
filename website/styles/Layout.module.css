@@ -161,9 +161,17 @@
   border-right: 2px solid rgb(118, 127, 211);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1080px) {
   .grid {
     width: 100%;
     flex-direction: column;
   }
+  .main {
+    width: 100%;
+    flex-direction: column;
+  }
+  .footer {
+    display: none;
+  }
+
 }

@@ -15,8 +15,8 @@ export default function Casino() {
   const [betRound, setBetRound] = useState(false);
 
   let handleBet = (num) => {
-    if (bet+num >= 51) {
-      setBet(50);
+    if (bet+num >= 11) {
+      setBet(10);
     } else if (bet+num <= 0) {
       setBet(1);
     } else {
@@ -33,7 +33,6 @@ export default function Casino() {
     let tempDeck = Start();
     // use handleDeal to draw 5 cards
     let hand = handleDeal(5, tempDeck);
-     setHeld([false, false, false, false, false]);
     setCards(hand);
   }
 
@@ -58,7 +57,6 @@ export default function Casino() {
     }
    }
    setCards(tempCards);
-    //reset hold options
    //send hand to handleEnd function
    handleEnd(tempCards);
   }
@@ -82,6 +80,7 @@ export default function Casino() {
 
     //re-enable bet controls
     setBetRound(false);
+    setHeld([false, false, false, false, false]);
   }
 
   return (
@@ -116,17 +115,17 @@ export default function Casino() {
           <button className={held[3] ? PokerStyles.clickedHoldBtn : PokerStyles.holdbtn} onClick={()=> handleHold(3)}>HOLD</button>
           <button className={held[4] ? PokerStyles.clickedHoldBtn : PokerStyles.holdbtn} onClick={()=> handleHold(4)}>HOLD</button>
         </div>
-        {!betRound &&
+        {betRound === false &&
         <div className={PokerStyles.betBar}>
           <button className={PokerStyles.betBtn}>BET</button>
           <button className={PokerStyles.betBtn} onClick={() => handleBet(1)}>+</button>
           <button className={PokerStyles.betBtn} onClick={() => handleBet(-1)}>-</button>
-          <button className={PokerStyles.betBtn} onClick={() => handleBet(50)}>MAX BET</button>
+          <button className={PokerStyles.betBtn} onClick={() => handleBet(15)}>MAX BET</button>
           <button className={PokerStyles.betBtn} onClick={() => handleStart()}>New Round</button>
           <div className={PokerStyles.betAmt}>Bet {bet}</div>
         </div>
         }
-        {betRound &&
+        {betRound === true &&
         <div className={PokerStyles.betBar}>
           <button className={PokerStyles.holdbtn} onClick={() => handleDraw()}>DRAW</button>
         </div>
@@ -136,7 +135,7 @@ export default function Casino() {
         <table className={PokerStyles.table}>
           <tbody>
           <tr className={PokerStyles.tr}>
-            <th className={PokerStyles.th}> Hand Rank</th>
+            <th className={PokerStyles.th}>Hand Rank</th>
             <th className={PokerStyles.th}>Winnings</th>
           </tr>
           <tr className={PokerStyles.tr}>
@@ -161,15 +160,15 @@ export default function Casino() {
           </tr>
           <tr className={PokerStyles.tr}>
             <th className={PokerStyles.th}>STRAIT</th>
-            <th className={PokerStyles.th}>5</th>
-          </tr>
-          <tr className={PokerStyles.tr}>
-            <th className={PokerStyles.th}>THREE OF A KIND</th>
             <th className={PokerStyles.th}>4</th>
           </tr>
           <tr className={PokerStyles.tr}>
-            <th className={PokerStyles.th}>TWO PAIR</th>
+            <th className={PokerStyles.th}>THREE OF A KIND</th>
             <th className={PokerStyles.th}>3</th>
+          </tr>
+          <tr className={PokerStyles.tr}>
+            <th className={PokerStyles.th}>TWO PAIR</th>
+            <th className={PokerStyles.th}>2</th>
           </tr>
           <tr className={PokerStyles.tr}>
             <th className={PokerStyles.th}>JACK PAIR OR BETTER</th>

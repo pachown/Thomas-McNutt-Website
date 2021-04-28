@@ -5,7 +5,7 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
-  'LeetCode 136 Single Number': [`Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
+  'LeetCode #136 Single Number': [`Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
 
   Follow up: Could you implement a solution with a linear runtime complexity and without using extra memory?`,
   `var singleNumber = function(nums) {
@@ -28,7 +28,7 @@ let algos = {
 };`,
 `Runtime: 100 ms, faster than 38.20% of JavaScript online submissions for Single Number.\n
 Memory Usage: 44.2 MB, less than 33.71% of JavaScript online submissions for Single Number.`,'Javascript'],
-  'LeetCode 1281 Subtract the Product and Sum of Digits of an Integer':[`Given an integer number n, return the difference between the product of its digits and the sum of its digits.`,
+  'LeetCode #1281 Subtract the Product and Sum of Digits of an Integer':[`Given an integer number n, return the difference between the product of its digits and the sum of its digits.`,
    `var subtractProductAndSum = function(n) {
     let sum = 1;
     let product = 0;
