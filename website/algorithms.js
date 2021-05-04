@@ -5,6 +5,36 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+  'Leetcode #728 Self Dividing Numbers':[` A self-dividing number is a number that is divisible by every digit it contains.
+
+For example, 128 is a self-dividing number because 128 % 1 == 0, 128 % 2 == 0, and 128 % 8 == 0.
+
+Also, a self-dividing number is not allowed to contain the digit zero.
+
+Given a lower and upper number bound, output a list of every possible self dividing number, including the bounds if possible. `,
+    `var selfDividingNumbers = function(left, right) {
+    let allAnswers = [];
+    for(var i = left; i <= right; i++) {
+        if (isSelfDividing(i)) {
+            allAnswers.push(i);
+        };
+    }
+ return allAnswers;
+};
+
+var isSelfDividing = (num) => {
+    let digits = Array.from(String(num), Number);
+    let legit = true
+    // console.log(digits, num, num % digit);
+    digits.forEach((digit) => {
+        if (num % digit !== 0 || num === 0){
+            legit = false;
+            }
+    })
+    return legit;
+}`,
+    `Runtime: 84 ms, faster than 67.29% of JavaScript online submissions for Self Dividing Numbers.
+Memory Usage: 44.4 MB, less than 15.96% of JavaScript online submissions for Self Dividing Numbers.`]
   'LeetCode #136 Single Number': [`Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
 
   Follow up: Could you implement a solution with a linear runtime complexity and without using extra memory?`,
