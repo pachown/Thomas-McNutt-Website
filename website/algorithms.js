@@ -5,6 +5,29 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+  'Leetcode #104 Maximum Depth of Binary Tree':[`Given the root of a binary tree, return its maximum depth.
+
+A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.`,
+   `var maxDepth = function(root) {
+    let answer = 0;
+    if (!root) {
+        return 0;
+    }
+    let recurse = (node, depth)=>{
+        if (!node) {
+            return;
+        }
+        if (depth > answer) {
+            answer = depth;
+        }
+      recurse(node.left, depth + 1);
+      recurse(node.right, depth + 1);
+    }
+    recurse(root, 1);
+    return answer;
+};`,
+     `Runtime: 88 ms, faster than 62.26% of JavaScript online submissions for Maximum Depth of Binary Tree. \n
+Memory Usage: 41.5 MB, less than 60.10% of JavaScript online submissions for Maximum Depth of Binary Tree.`,`Javascript`],
   'Leetcode #728 Self Dividing Numbers':[` A self-dividing number is a number that is divisible by every digit it contains.
 
 For example, 128 is a self-dividing number because 128 % 1 == 0, 128 % 2 == 0, and 128 % 8 == 0.
