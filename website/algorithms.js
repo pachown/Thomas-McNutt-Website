@@ -5,6 +5,40 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+  'Leetcode #682 Baseball Game':[`You are keeping score for a baseball game with strange rules. The game consists of several rounds, where the scores of past rounds may affect future rounds' scores.
+
+At the beginning of the game, you start with an empty record. You are given a list of strings ops, where ops[i] is the ith operation you must apply to the record and is one of the following:
+
+    An integer x - Record a new score of x.
+    "+" - Record a new score that is the sum of the previous two scores. It is guaranteed there will always be two previous scores.
+    "D" - Record a new score that is double the previous score. It is guaranteed there will always be a previous score.
+    "C" - Invalidate the previous score, removing it from the record. It is guaranteed there will always be a previous score.
+
+Return the sum of all the scores on the record.`,
+  `var calPoints = function(ops) {
+    let record = ops.slice();
+    for (let i = 1 ; i < ops.length; i++) {
+        if ( record[i] === 'C'){
+            console.log(record, i)
+            record.splice([i - 1], 2);
+            i -= 2;
+        }
+        if (record[i] === 'D'){
+            record[i] = record[i-1]*2;
+            }
+        if (record[i] === '+'){
+            record[i] = parseInt(record[i-2]) + parseInt(record[i-1]);
+        }
+        
+    }
+    let big = 0;
+    record.reduce((total, score) => {
+        big += parseInt(score)}, 0)
+    return big;
+};`,
+   `Runtime: 160 ms, faster than 6.93% of JavaScript online submissions for Baseball Game.
+Memory Usage: 47.5 MB, less than 5.82% of JavaScript online submissions for Baseball Game.`,
+  `Javascript`]
   'Leetcode #104 Maximum Depth of Binary Tree':[`Given the root of a binary tree, return its maximum depth.
 
 A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.`,
