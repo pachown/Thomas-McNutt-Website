@@ -5,6 +5,51 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+  'LeetCode #824 Goat Latin': [`A sentence S is given, composed of words separated by spaces. Each word consists of lowercase and uppercase letters only.
+
+We would like to convert the sentence to "Goat Latin" (a made-up language similar to Pig Latin.)
+
+The rules of Goat Latin are as follows:
+
+    If a word begins with a vowel (a, e, i, o, or u), append "ma" to the end of the word.
+    For example, the word 'apple' becomes 'applema'.
+     
+    If a word begins with a consonant (i.e. not a vowel), remove the first letter and append it to the end, then add "ma".
+    For example, the word "goat" becomes "oatgma".
+     
+    Add one letter 'a' to the end of each word per its word index in the sentence, starting with 1.
+    For example, the first word gets "a" added to the end, the second word gets "aa" added to the end and so on.
+
+Return the final sentence representing the conversion from S to Goat Latin. `,
+   `var toGoatLatin = function(S) {
+    let words = S.split(" ");
+    let answers = [];
+    let i = 1;
+    words.forEach((word) => {
+        if (word[0].toLowerCase() === 'a' || word[0].toLowerCase() === 'e' || word[0].toLowerCase() === 'i' || word[0].toLowerCase() === 'o' || word[0].toLowerCase() === 'u') {
+            word += 'ma';
+        } else {
+            let letter = word.slice(0, 1);
+            word = word.slice(1, word.length)
+            word += letter + 'ma';
+        }
+        word += addA(i);
+            i++;
+        answers.push(word);
+    })
+    return answers.join(" ");
+};
+
+var addA = function(times){
+    let response = '';
+    for (var i = 0; i < times; i++){
+        response += 'a';
+    }
+    return response;
+}`,
+  `Runtime: 80 ms, faster than 63.43% of JavaScript online submissions for Goat Latin.
+Memory Usage: 38.4 MB, less than 96.76% of JavaScript online submissions for Goat Latin.`,
+  `Javascript`],
   'Leetcode #682 Baseball Game':[`You are keeping score for a baseball game with strange rules. The game consists of several rounds, where the scores of past rounds may affect future rounds' scores.
 
 At the beginning of the game, you start with an empty record. You are given a list of strings ops, where ops[i] is the ith operation you must apply to the record and is one of the following:
