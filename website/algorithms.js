@@ -5,6 +5,43 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+  'Leetcode #806 Number of Lines To Write String': [`You are given a string s of lowercase English letters and an array widths denoting how many pixels wide each lowercase English letter is. Specifically, widths[0] is the width of 'a', widths[1] is the width of 'b', and so on.
+
+You are trying to write s across several lines, where each line is no longer than 100 pixels. Starting at the beginning of s, write as many letters on the first line such that the total width does not exceed 100 pixels. Then, from where you stopped in s, continue writing as many letters as you can on the second line. Continue this process until you have written all of s.
+
+Return an array result of length 2 where:
+
+    result[0] is the total number of lines.
+    result[1] is the width of the last line in pixels.
+`,
+     `public class Solution {
+   public int[] NumberOfLines(int[] widths, string S)
+{
+		Int32 row = 1;
+		Int32 sum = 0;
+		Int32 temp = 0;
+
+		Char[] c = S.ToCharArray();
+		foreach(Char _c in c)
+		{
+				temp = widths[_c - 97];
+				if (sum + temp > 100)
+				{
+						row++;
+						sum = temp;
+				}
+				else
+				{
+						sum += temp;
+				}
+		}
+
+		return new int[2] { row, sum };
+}
+}`,
+    `Runtime: 380 ms, faster than 8.16% of C# online submissions for Number of Lines To Write String.\n
+Memory Usage: 30.4 MB, less than 82.65% of C# online submissions for Number of Lines To Write String.`,
+    `C#`],
   'LeetCode #824 Goat Latin': [`A sentence S is given, composed of words separated by spaces. Each word consists of lowercase and uppercase letters only.
 
 We would like to convert the sentence to "Goat Latin" (a made-up language similar to Pig Latin.)
