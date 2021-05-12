@@ -5,6 +5,38 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+	'LeetCode #326 Power of Three':
+`Given an integer n, return true if it is a power of three. Otherwise, return false.
+
+An integer n is a power of three, if there exists an integer x such that n == 3x.`,
+`public class Solution {
+    public bool IsPowerOfThree(int n) {
+        if (n == 0) {
+            return false;
+        }
+        if (n == 1) {
+            return true;
+        }
+        bool isPower;
+       
+        void Recurse(double num){
+            if (num == 1) {
+                isPower = true;
+                return;
+            } else if (num < 3) {
+                isPower = false;
+            } else {
+                Recurse(num/3);
+            }
+        }
+        Recurse(Convert.ToDouble(n));
+        
+        return isPower;
+    }
+}`,
+`Runtime: 76 ms, faster than 79.11% of C# online submissions for Power of Three. 
+Memory Usage: 17.4 MB, less than 44.74% of C# online submissions for Power of Three.`,
+`C#`],
 	'LeetCode #1 Two Sum':[`Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
 
 You may assume that each input would have exactly one solution, and you may not use the same element twice.
