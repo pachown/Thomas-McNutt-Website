@@ -27,7 +27,7 @@ You can return the answer in any order.`,
             }
         }
         return answer;
-        
+
     }
 }`,
  `Runtime: 236 ms, faster than 82.66% of C# online submissions for Two Sum.
@@ -44,7 +44,7 @@ An integer n is a power of four, if there exists an integer x such that n == 4x.
             return true;
         }
         bool answer = false;
-        
+
         void Recurse(double num) {
             num = num / 4;
             if (num == 1) {
@@ -108,10 +108,10 @@ The rules of Goat Latin are as follows:
 
     If a word begins with a vowel (a, e, i, o, or u), append "ma" to the end of the word.
     For example, the word 'apple' becomes 'applema'.
-     
+
     If a word begins with a consonant (i.e. not a vowel), remove the first letter and append it to the end, then add "ma".
     For example, the word "goat" becomes "oatgma".
-     
+
     Add one letter 'a' to the end of each word per its word index in the sentence, starting with 1.
     For example, the first word gets "a" added to the end, the second word gets "aa" added to the end and so on.
 
@@ -169,7 +169,7 @@ Return the sum of all the scores on the record.`,
         if (record[i] === '+'){
             record[i] = parseInt(record[i-2]) + parseInt(record[i-1]);
         }
-        
+
     }
     let big = 0;
     record.reduce((total, score) => {
@@ -231,7 +231,7 @@ var isSelfDividing = (num) => {
     return legit;
 }`,
     `Runtime: 84 ms, faster than 67.29% of JavaScript online submissions for Self Dividing Numbers.
-Memory Usage: 44.4 MB, less than 15.96% of JavaScript online submissions for Self Dividing Numbers.`]
+Memory Usage: 44.4 MB, less than 15.96% of JavaScript online submissions for Self Dividing Numbers.`],
   'LeetCode #136 Single Number': [`Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
 
   Follow up: Could you implement a solution with a linear runtime complexity and without using extra memory?`,
