@@ -5,6 +5,34 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+	'LeetCode #1 Two Sum':[`Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
+
+You may assume that each input would have exactly one solution, and you may not use the same element twice.
+
+You can return the answer in any order.`,
+`public class Solution {
+    public int[] TwoSum(int[] nums, int target) {
+        //create a loop
+        //search for index of num that will hit target.
+        //if hit, return array with loop index and the indexOf index
+        int[] answer = new int[2];
+        for (int i = 0; i < nums.Length; i++) {
+            int findSolution = Array.IndexOf(nums, target - nums[i]);
+            if (findSolution == i) {findSolution = -1;}
+            if (findSolution != -1)
+            {
+                answer[0] = i;
+                answer[1] = findSolution;
+                break;
+            }
+        }
+        return answer;
+        
+    }
+}`,
+ `Runtime: 236 ms, faster than 82.66% of C# online submissions for Two Sum.
+Memory Usage: 31.5 MB, less than 88.96% of C# online submissions for Two Sum.`,
+ `C#`],
   'LeetCode #342 Power of Four': [`Given an integer n, return true if it is a power of four. Otherwise, return false.
 
 An integer n is a power of four, if there exists an integer x such that n == 4x.`,`public class Solution {
