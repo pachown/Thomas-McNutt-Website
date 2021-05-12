@@ -5,6 +5,36 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+  'LeetCode #342 Power of Four': [`Given an integer n, return true if it is a power of four. Otherwise, return false.
+
+An integer n is a power of four, if there exists an integer x such that n == 4x.`,`public class Solution {
+    public bool IsPowerOfFour(int n) {
+        if (n == 0) {
+            return false;
+        }
+        if (n == 1) {
+            return true;
+        }
+        bool answer = false;
+        
+        void Recurse(double num) {
+            num = num / 4;
+            if (num == 1) {
+                answer = true;
+            } else
+            if (num < 4) {
+                answer = false;
+            } else {
+        Recurse(Convert.ToDouble(num));
+            }
+        }
+        Recurse(n);
+        return answer;
+    }
+}`,
+ `Runtime: 32 ms, faster than 100.00% of C# online submissions for Power of Four.
+Memory Usage: 15.4 MB, less than 53.52% of C# online submissions for Power of Four.`,
+ `C#`],
   'Leetcode #806 Number of Lines To Write String': [`You are given a string s of lowercase English letters and an array widths denoting how many pixels wide each lowercase English letter is. Specifically, widths[0] is the width of 'a', widths[1] is the width of 'b', and so on.
 
 You are trying to write s across several lines, where each line is no longer than 100 pixels. Starting at the beginning of s, write as many letters on the first line such that the total width does not exceed 100 pixels. Then, from where you stopped in s, continue writing as many letters as you can on the second line. Continue this process until you have written all of s.
