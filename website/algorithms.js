@@ -5,7 +5,44 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
-	'LeetCode #326 Power of Three':
+  'LeetCode #290 Word Pattern':[`Given a pattern and a string s, find if s follows the same pattern.
+
+  Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s.`,
+  `var wordPattern = function(pattern, s) {
+    //separate pattern and s into arrays of individual strings
+    let splitPattern = pattern.split("");
+    let splitS = s.split(" ");
+
+    if (splitPattern.length !== splitS.length) {
+        return false;
+    }
+
+    let values = {};
+
+    //forEach loop through array
+        //insert pattern & s combos into an object if the key doesn't exist already.
+        //if key exists but is a different combination, return false;
+
+    for (let i = 0; i < splitPattern.length; i++) {
+        if (values[splitPattern[i]] === undefined || values[splitPattern[i]] === splitS[i]) {
+            values[splitPattern[i]] = splitS[i];
+        } else {
+            return false;
+        }
+    }
+
+let uniqPattern = [... new Set(splitPattern)];
+let uniqS = [... new Set(splitS)];
+if (uniqPattern.length === uniqS.length) {
+    return true;
+} else {
+    return false;
+}
+};`,
+`Runtime: 76 ms, faster than 72.01% of JavaScript online submissions for Word Pattern.\n
+Memory Usage: 38.1 MB, less than 91.98% of JavaScript online submissions for Word Pattern.`,
+`Javascript`],
+	'LeetCode #326 Power of Three': [
 `Given an integer n, return true if it is a power of three. Otherwise, return false.
 
 An integer n is a power of three, if there exists an integer x such that n == 3x.`,
@@ -18,7 +55,7 @@ An integer n is a power of three, if there exists an integer x such that n == 3x
             return true;
         }
         bool isPower;
-       
+
         void Recurse(double num){
             if (num == 1) {
                 isPower = true;
@@ -30,11 +67,11 @@ An integer n is a power of three, if there exists an integer x such that n == 3x
             }
         }
         Recurse(Convert.ToDouble(n));
-        
+
         return isPower;
     }
 }`,
-`Runtime: 76 ms, faster than 79.11% of C# online submissions for Power of Three. 
+`Runtime: 76 ms, faster than 79.11% of C# online submissions for Power of Three.
 Memory Usage: 17.4 MB, less than 44.74% of C# online submissions for Power of Three.`,
 `C#`],
 	'LeetCode #1 Two Sum':[`Given an array of integers nums and an integer target, return indices of the two numbers such that they add up to target.
