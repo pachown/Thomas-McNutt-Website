@@ -5,6 +5,14 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+	'Leetcode #344 Reverse String':[`Write a function that reverses a string. The input string is given as an array of characters s.`,
+	`var reverseString = function(s) {
+    return s.reverse();
+    
+};`,
+	`Runtime: 100 ms, faster than 95.99% of JavaScript online submissions for Reverse String.\n
+Memory Usage: 45.3 MB, less than 97.39% of JavaScript online submissions for Reverse String.`,
+	`Javascript`],
   'LeetCode #290 Word Pattern':[`Given a pattern and a string s, find if s follows the same pattern.
 
   Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s.`,
