@@ -5,6 +5,45 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+	'LeetCode #374 Guess Number Higher or Lower':[`We are playing the Guess Game. The game is as follows:
+
+I pick a number from 1 to n. You have to guess which number I picked.
+
+Every time you guess wrong, I will tell you whether the number I picked is higher or lower than your guess.
+
+You call a pre-defined API int guess(int num), which returns 3 possible results:
+
+    -1: The number I picked is lower than your guess (i.e. pick < num).
+    1: The number I picked is higher than your guess (i.e. pick > num).
+    0: The number I picked is equal to your guess (i.e. pick == num).
+
+Return the number that I picked.`,
+	`var guessNumber = function(n) {
+    if (guess(n) === 0) {
+        return n;
+    }
+    let top = n;
+    let bottom = 1;
+    let attempt = Math.floor((top + bottom) /2);
+    let res = guess(attempt);
+
+    while(res !== 0) {
+        if (res === 1) {
+            bottom = Math.floor((top + bottom) /2);
+            attempt = Math.floor((top + bottom) /2);
+            res = guess(Math.floor((top + bottom) /2));
+        } else {
+            top = Math.floor((top + bottom) /2);
+            attempt = Math.floor((top + bottom) /2);
+             res = guess(Math.floor((top + bottom) /2));
+        }
+    }
+    return attempt;
+
+};`,
+	 `Runtime: 88 ms, faster than 9.64% of JavaScript online submissions for Guess Number Higher or Lower.\n
+Memory Usage: 38.5 MB, less than 27.13% of JavaScript online submissions for Guess Number Higher or Lower.`,
+	 `Javascript`],
 	'LeetCode #367 Valid Perfect Square':[`Given a positive integer num, write a function which returns True if num is a perfect square else False.
 
 Follow up: Do not use any built-in library function such as sqrt.`,
