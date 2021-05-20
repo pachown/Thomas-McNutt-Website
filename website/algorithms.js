@@ -5,6 +5,15 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+	'LeetCode #367 Valid Perfect Square':[`Given a positive integer num, write a function which returns True if num is a perfect square else False.
+
+Follow up: Do not use any built-in library function such as sqrt.`,
+	`var isPerfectSquare = function(num) {
+return (num ** (1/2)) % 1 === 0;
+};`,
+ `Runtime: 100 ms, faster than 16.84% of JavaScript online submissions for Valid Perfect Square.\n
+Memory Usage: 38.3 MB, less than 86.04% of JavaScript online submissions for Valid Perfect Square.`,
+`Javascript`],
 	'Leetcode #344 Reverse String':[`Write a function that reverses a string. The input string is given as an array of characters s.`,
 	`var reverseString = function(s) {
     return s.reverse();
