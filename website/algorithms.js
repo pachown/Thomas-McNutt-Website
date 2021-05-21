@@ -5,6 +5,13 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+  'LeetCode #596 Classes More Than 5 Students':[`There is a table courses with columns: student and class
+
+  Please list out all classes which have more than or equal to 5 students.`,
+  `select class from courses group by class having count(distinct student) >= 5;`,
+  `Runtime: 560 ms, faster than 5.00% of MySQL online submissions for Classes More Than 5 Students.\n
+  Memory Usage: 0B, less than 100.00% of MySQL online submissions for Classes More Than 5 Students.`,
+  `SQL`],
 	'LeetCode #374 Guess Number Higher or Lower':[`We are playing the Guess Game. The game is as follows:
 
 I pick a number from 1 to n. You have to guess which number I picked.
@@ -56,7 +63,7 @@ Memory Usage: 38.3 MB, less than 86.04% of JavaScript online submissions for Val
 	'Leetcode #344 Reverse String':[`Write a function that reverses a string. The input string is given as an array of characters s.`,
 	`var reverseString = function(s) {
     return s.reverse();
-    
+
 };`,
 	`Runtime: 100 ms, faster than 95.99% of JavaScript online submissions for Reverse String.\n
 Memory Usage: 45.3 MB, less than 97.39% of JavaScript online submissions for Reverse String.`,
