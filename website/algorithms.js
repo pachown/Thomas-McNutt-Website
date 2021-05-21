@@ -5,6 +5,30 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+  'LeetCode #229 Majority Element II':[
+    `Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times.`,
+  `var majorityElement = function(nums) {
+    //create array to hold values that appear more than nums.length/3 times
+    let storage = {};
+    let vals = [];
+    for (let i = 0; i < nums.length; i++) {
+        if (storage[nums[i]] === undefined) {
+            storage[nums[i]] = 1;
+        }else {
+            storage[nums[i]]++;
+        }
+    }
+    let majority = nums.length/3;
+    for(let key in storage) {
+        if (storage[key] > majority) {
+            vals.push(key);
+        }
+    }
+    return vals;
+};`,
+  `Runtime: 80 ms, faster than 90.12% of JavaScript online submissions for Majority Element II.
+  Memory Usage: 40.3 MB, less than 76.13% of JavaScript online submissions for Majority Element II.`,
+  `Javascript`],
   'LeetCode #596 Classes More Than 5 Students':[`There is a table courses with columns: student and class
 
   Please list out all classes which have more than or equal to 5 students.`,
