@@ -5,6 +5,26 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+  'LeetCode #1002 Find Common Characters':[`Given an array words of strings made only from lowercase letters, return a list of all characters that show up in all strings within the list (including duplicates).  For example, if a character occurs 3 times in all strings but not 4 times, you need to include that character three times in the final answer.
+
+  You may return the answer in any order.
+
+  `,
+  `var commonChars = function(words) {
+    let common = words[0].split('').filter(char => {
+           for (var i = 1; i < words.length; i++) {
+               if (!words[i].includes(char)) return false;
+               else {
+                   words[i] = words[i].replace(char, '')
+               }
+           }
+           return true;
+       })
+     return common
+   };`,
+   `Runtime: 80 ms, faster than 96.80% of JavaScript online submissions for Find Common Characters.
+   Memory Usage: 41.8 MB, less than 64.80% of JavaScript online submissions for Find Common Characters.`,
+   `Javascript`],
   'LeetCode #999 Available Captures for Rook':[`On an 8 x 8 chessboard, there is exactly one white rook 'R' and some number of white bishops 'B', black pawns 'p', and empty squares '.'.
 
   When the rook moves, it chooses one of four cardinal directions (north, east, south, or west), then moves in that direction until it chooses to stop, reaches the edge of the board, captures a black pawn, or is blocked by a white bishop. A rook is considered attacking a pawn if the rook can capture the pawn on the rook's turn. The number of available captures for the white rook is the number of pawns that the rook is attacking.
