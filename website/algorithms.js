@@ -5,6 +5,92 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+  'LeetCode #999 Available Captures for Rook':[`On an 8 x 8 chessboard, there is exactly one white rook 'R' and some number of white bishops 'B', black pawns 'p', and empty squares '.'.
+
+  When the rook moves, it chooses one of four cardinal directions (north, east, south, or west), then moves in that direction until it chooses to stop, reaches the edge of the board, captures a black pawn, or is blocked by a white bishop. A rook is considered attacking a pawn if the rook can capture the pawn on the rook's turn. The number of available captures for the white rook is the number of pawns that the rook is attacking.
+
+  Return the number of available captures for the white rook.`,
+  `var numRookCaptures = function(board) {
+    //locate Rook (R) location
+    let rook = [];
+    for(var i = 0; i < 8; i++) {
+        for( var j = 0; j < 8; j++) {
+            if (board[i][j] === "R") {
+                rook = [j, i];
+            }
+        }
+    }
+    //find collisions and increment if found
+    let collisions = 0;
+    let findCollisionTop = (x, y) => {
+       if(y < 0) {
+           return;
+       }
+        let pos = board[y][x];
+       if(pos === 'p'){
+           collisions++;
+           return;
+       }
+        if(pos === 'B'){
+            return;
+        }
+        findCollisionTop(x, y - 1);
+    }
+
+    let findCollisionRight = (x, y) => {
+        if (x > 7) {
+            return;
+        }
+        let pos = board[y][x];
+        if(pos === 'p') {
+            collisions++;
+            return;
+        }
+        if(pos === 'B') {
+            return;
+        }
+        findCollisionRight(x + 1, y);
+    }
+
+    let findCollisionLeft = (x, y) => {
+        if (x < 0) {
+            return;
+        }
+        let pos = board[y][x];
+        if(pos === 'p') {
+            collisions++;
+            return;
+        }
+        if(pos === 'B') {
+            return;
+        }
+        findCollisionLeft(x - 1, y);
+    }
+    let findCollisionBottom = (x, y) => {
+        if(y > 7) {
+           return;
+       }
+        let pos = board[y][x];
+       if(pos === 'p'){
+           collisions++;
+           return;
+       }
+        if(pos === 'B'){
+            return;
+        }
+        findCollisionBottom(x, y + 1);
+
+    }
+    findCollisionTop(rook[0], rook[1]);
+    findCollisionRight(rook[0], rook[1]);
+    findCollisionLeft(rook[0], rook[1]);
+    findCollisionBottom(rook[0], rook[1]);
+
+    return collisions;
+};`,
+`Runtime: 76 ms, faster than 67.92% of JavaScript online submissions for Available Captures for Rook.
+Memory Usage: 38.5 MB, less than 42.14% of JavaScript online submissions for Available Captures for Rook.`,
+`Javascript`],
   'LeetCode #509 Fibonacci Number': [`The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is,`,
   `public class Solution {
     public int Fib(int n) {
