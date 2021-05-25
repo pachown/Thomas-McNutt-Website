@@ -5,6 +5,38 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+  'Added LeetCode #480 Sliding Window Median {HARD}':
+  [`The median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value. So the median is the mean of the two middle values.
+
+  For examples, if arr = [2,3,4], the median is 3.
+  For examples, if arr = [1,2,3,4], the median is (2 + 3) / 2 = 2.5.
+  You are given an integer array nums and an integer k. There is a sliding window of size k which is moving from the very left of the array to the very right. You can only see the k numbers in the window. Each time the sliding window moves right by one position.
+
+  Return the median array for each window in the original array. Answers within 10-5 of the actual value will be accepted.`,
+  `var medianSlidingWindow = function(nums, k) {
+    //create an array to hold the answers
+    let ans = [];
+    //loop through the nums array - k + 1 times
+    for(let i = 0; i < nums.length - k + 1; i++) {
+        let window = [];
+        let median;
+        for(let j = 0; j < k; j++) {
+            window.push(nums[i + j]);
+        }
+        window.sort(function(a,b){return a - b});
+        if (k % 2 !== 0) {
+            median = window[Math.floor(window.length/2)];
+        } else {
+            median = (window[Math.floor(window.length/2)] +
+                window[Math.floor(window.length/2) - 1]) / 2;
+        }
+        ans.push(median);
+    }
+  return ans;
+};`,
+  `Runtime: 9436 ms, faster than 5.60% of JavaScript online submissions for Sliding Window Median.\n
+  Memory Usage: 45.9 MB, less than 28.80% of JavaScript online submissions for Sliding Window Median.`,
+  `Javascript`],
   'LeetCode #1207 Unique Number of Occurrences':[`Given an array of integers arr, write a function that returns true if and only if the number of occurrences of each value in the array is unique.`,
   `var uniqueOccurrences = function(arr) {
     //create a holding object to record occurances
