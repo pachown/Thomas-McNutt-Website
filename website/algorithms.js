@@ -5,6 +5,35 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+  'LeetCode #965 Univalued Binary Tree':
+  [`A binary tree is univalued if every node in the tree has the same value.
+
+  Return true if and only if the given tree is univalued.`,
+  `var isUnivalTree = function(root) {
+    //take node of initial value
+    //traverse tree entirely
+    //if all vals match initial val, return true, else false
+    let allSame = true
+    let val = root.val;
+
+    let recurse = (node) => {
+        if (!node) {
+            return;
+        }
+        if(node.val !== val) {
+            allSame = false;
+            return;
+        }
+        recurse(node.left);
+        recurse(node.right);
+    }
+    recurse(root);
+    return allSame;
+};`,
+  `Runtime: 80 ms, faster than 63.74% of JavaScript online submissions for Univalued Binary Tree.\n
+  Memory Usage: 39.1 MB, less than 24.54% of JavaScript online submissions for Univalued Binary Tree.
+  `,
+  `Javascript`],
   'LeetCode #491 Average Salary Excluding the Minimum and Maximum Salary':[`Given an array of unique integers salary where salary[i] is the salary of the employee i.
 
   Return the average salary of employees excluding the minimum and maximum salary.`,
