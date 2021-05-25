@@ -5,6 +5,26 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+  'LeetCode #260. Single Number III':[`Given an integer array nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once. You can return the answer in any order.
+
+  You must write an algorithm that runs in linear runtime complexity and uses only constant extra space.
+
+  `,
+  `var singleNumber = function(nums) {
+    //sort first then determine non-duplicates by checking the value after in a for loop
+    nums.sort();
+    let ans = [];
+    for(let i = 0; i < nums.length; i++) {
+        if(nums[i + 1] === nums[i]){
+            i++;
+        } else {
+            ans.push(nums[i]);
+        }
+    }
+    return ans;
+};`,
+`Runtime: 88 ms, faster than 55.19% of JavaScript online submissions for Single Number III.\n
+Memory Usage: 39.5 MB, less than 84.43% of JavaScript online submissions for Single Number III.`,`Javascript`],
   'LeetCode #965 Univalued Binary Tree':
   [`A binary tree is univalued if every node in the tree has the same value.
 
