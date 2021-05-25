@@ -5,6 +5,18 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+  'LeetCode #491 Average Salary Excluding the Minimum and Maximum Salary':[`Given an array of unique integers salary where salary[i] is the salary of the employee i.
+
+  Return the average salary of employees excluding the minimum and maximum salary.`,
+  `var average = function(salary) {
+    let total = (salary.reduce(addTogether) - Math.min(...salary) - Math.max(...salary)) / (salary.length-2);
+    return total;
+};
+
+var addTogether =  (acc, curr) => acc + curr;`,
+  `Runtime: 76 ms, faster than 71.79% of JavaScript online submissions for Average Salary Excluding the Minimum and Maximum Salary.\n
+  Memory Usage: 38.3 MB, less than 65.13% of JavaScript online submissions for Average Salary Excluding the Minimum and Maximum Salary.`,
+  `Javascript`],
   'LeetCode #1002 Find Common Characters':[`Given an array words of strings made only from lowercase letters, return a list of all characters that show up in all strings within the list (including duplicates).  For example, if a character occurs 3 times in all strings but not 4 times, you need to include that character three times in the final answer.
 
   You may return the answer in any order.
