@@ -5,6 +5,31 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+  'LeetCode #1207 Unique Number of Occurrences':[`Given an array of integers arr, write a function that returns true if and only if the number of occurrences of each value in the array is unique.`,
+  `var uniqueOccurrences = function(arr) {
+    //create a holding object to record occurances
+    //for loop through the array and push values to the object, recording occurances on repeats
+    //push occurance values to an array.
+    //if occurance value array has no duplicates, return true, else false
+
+        let occurances = {};
+    for(let i = 0; i < arr.length; i++) {
+        if (occurances[arr[i]] === undefined) {
+            occurances[arr[i]] = 1;
+        } else {
+            occurances[arr[i]] += 1;
+        }
+    }
+    let occuranceVals = [];
+    for (let key in occurances) {
+        occuranceVals.push(occurances[key]);
+    }
+    let ans = new Set(occuranceVals).size === occuranceVals.length;
+    return ans;
+};`,
+  `Runtime: 72 ms, faster than 95.63% of JavaScript online submissions for Unique Number of Occurrences.\n
+  Memory Usage: 38.9 MB, less than 76.64% of JavaScript online submissions for Unique Number of Occurrences.`,
+  `Javascript`],
   'LeetCode #260. Single Number III':[`Given an integer array nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once. You can return the answer in any order.
 
   You must write an algorithm that runs in linear runtime complexity and uses only constant extra space.
