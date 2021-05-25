@@ -5,6 +5,32 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+  'LeetCode #509 Fibonacci Number': [`The Fibonacci numbers, commonly denoted F(n) form a sequence, called the Fibonacci sequence, such that each number is the sum of the two preceding ones, starting from 0 and 1. That is,`,
+  `public class Solution {
+    public int Fib(int n) {
+        if (n == 0)
+        {
+            return 0;
+        }
+        if (n == 1)
+        {
+            return 1;
+        }
+        int[] previousNums = new int[] {0,1};
+        int curr = 1;
+        while (curr != n)
+        {
+            int holding = previousNums[0] + previousNums[1];
+            previousNums[0] = previousNums[1];
+            previousNums[1] = holding;
+            curr++;
+        }
+        return previousNums[1];
+    }
+}`,
+`Runtime: 40 ms, faster than 71.36% of C# online submissions for Fibonacci Number.
+Memory Usage: 15.3 MB, less than 35.64% of C# online submissions for Fibonacci Number.`,
+`C#`],
   'LeetCode #229 Majority Element II':[
     `Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times.`,
   `var majorityElement = function(nums) {
