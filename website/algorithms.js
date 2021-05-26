@@ -5,6 +5,42 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+  'LeetCode #1200 Minimum Absolute Difference':[`Given an array of distinct integers arr, find all pairs of elements with the minimum absolute difference of any two elements.
+
+  Return a list of pairs in ascending order(with respect to pairs), each pair [a, b] follows
+
+  a, b are from arr
+  a < b
+  b - a equals to the minimum absolute difference of any two elements in arr
+  `,
+  `var minimumAbsDifference = function(arr) {
+
+    //sort the array
+    //find the smallest difference between two numbers
+    //create a variable to hold pairs of values
+    //loop through the array again and push all touples with the smallest diff
+    //return pairs of values
+
+    arr = arr.sort((a,b)=> {return a-b});
+    let smallest = Infinity
+    for(let i = 0; i < arr.length -1; i++) {
+        if (Math.abs(arr[i] - arr[i+1]) < smallest)
+            {
+                smallest = Math.abs(arr[i] - arr[i+1])
+            }
+    }
+    let answer = [];
+    for(let i = 0; i < arr.length - 1; i++) {
+        if (Math.abs(arr[i] - arr[i+1]) === smallest)
+            {
+                answer.push([arr[i], arr[i+1]]);
+            }
+    }
+    return answer;
+};`,
+`Runtime: 156 ms, faster than 93.75% of JavaScript online submissions for Minimum Absolute Difference.
+Memory Usage: 49.5 MB, less than 48.03% of JavaScript online submissions for Minimum Absolute Difference.`,
+`Javascript`],
   'Added LeetCode #480 Sliding Window Median {HARD}':
   [`The median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value. So the median is the mean of the two middle values.
 
