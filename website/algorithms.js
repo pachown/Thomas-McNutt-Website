@@ -41,6 +41,63 @@ let algos = {
 `Runtime: 156 ms, faster than 93.75% of JavaScript online submissions for Minimum Absolute Difference.
 Memory Usage: 49.5 MB, less than 48.03% of JavaScript online submissions for Minimum Absolute Difference.`,
 `Javascript`],
+	'LeetCode #1800 Maximum Ascending Subarray Sum':[`Given an array of positive integers nums, return the maximum possible sum of an ascending subarray in nums.
+
+A subarray is defined as a contiguous sequence of numbers in an array.
+
+A subarray [numsl, numsl+1, ..., numsr-1, numsr] is ascending if for all i where l <= i < r, numsi < numsi+1. Note that a subarray of size 1 is ascending.`,
+	    `var maxAscendingSum = function(nums) {
+    if (nums.length === 0) {
+        return 0;
+    }
+    if (nums.length === 1) {
+        return nums[0];
+    }
+    //loop through nums
+    //if ascending, count total
+    //if descending, compare current total to max, replace if larger, start count again
+    //return count;
+    let highCount = 0;
+    let currCount = nums[0];
+    for(let i = 1; i < nums.length; i++) {
+        if (nums[i-1] < nums[i]) {
+            currCount += nums[i];
+        } else {
+            if (highCount < currCount) {
+                highCount = currCount;
+            }
+            currCount = nums[i];
+        }
+    }
+       if (highCount < currCount) {
+                highCount = currCount;
+            }
+    return highCount;
+};`,
+	    `Runtime: 80 ms, faster than 51.75% of JavaScript online submissions for Maximum Ascending Subarray Sum.\n
+Memory Usage: 38.6 MB, less than 51.10% of JavaScript online submissions for Maximum Ascending Subarray Sum.`,`Javascript`],
+	'LeetCode #442 Find All Duplicates in an Array':[`Given an integer array nums of length n where all the integers of nums are in the range [1, n] and each integer appears once or twice, return an array of all the integers that appears twice.
+
+You must write an algorithm that runs in O(n) time and uses only constant extra space.`,
+	    `var findDuplicates = function(nums) {
+    //loop through nums
+    //store values in object
+    //if object has 2 occurances, add it to a list of answer nums
+    //return answer nums
+    let holding = {};
+    let answer = [];
+    for(let i = 0; i < nums.length; i++) {
+        if(holding[nums[i]] === undefined) {
+            holding[nums[i]] = 1;
+        } else {
+            answer.push(nums[i])
+        }
+    }
+    return answer
+};`,
+	    `Runtime: 120 ms, faster than 64.67% of JavaScript online submissions for Find All Duplicates in an Array.
+Memory Usage: 50 MB, less than 31.19% of JavaScript online submissions for Find All Duplicates in an Array.`,
+	    `Javascript`],
   'Added LeetCode #480 Sliding Window Median {HARD}':
   [`The median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value. So the median is the mean of the two middle values.
 
