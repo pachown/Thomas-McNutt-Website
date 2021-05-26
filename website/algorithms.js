@@ -5,6 +5,28 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+	'LeetCode #442 Find All Duplicates in an Array':[`Given an integer array nums of length n where all the integers of nums are in the range [1, n] and each integer appears once or twice, return an array of all the integers that appears twice.
+
+You must write an algorithm that runs in O(n) time and uses only constant extra space.`,
+	    `var findDuplicates = function(nums) {
+    //loop through nums
+    //store values in object
+    //if object has 2 occurances, add it to a list of answer nums
+    //return answer nums
+    let holding = {};
+    let answer = [];
+    for(let i = 0; i < nums.length; i++) {
+        if(holding[nums[i]] === undefined) {
+            holding[nums[i]] = 1;
+        } else {
+            answer.push(nums[i])
+        }
+    }
+    return answer
+};`,
+	    `Runtime: 120 ms, faster than 64.67% of JavaScript online submissions for Find All Duplicates in an Array.
+Memory Usage: 50 MB, less than 31.19% of JavaScript online submissions for Find All Duplicates in an Array.`,
+	    `Javascript`],
   'Added LeetCode #480 Sliding Window Median {HARD}':
   [`The median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value. So the median is the mean of the two middle values.
 
