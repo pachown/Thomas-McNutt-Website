@@ -11,7 +11,7 @@ const Footer = ({ children }) => {
         <a></a>
         <SocialIcon url="https://github.com/pachown" />
 
-        <br />
+        <br />  
         <br />
         <a href="mailto:Pachown@gmail.com">
           Email Me
