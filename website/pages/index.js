@@ -17,13 +17,12 @@ export default function About() {
               <a className={Layout.download} href="Thomas McNutt Resume.pdf" download>Download My Resume</a>
             </h3>
         </div> */}
-        <div className="styles.about" className="styles.section1" className="styles.origin"><p>Hello! My name is Thomas McNutt and I build things on the internet</p></div>
-        <div className="styles.about" className="styles.section2"><p>Here is a bit about myself</p></div>
-        <div className="styles.about" className="styles.section3"><p>I've always loved creating. When I was a young I loved building things such as cities and factories.</p></div>
-        <div className="styles.about" className="styles.section4"><p>I have a passion for improvement and strategy which I emphasize in my hobbies such as card games, board games and computer games.</p></div>
-        <div className="styles.about" className="styles.section5"><p>In fact, I enjoyed strategy games so much that I became a professional poker player for some time after high school!</p></div>
-        <div className="styles.about" className="styles.section6"><p>When I decided to wrap up my poker career, I went to work for a bank where I could learn about different types of businesses and meet new people every day.</p></div>
-        <div className="styles.about" className="styles.section7"><p>Eventually, the creative itch brought me to software engineering, where I can combine my love of creation, my passion for strategy, a constant improvement mindset and collaboration with brilliant people!</p></div>
+        <div className={Styles.section1}><p>Hello! My name is Thomas McNutt and I build things on the internet. </p><p>Here is a bit about myself:</p></div>
+        <div className={Styles.section2}><p>I've always loved creating. When I was a young I loved building new things and improving old things.</p></div>
+        <div className={Styles.section3}><p>I have a passion for improvement and strategy which I exercise with my hobbies such as: card games, board games, and computer games.</p></div>
+        <div className={Styles.section4}><p>In fact, I enjoy strategy games so much that I became a professional poker player for a year! While fun, it wasn't the most stable career, as you can imagine.</p></div>
+        <div className={Styles.section5}><p>Afterwards I worked 5 years as a manager at a bank where I learned about different businesses models, met new people, and worked heavily with numbers and data.</p></div>
+        <div className={Styles.section6}><p>Eventually, the creative itch brought me to software engineering, where I was able to finally combine my love of creation, my passion for strategy, a constant improvement mindset, and I get to collaboration with brilliant people!</p></div>
       </main>
     </div>
   )
