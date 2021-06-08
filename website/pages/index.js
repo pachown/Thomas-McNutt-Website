@@ -11,12 +11,6 @@ export default function About() {
         <meta name="keywords" content="web development, programming" />
       </Head>
       <main className={Styles.main}>
-        {/* <div className={Layout.about}>
-          <h2 >Hello! I'm Thomas McNutt, a Software Engineer based out of Denver, CO. I build things on the internet such as this <a href="/">website</a>, this <a href="/casino/videoPoker">casino game</a> and this <a href="/algos">blog</a> filled with my solutions for common coding algorithms. </h2>
-            <h3>
-              <a className={Layout.download} href="Thomas McNutt Resume.pdf" download>Download My Resume</a>
-            </h3>
-        </div> */}
         <div className={Styles.section1}><p>Hello! My name is Thomas McNutt and I build things on the internet. </p><p>Here is a bit about myself:</p></div>
         <div className={Styles.section2}><p>I've always loved creating. When I was a young I loved building new things and improving old things.</p></div>
         <div className={Styles.section3}><p>I have a passion for improvement and strategy which I exercise with my hobbies such as: card games, board games, and computer games.</p></div>

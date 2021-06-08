@@ -1,148 +1,68 @@
-@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
-
 /* Navbar section */
 
-.nav {
-    width: 99%;
-    height: 145px;
-    position: fixed;
-    color: black;
-    border-radius: 40px;
-    /* background:
-		linear-gradient(-135deg, rgba(185, 196, 216, 0.4) 10%, transparent),
-		repeating-linear-gradient(45deg, rgba(133, 134, 138, 0.4) 0%, rgba(31, 48, 94, 0.6) 5%, transparent 5%, transparent 10%),
-		repeating-linear-gradient(-45deg, rgba(179, 193, 219, 0.4) 0%, rgba(31, 48, 94, 0.5) 5%, transparent 5%, transparent 10%); */
-	  background-color: rgba(9, 42, 46, 0.5);
-    display: inline-flex;
-    flex-direction: row;
-    justify-content: space-between;
-    /* max-width: 800px; */
-}
-
-.name {
-  font-family:Georgia, 'Times New Roman', Times, serif;
-  font-size: 2.2em;
-  font-weight: 800;
-}
-
-.nav div.logo {
-  height: auto;
-  width: auto;
-}
-
-.mug {
-  height: 100px;
-  width: auto;
-  border-radius: 50px;
-  padding-left: 50px;
-}
-
-.nav div.main_list {
-  flex-direction: row;
-    height: 65px;
-}
-
-.nav div.main_list ul {
-  display: inline-flex;
-  flex-direction: row;
-  list-style: none;
-    width: 100%;
-    height: 65px;
-    margin: 0;
-    padding: 0;
-}
-
-.nav div.main_list ul li {
-    width: auto;
-    height: 65px;
-    padding: 0;
-    padding-right: 3em;
-}
-
-.nav div.main_list ul li a {
-    text-decoration: none;
-    color: #cdcde4;
-    line-height: 65px;
-    font-size: 2.4em;
-    border-bottom: 1px solid rgb(129, 111, 228);
-    border-top: 1px solid white;
-    padding: 5px;
-    font-weight: 800;
-    background-color: rgba(31, 48, 94, 0.5);
-    border-radius: 25px;
-}
-
-.nav div.main_list ul li a:hover {
-    color: #313669;
-    background-color: rgba(107, 127, 182, 0.5);
-}
-
-/* Home section */
-
-.nav {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    -webkit-transition: all 0.4s ease;
-    transition: all 0.4s ease;
-}
-
-
-/* Media qurey section */
-/*
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-    .container {
-        margin: 0;
-    }
-}
-
-@media screen and (max-width:768px) {
-    .navTrigger {
-        display: block;
-    }
-    .nav div.logo {
-        margin-left: 15px;
-    }
-    .nav div.main_list {
-        width: 100%;
-        height: 0;
-        overflow: hidden;
-    }
-    .nav div.show_list { */
-        /* height: auto;
-        display: none;
-    }
-    .nav div.main_list ul {
-        flex-direction: column;
-        width: 100%;
-        height: 100vh;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        background-color: #111;
-        /*same background color of navbar*/
-        /* background-position: center top;
-    }
-    .nav div.main_list ul li {
-        width: 100%;
-        text-align: right;
-    }
-    .nav div.main_list ul li a {
-        text-align: center;
-        width: 100%;
-        font-size: 3rem;
-        padding: 20px;
-    }
-    .nav div.media_button {
-        display: block;
-    } */
-/* } */
-
-
-/* Animation */
 /* Inspiration taken from Dicson https://codemyui.com/simple-hamburger-menu-x-mark-animation/ */
+#App {
+    height: 100vh;
+    margin: 0;
+    display: inline-block;
+}
 
-@media (max-width: 1080px) {
+#page-wrap {
+    text-align: center;
+    overflow: auto;
+}
+
+.bm-item {
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 10px;
+    color: #c75555;
+    transition: color 0.2s;
+}
+
+.bm-item:hover {
+    color: red;
+}
+
+.bm-burger-bars {
+    background: #324bbd;
+}
+
+.bm-burger-button {
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    right:36px;
+    top: 36px;
+}
+
+.bm-cross-buttom {
+    height:0pt 24px;
+    width: 24px;
+}
+
+.bm-menu {
+    background: pink;
+    padding: 2.5em 1.5em 0;
+    font-size: 1.5em;
+}
+
+.bm-morph-shape {
+    fill: green;
+}
+
+.bm-item-list {
+    color: #b8b7ad;
+}
+
+.bm-overlay {
+    background: rgba(0,200,0,0.3);
+    height: 100px;
+}
+
+
+/* @media (max-width: 1080px) {
     .nav {
         display: none;
     }
-}
+} */

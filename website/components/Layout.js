@@ -1,17 +1,18 @@
 import styles from '../styles/Layout.module.css'
-import Nav from './Nav'
 import Footer from './Footer'
+import Sidebar from './Sidebar'
+import '../styles/Nav.module.css'
 
 const Layout = ({children}) => {
   return (
-    <>
-    <Nav />
-    <div className={styles.container} >
-      <main >
-    {children}
-      </main>
+    <div className="App" id="outer-container">
+      <Sidebar />
+      <div className={styles.container} id="page-wrap">
+        <main >
+          {children}
+        </main>
+      </div>
     </div>
-    </>
   )
 }
 
