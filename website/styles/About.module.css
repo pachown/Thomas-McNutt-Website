@@ -1,16 +1,18 @@
 
 .main {
   box-sizing: border-box;
-  background: rgb(0, 0, 0);
+  background: white;
   padding: 0;
-  margin: 0;
+  margin: 2em;
   color: white;
   font-family:'Courier New', Courier, monospace;
   font-weight: 300;
-  font-size: 8vh;
+  text-shadow: black 0px 0px 6px;
+  font-size: 6vh;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   color: #000;
+  text-shadow: white 0px 0px 6px;
 }
 
 .container {
@@ -20,9 +22,39 @@
 .about {
 
 }
+
+.p1 {
+height: auto;
+width: 70%;
+background: rgba(0,0,0,0.3);
+text-align: center;
+float: right;
+margin-right: 1.5em;
+}
+
+.p2 {
+  height: auto;
+  width: 70%;
+  background: rgba(0,0,0,0.3);
+  text-align: center;
+  float: left;
+  margin-left: 1.5em;
+}
+
+.p3 {
+  height: auto;
+  width: 70%;
+  background: rgba(0,0,0,0.3);
+  text-align: center;
+  justify-content: center;
+  }
+
 .section1 {
-  min-height: 500px;
-  color: white;
+  margin-top: -1.5em;
+  text-align: center;
+  background-image: url("../public/Welcome.jpeg");
+  min-height: 60vh;
+  color: black;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -30,7 +62,7 @@
 }
 .section2 {
   background-image: url("../public/Creative.jpeg");
-  min-height: 500px;
+  min-height: 60vh;
   color: white;
   background-attachment: fixed;
   background-position: center;
@@ -39,8 +71,8 @@
 }
 .section3 {
   background-image: url("../public/Strategy.jpeg");
-  min-height: 500px;
-  color: black;
+  min-height: 60vh;
+  color: white;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -48,7 +80,7 @@
 }
 .section4 {
   background-image: url("../public/Poker.jpeg");
-  min-height: 500px;
+  min-height: 60vh;
   color: white;
   background-attachment: fixed;
   background-position: center;
@@ -57,7 +89,7 @@
 }
 .section5 {
   background-image: url("../public/Bank.jpeg");
-  min-height: 500px;
+  min-height: 60vh;
   color: white;
   background-attachment: fixed;
   background-position: center;
@@ -66,7 +98,7 @@
 }
 .section6 {
   background-image: url("../public/Computer.jpeg");
-  min-height: 500px;
+  min-height: 80vh;
   color: white;
   background-attachment: fixed;
   background-position: center;

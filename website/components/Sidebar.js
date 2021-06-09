@@ -1,11 +1,12 @@
 import Link from 'next/link'
-import { bubble as Menu } from 'react-burger-menu'
+import { pushRotate as Menu } from 'react-burger-menu'
 import '../styles/Nav.module.css'
 
 const Sidebar = ({props}) => {
 
     return (
-        <Menu styles={styles} {...props} pageWrapId={"page-wrap"} outerContainerId={"outer-container"} right width={'15%'} noOverlay>
+        <Menu styles={styles} {...props} pageWrapId={"page-wrap"} outerContainerId={"outer-container"} left width={'25%'}>
+            <h2>Where would you like to go?</h2>
             <a href="/" className="menu-item">About Me</a>
             <a href="/casino/videoPoker" className="menu-item">Projects</a>
             <a href="/algos" className="menu-item">Algorithms Blog</a>
@@ -17,13 +18,15 @@ const Sidebar = ({props}) => {
 export default Sidebar;
 
 var styles = {
+h2: {
+color: 'rgb(224, 206, 206);',
+},
 bmBurgerButton: {
   position: 'fixed',
   width: '5em',
   height: '4.5em',
-  left: '5 em',
-  top: '5 em',
-  color: 'white'
+  left: '5em',
+  top: '5em',
 },
 bmBurgerBars: {
   background: '#373a47'
@@ -31,32 +34,28 @@ bmBurgerBars: {
 bmBurgerBarsHover: {
   background: 'white'
 },
-bmCrossButton: {
-  height: '3em',
-  width: '3em'
-},
-bmMenuWrap: {
-  overflow: 'hidden',
-  position: 'fixed',
-  height: '20%',
-  background: 'grey',
+bmCross: {
+  background: 'white',
 },
 bmItemList: {
-  overflow: 'hidden',
   color: 'white',
   padding: '0.8em'
 },
 bmItem: {
-  overflow: 'hidden',
   color: 'white',
-  fontSize: '2.2em'
+  fontSize: '2.2em',
+  textDecoration: 'none',
+  transition: 'color 0.2s',
+  marginBottom: '10px',
 },
 bmMenu: {
-  background: 'grey',
+  textAlign: 'center',
+  padding: '2.5em 1.5em 0',
+  background: '#373a47',
   overflow: 'hidden',
 },
-bmMorphShape: {
-  background: 'grey',
+bmOverlay: {
+  background: 'rgba(0,0,0,0.6)',
 }
 
 }
