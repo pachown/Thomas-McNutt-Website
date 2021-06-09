@@ -5,7 +5,7 @@ import '../styles/Nav.module.css'
 const Sidebar = ({props}) => {
 
     return (
-        <Menu styles={styles} {...props} pageWrapId={"page-wrap"} outerContainerId={"outer-container"} left width={'25%'}>
+        <Menu styles={styles} {...props} pageWrapId={"page-wrap"} outerContainerId={"outer-container"} left width={'25%'} disableAutoFocus>
             <h2>Where would you like to go?</h2>
             <a href="/" className="menu-item">About Me</a>
             <a href="/casino/videoPoker" className="menu-item">Projects</a>
