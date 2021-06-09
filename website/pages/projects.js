@@ -11,11 +11,23 @@ export default function Projects() {
         <meta name="keywords" content="web development, programming" />
       </Head>
       <main className={Styles.main}>
-        <h1></h1>
-        <article className={Styles.project1}>Project 1</article>
-        <article className={Styles.project2}>Project 2</article>
-        <article className={Styles.project3}>Project 3</article>
-        <article className={Styles.project4}>Project 4</article>
+        <h1 className={Styles.title}>My Projects</h1>
+        <article className={Styles.project1}>
+          <p className={Styles.p1}>Project 1</p>
+          <img className={Styles.project1Img}></img>
+        </article>
+        <article className={Styles.project2}>
+          <img className={Styles.project2Img}></img>
+          <p className={Styles.p1}>Project 2</p>
+        </article>
+        <article className={Styles.project3}>
+          <p className={Styles.p1}>Project 3</p>
+          <img className={Styles.project3Img}></img>
+        </article>
+        <article className={Styles.project4}>
+          <img className={Styles.project4Img}></img>
+          <p className={Styles.p1}>Project 4</p>
+          </article>
       </main>
     </div>
   )

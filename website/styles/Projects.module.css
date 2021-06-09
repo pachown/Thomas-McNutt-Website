@@ -1,0 +1,91 @@
+.main {
+  display: flex;
+  background: white;
+  padding: 0;
+  margin: 2em;
+  color: white;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 300;
+  text-shadow: black 0px 0px 6px;
+  font-size: 5vh;
+  text-align: center;
+  color: #000;
+  text-shadow: white 0px 0px 6px;
+  flex-direction: column;
+  width: 75%;
+}
+.title {
+  margin-top: -1em;
+}
+.project1 {
+flex-direction:row;
+}
+.p1 {
+  float: left;
+}
+.project1Img {
+  margin-right: 1em;
+  margin-top: .25em;
+  width: 4em;
+  height: 5em;
+  background-image: url("../public/FaceShot.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: cover;
+  float:right;
+}
+.project2 {
+
+}
+.p2 {
+  float: right;
+}
+.project2Img {
+  margin-right: 1em;
+  margin-top: .25em;
+  width: 4em;
+  height: 5em;
+  background-image: url("../public/FaceShot.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: cover;
+  float:left;
+}
+.project3 {
+
+}
+.p3 {
+  float: left;
+}
+.project3Img {
+  margin-right: 1em;
+  margin-top: .25em;
+  width: 4em;
+  height: 5em;
+  background-image: url("../public/FaceShot.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: cover;
+  float:right;
+}
+.project4 {
+
+}
+.p4 {
+  float: right;
+}
+.project4Img {
+  margin-right: 1em;
+  margin-top: .25em;
+  width: 4em;
+  height: 5em;
+  background-image: url("../public/FaceShot.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: cover;
+  float: left;
+}

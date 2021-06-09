@@ -9,7 +9,7 @@ const Sidebar = ({props}) => {
             <h1 className="title"><u>Thomas McNutt's Portfolio</u></h1>
             <h2>Where would you like to go?</h2>
             <a href="/" className="menu-item">About Me</a>
-            <a href="/casino/videoPoker" className="menu-item">Projects</a>
+            <a href="/projects" className="menu-item">Projects</a>
             <a href="/algos" className="menu-item">Algorithms Blog</a>
             <a href="/" className="menu-item">Contact Me</a>
         </Menu>
