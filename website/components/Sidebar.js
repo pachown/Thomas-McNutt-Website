@@ -6,6 +6,7 @@ const Sidebar = ({props}) => {
 
     return (
         <Menu styles={styles} {...props} pageWrapId={"page-wrap"} outerContainerId={"outer-container"} left width={'25%'} disableAutoFocus>
+            <h1 className="title"><u>Thomas McNutt's Portfolio</u></h1>
             <h2>Where would you like to go?</h2>
             <a href="/" className="menu-item">About Me</a>
             <a href="/casino/videoPoker" className="menu-item">Projects</a>
@@ -18,6 +19,11 @@ const Sidebar = ({props}) => {
 export default Sidebar;
 
 var styles = {
+title: {
+color: 'pearl',
+textTransform: 'uppercase',
+fontWeight: '800',
+},
 h2: {
 color: 'rgb(224, 206, 206);',
 },
