@@ -1,7 +1,7 @@
 import Head from 'next/head';
-import PokerStyles from '../../styles/Poker.module.css';
+import PokerStyles from '../styles/Poker.module.css';
 import {useState} from 'react';
-import {Start, Winner} from '../../videoPokerFiles/gameLogic.js';
+import {Start, Winner} from '../videoPokerFiles/gameLogic.js';
 
 
 export default function Casino() {

@@ -5,15 +5,11 @@ html{
   font-family: "Quicksand", sans-serif;
   font-size: 62.5%;
   font-size: 10px;
-  background-color: rgb(130, 220, 223);
-  /* background-image: url("/wood-background.jpeg"); */
   background-size: contain;
 }
-/*
-*/
-button:focus {
+/* button:focus {
   outline: 0;
-}
+} */
 
 /* a {
   color: inherit;

@@ -1,0 +1,151 @@
+
+.main {
+  box-sizing: border-box;
+  background: white;
+  padding: 0;
+  margin: 2em;
+  color: white;
+  font-family:'Courier New', Courier, monospace;
+  font-weight: 300;
+  text-shadow: black 0px 0px 6px;
+  font-size: 5vh;
+  text-align: center;
+  /* text-transform: uppercase; */
+  color: #000;
+  text-shadow: white 0px 0px 6px;
+}
+
+.title {
+  margin-top: -1em;
+  margin-bottom: -.5em;
+}
+
+.faceShot {
+  margin-right: 1em;
+  margin-top: .25em;
+  width: 4em;
+  height: 5em;
+  background-image: url("../public/FaceShot.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: cover;
+  float:right;
+}
+
+.p1 {
+margin-top: 1em;
+height: auto;
+width: 70%;
+background: rgba(0,0,0,0.3);
+text-align: center;
+float: right;
+margin-right: 1.5em;
+max-height: 60vh;
+}
+
+.p2 {
+  margin-top: 1em;
+  height: auto;
+  width: 70%;
+  background: rgba(0,0,0,0.3);
+  text-align: center;
+  float: left;
+  margin-left: 1.5em;
+  max-height: 60vh;
+}
+
+.p3 {
+  margin-top: 1em;
+  height: auto;
+  width: 70%;
+  background: rgba(0,0,0,0.3);
+  text-align: center;
+  max-height: 30vh;
+  }
+
+.section1 {
+  text-align: center;
+  background-image: url("../public/Welcome.jpeg");
+  min-height: 30vh;
+  max-height: 30vh;
+  color: black;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section2 {
+  background-image: url("../public/Creative.jpeg");
+  min-height: 60vh;
+  max-height: 60vh;
+  color: white;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section3 {
+  background-image: url("../public/Strategy.jpeg");
+  min-height: 60vh;
+  max-height: 60vh;
+  color: white;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section4 {
+  background-image: url("../public/Poker.jpeg");
+  min-height: 60vh;
+  max-height: 60vh;
+  color: white;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section5 {
+  background-image: url("../public/Bank.jpeg");
+  min-height: 60vh;
+  max-height: 60vh;
+  color: white;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.section6 {
+  background-image: url("../public/Computer.jpeg");
+  min-height: 60vh;
+  max-height: 100vh;
+  color: white;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@media (max-width: 1080px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+  .main {
+    width: 100%;
+    flex-direction: column;
+  }
+  .faceShot {
+    display: none;
+  }
+  .section4 {
+    max-height: 80vh;
+  }
+  .main {
+    font-size: 4vh;
+  }
+  .section6 {
+    max-height: 100vh;
+  }
+
+}
