@@ -11,7 +11,7 @@ const Sidebar = ({props}) => {
             <a href="/" className="menu-item">About Me</a>
             <a href="/projects" className="menu-item">Projects</a>
             <a href="/algos" className="menu-item">Algorithms Blog</a>
-            <a href="/" className="menu-item">Contact Me</a>
+            <a href="/contactme" className="menu-item">Contact Me</a>
         </Menu>
     );
 };

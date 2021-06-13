@@ -2,51 +2,55 @@
   display: flex;
   background: white;
   padding: 0;
-  margin: 2em;
+  margin: 1.5em;
   color: white;
   font-family:'Courier New', Courier, monospace;
   font-weight: 300;
-  text-shadow: black 0px 0px 6px;
-  font-size: 5vh;
+  font-size: 3vh;
   text-align: center;
-  color: #000;
   text-shadow: white 0px 0px 6px;
   flex-direction: column;
-  width: 75%;
+  width: 80%;
 }
 .title {
-  margin-top: -1em;
+  text-align: center;
+  color: black;
+  margin-top: -.3em;
+  font-size: 4em;
+  margin-bottom: -.02em;
 }
 .project1 {
-flex-direction:row;
+  flex-direction:row;
+  background:rgba(0,0,0,0.3);
+  min-height: 40vh;
+  max-height: 60vh;
 }
 .p1 {
   float: left;
 }
 .project1Img {
-  margin-right: 1em;
-  margin-top: .25em;
-  width: 4em;
-  height: 5em;
-  background-image: url("../public/FaceShot.jpeg");
+  width: 7em;
+  height: 4em;
+  background-image: url("../public/TripAdvisor.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-size: cover;
-  float:right;
+  float: right;
 }
 .project2 {
-
+  background:rgba(0,0,0,0.5);
+  flex-direction:row;
+  min-height: 40vh;
+  max-height: 60vh;
 }
 .p2 {
   float: right;
 }
 .project2Img {
-  margin-right: 1em;
-  margin-top: .25em;
-  width: 4em;
-  height: 5em;
-  background-image: url("../public/FaceShot.jpeg");
+  width: 6em;
+  height: 7em;
+  background-image: url("../public/SlotMachine.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -54,24 +58,29 @@ flex-direction:row;
   float:left;
 }
 .project3 {
-
+  background:rgba(0,0,0,0.7);
+  flex-direction: row;
+  min-height: 40vh;
+  max-height: 60vh;
 }
 .p3 {
   float: left;
 }
+.bullets3 {
+  float: left;
+  text-align: left;
+}
 .project3Img {
-  margin-right: 1em;
-  margin-top: .25em;
-  width: 4em;
+  width: 8em;
   height: 5em;
-  background-image: url("../public/FaceShot.jpeg");
+  background-image: url("../public/videoPoker.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-size: cover;
   float:right;
 }
-.project4 {
+/* .project4 {
 
 }
 .p4 {
@@ -88,4 +97,4 @@ flex-direction:row;
   background-size: cover;
   background-size: cover;
   float: left;
-}
+} */
