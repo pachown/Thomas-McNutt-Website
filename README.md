@@ -10,20 +10,13 @@ See it deployed on Vercel [here](https://thomas-mcnutt-website.vercel.app/) !
 
 <br>
 
-<image src="https://github.com/pachown/Thomas-McNutt-Website/blob/main/website/public/WebsiteView.jpg">
+<image src="https://github.com/pachown/Thomas-McNutt-Website/blob/main/website/public/WebsiteView.jpeg">
 
 ## Summary
 
-This is my Portfolio website. It currently has an about index page, an algorithms page where I post my solutions and results to different Leetcode problems, and a casino that currently includes one Video Poker game.
-
-Come check out my website and see how I nailed (or didn't nail) different LeetCode problems!
-
-TODO: 
-Finish logic for poker game
-Put all pages in a hamburger menu
-Make top bar change to a solid color when scrolling.
-Add analytics
-
+This is my Portfolio website. It has an about me page, an algorithm blog, a projects page, and an outreach page so that you can get in touch with me!
+  
+The npm packages I used to help me out are show-code and react-burger-menu. Making the latter work on Next.js was quite an enjoyable problem solving process and I look forward to using it again in the future.
 
 ## Author
 
