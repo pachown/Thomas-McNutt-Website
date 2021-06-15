@@ -31,8 +31,8 @@ bmBurgerButton: {
   position: 'fixed',
   width: '5em',
   height: '4.5em',
-  left: '5em',
-  top: '5em',
+  left: '3em',
+  top: '3em',
 },
 bmBurgerBars: {
   background: '#373a47'

@@ -14,7 +14,7 @@ export default function About() {
         <h1 className={Styles.title}>About Me</h1>
         <div className={Styles.section1}>
           <img className={Styles.faceShot} ></img>
-          <article className={Styles.p3}>Hello! My name is Thomas McNutt and I build things on the internet.</article>
+          <article className={Styles.p3}>Hello! My name is Thomas McNutt and I design and build things on the internet.</article>
         </div>
         {/* <div className={Styles.chains}></div> */}
         <div className={Styles.container1}>
