@@ -14,7 +14,14 @@
   color: #000;
   text-shadow: white 0px 0px 6px;
 }
-
+.chains {
+  background-image: url("../public/Chains.jpg");
+  background-repeat: no-repeat;
+  background-position-x: center;
+  /* background-position: center; */
+  /* transform: rotate(90deg); */
+  height: 10vh;
+}
 .title {
   margin-top: -1em;
   margin-bottom: -.5em;
@@ -37,31 +44,35 @@
 margin-top: 1em;
 height: auto;
 width: 70%;
-background: rgba(0,0,0,0.3);
+background: rgba(0,0,0,0.8);
 text-align: center;
 float: right;
 margin-right: 1.5em;
 max-height: 60vh;
+border: 1px solid white;
 }
 
 .p2 {
   margin-top: 1em;
   height: auto;
   width: 70%;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.8);
   text-align: center;
   float: left;
   margin-left: 1.5em;
   max-height: 60vh;
+  border: 1px solid white;
 }
 
 .p3 {
   margin-top: 1em;
   height: auto;
+  margin-left: 10vh;
   width: 70%;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.8);
   text-align: center;
   max-height: 30vh;
+  border: 1px solid white;
   }
 
 .section1 {
@@ -69,7 +80,7 @@ max-height: 60vh;
   background-image: url("../public/Welcome.jpeg");
   min-height: 30vh;
   max-height: 30vh;
-  color: black;
+  color: white;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
