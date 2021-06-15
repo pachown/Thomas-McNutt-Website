@@ -1,0 +1,26 @@
+.container {
+  display: inline-flex;
+  width: 20%;
+  margin-left: 32em;
+  margin-right: 30em;
+  background-color: black;
+  color: white;
+  font-size: 2em;
+  text-align: center;
+  justify-content: space-evenly;
+  border-radius: 1em;
+}
+
+.email {
+  margin-top: .75em;
+  color: white;
+  margin-right: -.5em;
+}
+
+.title {
+  text-align: center;
+  font-size: 2.2em;
+}
+.foot {
+  margin-top: -6em;
+}

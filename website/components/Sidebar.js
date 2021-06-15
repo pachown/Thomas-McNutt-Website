@@ -38,14 +38,17 @@ bmBurgerBars: {
   background: '#373a47'
 },
 bmBurgerBarsHover: {
-  background: 'white'
+  background: 'red'
 },
 bmCross: {
   background: 'white',
 },
 bmItemList: {
   color: 'white',
-  padding: '0.8em'
+  padding: '0.8em',
+  position: 'sticky',
+  top: '0',
+  left: '0',
 },
 bmItem: {
   color: 'white',
@@ -59,7 +62,14 @@ bmMenu: {
   padding: '2.5em 1.5em 0',
   background: '#373a47',
   overflow: 'hidden',
-  position: 'absolute',
+  position: 'fixed',
+  top: '0',
+  left: '0',
+},
+bmMenuWrap: {
+  top: '0',
+  left: '0',
+  position: 'fixed',
 },
 bmOverlay: {
   background: 'rgba(0,0,0,0.6)',
