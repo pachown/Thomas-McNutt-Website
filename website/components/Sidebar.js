@@ -59,6 +59,7 @@ bmMenu: {
   padding: '2.5em 1.5em 0',
   background: '#373a47',
   overflow: 'hidden',
+  position: 'absolute',
 },
 bmOverlay: {
   background: 'rgba(0,0,0,0.6)',

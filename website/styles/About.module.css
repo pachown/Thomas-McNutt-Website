@@ -81,6 +81,7 @@ border: 1px solid white;
   min-height: 30vh;
   max-height: 30vh;
   color: white;
+  border-color: 1px double black;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -135,6 +136,73 @@ border: 1px solid white;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.container1 {
+  width: 100%;
+  height: 10vh;
+  background: white;
+  margin-bottom: 2vh;
+}
+.chevron {
+  position: absolute;
+  width: 12vh;
+  height: 3vh;
+  right: 50%;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  height: 100%;
+  width: 51%;
+  background: black;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(3vh) scale3d(0.7, 0.7, 0.7);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(6vh) scale3d(0.5, 0.5, 0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(9vh) scale3d(0.25, 0.25, 0.25);
+  }
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1080px) {
