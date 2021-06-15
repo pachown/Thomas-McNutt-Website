@@ -31,8 +31,8 @@ bmBurgerButton: {
   position: 'fixed',
   width: '5em',
   height: '4.5em',
-  left: '5em',
-  top: '5em',
+  left: '3em',
+  top: '3em',
 },
 bmBurgerBars: {
   background: '#373a47'
@@ -59,6 +59,7 @@ bmMenu: {
   padding: '2.5em 1.5em 0',
   background: '#373a47',
   overflow: 'hidden',
+  position: 'absolute',
 },
 bmOverlay: {
   background: 'rgba(0,0,0,0.6)',

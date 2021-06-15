@@ -14,12 +14,10 @@
   color: #000;
   text-shadow: white 0px 0px 6px;
 }
-
 .title {
   margin-top: -1em;
-  margin-bottom: -.5em;
+  margin-bottom: .2em;
 }
-
 .faceShot {
   margin-right: 1em;
   margin-top: .25em;
@@ -31,37 +29,45 @@
   background-size: cover;
   background-size: cover;
   float:right;
+  border-radius: .5em;
 }
 
 .p1 {
 margin-top: 1em;
 height: auto;
 width: 70%;
-background: rgba(0,0,0,0.3);
+background: rgba(0,0,0,0.8);
 text-align: center;
 float: right;
 margin-right: 1.5em;
 max-height: 60vh;
+border: 1px solid white;
+border-radius: .5em;
 }
 
 .p2 {
   margin-top: 1em;
   height: auto;
   width: 70%;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.8);
   text-align: center;
   float: left;
   margin-left: 1.5em;
   max-height: 60vh;
+  border: 1px solid white;
+  border-radius: .5em;
 }
 
 .p3 {
   margin-top: 1em;
   height: auto;
+  margin-left: 10vh;
   width: 70%;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0,0,0,0.8);
   text-align: center;
   max-height: 30vh;
+  border: 1px solid white;
+  border-radius: .5em;
   }
 
 .section1 {
@@ -69,13 +75,16 @@ max-height: 60vh;
   background-image: url("../public/Welcome.jpeg");
   min-height: 30vh;
   max-height: 30vh;
-  color: black;
+  color: white;
+  border: .75vh solid black;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: .5em;
 }
 .section2 {
+  border: .75vh solid black;
   background-image: url("../public/Creative.jpeg");
   min-height: 60vh;
   max-height: 60vh;
@@ -84,8 +93,10 @@ max-height: 60vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: .5em;
 }
 .section3 {
+  border: .75vh solid black;
   background-image: url("../public/Strategy.jpeg");
   min-height: 60vh;
   max-height: 60vh;
@@ -94,8 +105,10 @@ max-height: 60vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: .5em;
 }
 .section4 {
+  border: .75vh solid black;
   background-image: url("../public/Poker.jpeg");
   min-height: 60vh;
   max-height: 60vh;
@@ -104,8 +117,10 @@ max-height: 60vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: .5em;
 }
 .section5 {
+  border: .75vh solid black;
   background-image: url("../public/Bank.jpeg");
   min-height: 60vh;
   max-height: 60vh;
@@ -114,8 +129,10 @@ max-height: 60vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: .5em;
 }
 .section6 {
+  border: .75vh solid black;
   background-image: url("../public/Computer.jpeg");
   min-height: 60vh;
   max-height: 100vh;
@@ -124,6 +141,74 @@ max-height: 60vh;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  border-radius: .5em;
+}
+.container1 {
+  width: 100%;
+  height: 10vh;
+  background: white;
+  margin-bottom: 2vh;
+}
+.chevron {
+  position: absolute;
+  width: 12vh;
+  height: 3vh;
+  right: 48%;
+  opacity: 0;
+  transform: scale3d(0.5, 0.5, 0.5);
+  animation: move 3s ease-out infinite;
+}
+
+.chevron:first-child {
+  animation: move 3s ease-out 1s infinite;
+}
+
+.chevron:nth-child(2) {
+  animation: move 3s ease-out 2s infinite;
+}
+
+.chevron:before,
+.chevron:after {
+  content: ' ';
+  position: absolute;
+  height: 100%;
+  width: 51%;
+  background: black;
+}
+
+.chevron:before {
+  left: 0;
+  transform: skew(0deg, 30deg);
+}
+
+.chevron:after {
+  right: 0;
+  width: 50%;
+  transform: skew(0deg, -30deg);
+}
+
+@keyframes move {
+  25% {
+    opacity: 1;
+  }
+  33% {
+    opacity: 1;
+    transform: translateY(3vh) scale3d(0.7, 0.7, 0.7);
+  }
+  67% {
+    opacity: 1;
+    transform: translateY(6vh) scale3d(0.5, 0.5, 0.5);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(9vh) scale3d(0.25, 0.25, 0.25);
+  }
+}
+
+@keyframes pulse {
+  to {
+    opacity: 1;
+  }
 }
 
 @media (max-width: 1080px) {
