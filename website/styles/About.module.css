@@ -8,7 +8,7 @@
   font-family:'Courier New', Courier, monospace;
   font-weight: 300;
   text-shadow: black 0px 0px 6px;
-  font-size: 5vh;
+  font-size: 3vh;
   text-align: center;
   /* text-transform: uppercase; */
   color: #000;
@@ -35,7 +35,7 @@
 .p1 {
 margin-top: 1em;
 height: auto;
-width: 70%;
+width: 50%;
 background: rgba(0,0,0,0.8);
 text-align: center;
 float: right;
@@ -48,7 +48,7 @@ border-radius: .5em;
 .p2 {
   margin-top: 1em;
   height: auto;
-  width: 70%;
+  width: 50%;
   background: rgba(0,0,0,0.8);
   text-align: center;
   float: left;
@@ -62,10 +62,10 @@ border-radius: .5em;
   margin-top: 1em;
   height: auto;
   margin-left: 10vh;
-  width: 70%;
+  width: 50%;
   background: rgba(0,0,0,0.8);
   text-align: center;
-  max-height: 30vh;
+  max-height: 60vh;
   border: 1px solid white;
   border-radius: .5em;
   }
@@ -231,6 +231,24 @@ border-radius: .5em;
   }
   .section6 {
     max-height: 100vh;
+  }
+  .p1 {
+    width: 100%;
+    margin-right: 0em;
+    margin-left: 0em;
+    float:none;
+  }
+  .p2 {
+    width: 100%;
+    margin-right: 0em;
+    margin-left: 0em;
+    float:none;
+  }
+  .p3 {
+    width: 100%;
+    margin-right: 0em;
+    margin-left: 0em;
+    float:none;
   }
 
 }
