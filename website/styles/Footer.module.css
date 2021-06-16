@@ -1,8 +1,6 @@
 .container {
   display: inline-flex;
-  width: 20%;
-  margin-left: 32em;
-  margin-right: 30em;
+  width: 100%;
   background-color: black;
   color: white;
   font-size: 2em;

@@ -5,6 +5,17 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+    'Leetcode #215 Kth Largest Element in an Array':[`Given an integer array nums and an integer k, return the kth largest element in the array.
+
+    Note that it is the kth largest element in the sorted order, not the kth distinct element.
+
+    `,
+    `var findKthLargest = function(nums, k) {
+        nums = nums.sort((a,b)=>{return b-a});
+        return nums[k-1];
+    };`,
+    `Runtime: 80 ms, faster than 86.81% of JavaScript online submissions for Kth Largest Element in an Array.\n
+    Memory Usage: 40.3 MB, less than 37.36% of JavaScript online submissions for Kth Largest Element in an Array.`,'Javascript'],
   'LeetCode #1200 Minimum Absolute Difference':[`Given an array of distinct integers arr, find all pairs of elements with the minimum absolute difference of any two elements.
 
   Return a list of pairs in ascending order(with respect to pairs), each pair [a, b] follows
