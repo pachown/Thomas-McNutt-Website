@@ -5,6 +5,36 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+    'LeetCode #841 Keys and Rooms':[`There are N rooms and you start in room 0.  Each room has a distinct number in 0, 1, 2, ..., N-1, and each room may have some keys to access the next room.
+
+    Formally, each room i has a list of keys rooms[i], and each key rooms[i][j] is an integer in [0, 1, ..., N-1] where N = rooms.length.  A key rooms[i][j] = v opens the room with number v.
+
+    Initially, all the rooms start locked (except for room 0).
+
+    You can walk back and forth between rooms freely.
+
+    Return true if and only if you can enter every room.`,
+    `var canVisitAllRooms = function(rooms) {
+        //travel through rooms recursively. Visit every room we have the key to and push every room visited to an array.
+        //make the array unique
+        //return array.length === rooms.length
+        let visited = {};
+        let travel = (room) => {
+            if (visited[room] !== 1) {
+                  visited[room] = 1;
+            }
+            rooms[room].forEach((key) => {
+                if (visited[key] !== 1) {
+                        travel(key);
+                }
+            })
+        }
+        travel(0);
+        return Object.keys(visited).length === rooms.length
+    };`,
+    `Runtime: 72 ms, faster than 99.23% of JavaScript online submissions for Keys and Rooms.\n
+    Memory Usage: 41.4 MB, less than 13.52% of JavaScript online submissions for Keys and Rooms.`,
+    `Javascript`],
     'Leetcode #215 Kth Largest Element in an Array':[`Given an integer array nums and an integer k, return the kth largest element in the array.
 
     Note that it is the kth largest element in the sorted order, not the kth distinct element.
