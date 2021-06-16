@@ -5,7 +5,7 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
-    '215. Kth Largest Element in an Array':[`Given an integer array nums and an integer k, return the kth largest element in the array.
+    'Leetcode #215 Kth Largest Element in an Array':[`Given an integer array nums and an integer k, return the kth largest element in the array.
 
     Note that it is the kth largest element in the sorted order, not the kth distinct element.
 
