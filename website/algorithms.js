@@ -5,6 +5,28 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+    'LeetCode #1779 Find Nearest Point That Has the Same X or Y Coordinate':[
+    `You are given two integers, x and y, which represent your current location on a Cartesian grid: (x, y). You are also given an array points where each points[i] = [ai, bi] represents that a point exists at (ai, bi). A point is valid if it shares the same x-coordinate or the same y-coordinate as your location.
+
+    Return the index (0-indexed) of the valid point with the smallest Manhattan distance from your current location. If there are multiple, return the valid point with the smallest index. If there are no valid points, return -1.
+
+    The Manhattan distance between two points (x1, y1) and (x2, y2) is abs(x1 - x2) + abs(y1 - y2).`,
+    `var nearestValidPoint = function(x, y, points) {
+        let closest = Infinity;
+        let index = -1;
+        for (let i = 0; i < points.length; i++) {
+            if(x === points[i][0] || y === points[i][1]) {
+                let length = Math.abs(x - points[i][0]) + Math.abs(y - points[i][1]);
+                if (length < closest) {
+                    closest = length;
+                    index = i;
+                }
+            }
+        }
+        return index;
+    };`,
+    `Runtime: 104 ms, faster than 90.96% of JavaScript online submissions for Find Nearest Point That Has the Same X or Y Coordinate.\n
+    Memory Usage: 46.7 MB, less than 72.34% of JavaScript online submissions for Find Nearest Point That Has the Same X or Y Coordinate.`,`Javascript`],
     'LeetCode #841 Keys and Rooms':[`There are N rooms and you start in room 0.  Each room has a distinct number in 0, 1, 2, ..., N-1, and each room may have some keys to access the next room.
 
     Formally, each room i has a list of keys rooms[i], and each key rooms[i][j] is an integer in [0, 1, ..., N-1] where N = rooms.length.  A key rooms[i][j] = v opens the room with number v.
