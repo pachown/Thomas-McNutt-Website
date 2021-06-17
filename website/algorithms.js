@@ -5,6 +5,43 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+    'LeetCode #1629 Slowest Key':[`A newly designed keypad was tested, where a tester pressed a sequence of n keys, one at a time.
+
+    You are given a string keysPressed of length n, where keysPressed[i] was the ith key pressed in the testing sequence, and a sorted list releaseTimes, where releaseTimes[i] was the time the ith key was released. Both arrays are 0-indexed. The 0th key was pressed at the time 0, and every subsequent key was pressed at the exact time the previous key was released.
+
+    The tester wants to know the key of the keypress that had the longest duration. The ith keypress had a duration of releaseTimes[i] - releaseTimes[i - 1], and the 0th keypress had a duration of releaseTimes[0].
+
+    Note that the same key could have been pressed multiple times during the test, and these multiple presses of the same key may not have had the same duration.
+
+    Return the key of the keypress that had the longest duration. If there are multiple such keypresses, return the lexicographically largest key of the keypresses.`,
+    `var slowestKey = function(releaseTimes, keysPressed) {
+        //instansiate variable to store longest time at 0
+        let longestPress = 0;
+        let previousPress = 0;
+        let totalPress = 0;
+        let key;
+        //separate keyspressed into an array of single characters
+        keysPressed = keysPressed.split('');
+        //loop through the arrays and compare for longest times pressed
+        for (let i = 0; i < releaseTimes.length; i++) {
+            let length = releaseTimes[i] - totalPress;
+            if (length > longestPress) {
+                longestPress = length;
+                key = keysPressed[i];
+            }
+                //when a match is found, check the lexiographical indexing of both characters to find which is larger
+               if (length === longestPress) {
+                    if (keysPressed[i].localeCompare(key) === 1) {
+                        key = keysPressed[i];
+                    }
+                }
+            totalPress += length;
+        }
+        return key;
+    };`,
+    `Runtime: 76 ms, faster than 93.77% of JavaScript online submissions for Slowest Key.\n
+    Memory Usage: 43.3 MB, less than 10.03% of JavaScript online submissions for Slowest Key.`,
+    `Javascript`],
     'LeetCode #1779 Find Nearest Point That Has the Same X or Y Coordinate':[
     `You are given two integers, x and y, which represent your current location on a Cartesian grid: (x, y). You are also given an array points where each points[i] = [ai, bi] represents that a point exists at (ai, bi). A point is valid if it shares the same x-coordinate or the same y-coordinate as your location.
 
