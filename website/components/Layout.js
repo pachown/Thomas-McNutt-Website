@@ -3,7 +3,7 @@ import Footer from './Footer'
 import Sidebar from './Sidebar'
 import '../styles/Nav.module.css'
 
-const Layout = ({children}) => {
+const Layout = ({ children }) => {
   return (
     <div className="App" id="outer-container">
       <Sidebar />

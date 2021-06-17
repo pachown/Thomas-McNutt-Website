@@ -6,7 +6,7 @@ export default function Projects() {
     <div className={Styles.container}>
       <Head>
         <title>Thomas McNutt Website</title>
-        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+        <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
         <link rel="icon" href="/logo-dark-plain.png" />
         <meta name="keywords" content="web development, programming" />
       </Head>

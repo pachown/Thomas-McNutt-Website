@@ -33,16 +33,16 @@
 }
 
 .p1 {
-margin-top: 1em;
-height: auto;
-width: 50%;
-background: rgba(0,0,0,0.8);
-text-align: center;
-float: right;
-margin-right: 1.5em;
-max-height: 60vh;
-border: 1px solid white;
-border-radius: .5em;
+  margin-top: 1em;
+  height: auto;
+  width: 50%;
+  background: rgba(0,0,0,0.8);
+  text-align: center;
+  float: right;
+  margin-right: 1.5em;
+  max-height: 60vh;
+  border: 1px solid white;
+  border-radius: .5em;
 }
 
 .p2 {
@@ -250,5 +250,4 @@ border-radius: .5em;
     margin-left: 0em;
     float:none;
   }
-
 }
