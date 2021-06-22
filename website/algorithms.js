@@ -5,6 +5,34 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+    'Leetcode #566 Reshape the Matrix':[
+        `In MATLAB, there is a handy function called reshape which can reshape an m x n matrix into a new one with a different size r x c keeping its original data.
+
+        You are given an m x n matrix mat and two integers r and c representing the row number and column number of the wanted reshaped matrix.
+
+        The reshaped matrix should be filled with all the elements of the original matrix in the same row-traversing order as they were.
+
+        If the reshape operation with given parameters is possible and legal, output the new reshaped matrix; Otherwise, output the original matrix.`,
+    `var matrixReshape = function(mat, r, c) {
+        let size = mat.length * mat[0].length;
+        let expected = r * c;
+        if (size !== expected) {
+            return mat;
+        }
+
+        let vals = mat[0];
+        for (let i = 1; i < mat.length; i++) {
+            vals = vals.concat(mat[i]);
+        }
+        let answer = [];
+        for (let i = 0; i < vals.length; i += c) {
+            answer.push(vals.slice(i, i + c))
+        }
+        return answer;
+    };`,
+    `Runtime: 84 ms, faster than 100.00% of JavaScript online submissions for Reshape the Matrix.\n
+    Memory Usage: 44.5 MB, less than 10.06% of JavaScript online submissions for Reshape the Matrix.`,
+    `Javascript`],
     'LeetCode # 1784. Check if Binary String Has at Most One Segment of Ones':[
         `Given a binary string s ​​​​​without leading zeros, return true​​​ if s contains at most one contiguous segment of ones. Otherwise, return false.`,
     `var checkOnesSegment = function(s) {
