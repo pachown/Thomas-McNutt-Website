@@ -5,6 +5,28 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+    'LeetCode # 1784. Check if Binary String Has at Most One Segment of Ones':[
+        `Given a binary string s ​​​​​without leading zeros, return true​​​ if s contains at most one contiguous segment of ones. Otherwise, return false.`,
+    `var checkOnesSegment = function(s) {
+        //separate string into array
+        s = s.split("");
+          //check array for initial 1s
+        //after the first 0, change variable one to false
+        //if another 1 is found, return the variable
+        //if not found, return true
+        let contiguous = true;
+        for ( let i = 0; i < s.length; i++) {
+            if (s[i] === '0') {
+                contiguous = false;
+            }
+            if (contiguous === false && s[i] === '1') {
+                return contiguous;
+            }
+        }
+        return true;
+    };`,
+    `Runtime: 72 ms, faster than 96.30% of JavaScript online submissions for Check if Binary String Has at Most One Segment of Ones.\n
+    Memory Usage: 39.2 MB, less than 7.41% of JavaScript online submissions for Check if Binary String Has at Most One Segment of Ones.`,`Javascript`],
     'LeetCode #1629 Slowest Key': [`A newly designed keypad was tested, where a tester pressed a sequence of n keys, one at a time.
 
     You are given a string keysPressed of length n, where keysPressed[i] was the ith key pressed in the testing sequence, and a sorted list releaseTimes, where releaseTimes[i] was the time the ith key was released. Both arrays are 0-indexed. The 0th key was pressed at the time 0, and every subsequent key was pressed at the exact time the previous key was released.
