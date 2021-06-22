@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Styles from '../styles/About.module.css'
 
 export default function About() {
+
   return (
     <div className={Styles.container}>
       <Head>
@@ -15,7 +16,7 @@ export default function About() {
         <div className={Styles.section1}>
           <img className={Styles.faceShot} ></img>
           <article className={Styles.p3}>Hello! My name is Thomas McNutt and I design and build things on the internet.</article>
-        </div>
+          </div>
         <div className={Styles.container1}>
           <div className={Styles.chevron}></div>
           <div className={Styles.chevron}></div>

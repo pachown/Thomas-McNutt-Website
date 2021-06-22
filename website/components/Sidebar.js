@@ -29,10 +29,10 @@ var styles = {
   },
   bmBurgerButton: {
     position: 'fixed',
-    width: '5em',
-    height: '4.5em',
-    left: '3em',
-    top: '3em',
+    width: '4em',
+    height: '4em',
+    left: '1em',
+    top: '1em',
   },
   bmBurgerBars: {
     background: '#373a47'
@@ -73,6 +73,6 @@ var styles = {
   },
   bmOverlay: {
     background: 'rgba(0,0,0,0.6)',
-  }
+  },
 
 }
