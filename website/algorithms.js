@@ -5,6 +5,49 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+    'Leetcode #1422 Maximum Score After Splitting a String':[
+        `Given a string s of zeros and ones, return the maximum score after splitting the string into two non-empty substrings (i.e. left substring and right substring).
+
+    The score after splitting a string is the number of zeros in the left substring plus the number of ones in the right substring.`,
+    `var maxScore = function(s) {
+        if (s.length === 0) {
+            return 0;
+        }
+        if (s.length ===1) {
+            return 1;
+        }
+        s = s.split("");
+        let grandTotal = 0;
+        for (let i = 0; i < s.length -1; i++) {
+                let total = 0;
+                let left = s.slice(0,i+1);
+                total += checkZero(left);
+                let right = s.slice(i+1, s.length);
+                total += checkOne(right);
+            if (total > grandTotal) {
+                grandTotal = total;
+            }
+        }
+    return grandTotal;
+    };
+
+    let checkZero = (string) => {
+        let total = 0;
+        string.forEach((char) => {
+            if (char === '0') total++;
+        })
+        return total;
+    }
+    let checkOne = (string) => {
+            let total = 0;
+        string.forEach((char) => {
+            if (char === '1') total++;
+        })
+        return total;
+    }`,
+    `Runtime: 100 ms, faster than 50.00% of JavaScript online submissions for Maximum Score After Splitting a String.\n
+    Memory Usage: 44.6 MB, less than 23.64% of JavaScript online submissions for Maximum Score After Splitting a String.`,
+    `Javascript`],
     'Leetcode #566 Reshape the Matrix':[
         `In MATLAB, there is a handy function called reshape which can reshape an m x n matrix into a new one with a different size r x c keeping its original data.
 
