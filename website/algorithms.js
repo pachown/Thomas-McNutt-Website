@@ -5,6 +5,30 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+    'LeetCode #435 Non-overlapping Intervals':[
+        `Given an array of intervals intervals where intervals[i] = [starti, endi], return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.`,
+        `var eraseOverlapIntervals = function(intervals) {
+            // sort intervals by larger number
+            // create counter
+            //loop through sorted intervals. If the lower number from the current number overlaps the larger number of the next interval, increment counter
+            intervals.sort((a,b) => a[1] - b[1]);
+            let counter = 0;
+            let prev = intervals[0]
+            for (let i = 1; i < intervals.length; i++) {
+                if (prev[1] > intervals[i][0]) {
+                    counter++
+                } else {
+                        prev = intervals[i]
+                }
+
+            }
+            return counter;
+        };
+        `,
+        `Runtime: 76 ms, faster than 90.33% of JavaScript online submissions for Non-overlapping Intervals.\n
+        Memory Usage: 40.7 MB, less than 33.19% of JavaScript online submissions for Non-overlapping Intervals.`,
+        `Javascript`
+    ],
     'LeetCode #459 Repeated Substring Pattern':[
         `Given a string s, check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.`,
 `var repeatedSubstringPattern = function(s) {
