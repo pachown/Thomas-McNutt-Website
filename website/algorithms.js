@@ -5,6 +5,31 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+    'LeetCode #459 Repeated Substring Pattern':[
+        `Given a string s, check if it can be constructed by taking a substring of it and appending multiple copies of the substring together.`,
+`var repeatedSubstringPattern = function(s) {
+    //loop through divisions of the string
+    //if the section added to itself the dividing amount of times is ever the same as the original string, return true
+    //stop checking once a solution is found
+    //if no solution is found, return false
+    let divisor = 1;
+    while (divisor <= s.length / 2) {
+        let sub = s.slice(0, divisor);
+        let newStr = '';
+        for (let i = 0; i < s.length / divisor; i++) {
+            newStr += sub;
+        }
+        if (newStr === s) {
+            return true;
+        }
+
+        divisor++;
+    }
+    return false;
+};`,
+`Runtime: 132 ms, faster than 29.07% of JavaScript online submissions for Repeated Substring Pattern.\n
+Memory Usage: 45.4 MB, less than 35.17% of JavaScript online submissions for Repeated Substring Pattern.`,
+`Javascript`],
     'Leetcode #1422 Maximum Score After Splitting a String':[
         `Given a string s of zeros and ones, return the maximum score after splitting the string into two non-empty substrings (i.e. left substring and right substring).
 
