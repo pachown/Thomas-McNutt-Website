@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Styles from '../styles/Projects.module.css'
+import Link from 'next/link'
 
 export default function Projects() {
   return (
@@ -25,6 +26,19 @@ export default function Projects() {
           </div>
         </article>
 
+        <article className={Styles.project3}>
+          <h2 className={Styles.p3}>Video Poker Application</h2>
+          <div className={Styles.container}>
+            <ul className={Styles.bullets}>
+              <li>Classic Video Poker</li>
+              <li>Easily Understandable UI</li>
+              <li>Fun For All Ages</li>
+              <li>Playable <a href="/videoPoker" className="menu-item">Here</a></li>
+            </ul>
+            <img className={Styles.project3Img}></img>
+          </div>
+        </article>
+
         <article className={Styles.project2}>
           <h2 className={Styles.p2}>Slot Machine Application</h2>
           <div className={Styles.container}>
@@ -34,17 +48,6 @@ export default function Projects() {
               <li>Unique Customer Generation Mechanics</li>
             </ul>
             <img className={Styles.project2Img}></img>
-          </div>
-        </article>
-        <article className={Styles.project3}>
-          <h2 className={Styles.p3}>Video Poker Application</h2>
-          <div className={Styles.container}>
-            <ul className={Styles.bullets}>
-              <li>Classic Video Poker</li>
-              <li>Easily Understandable UI</li>
-              <li>Fun For All Ages</li>
-            </ul>
-            <img className={Styles.project3Img}></img>
           </div>
         </article>
         {/* <article className={Styles.project4}>

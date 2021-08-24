@@ -32,26 +32,28 @@
   background:rgba(0,0,0,0.3);
   min-height: 40vh;
   max-height: 60vh;
+  margin-bottom: 2vh;
 }
 .container {
   display: inline-flex;
 }
 .project1Img {
-  width: 14em;
-  height: 8em;
+  width: 15em;
+  height: 9em;
   background-image: url("../public/TripAdvisor.jpeg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-size: cover;
   float: right;
-  margin-left: 5vh;
+  margin-left: 2vh;
 }
 .project2 {
-  background:rgba(0,0,0,0.5);
+  background:rgba(0,0,0,0.4);
   flex-direction:row;
   min-height: 40vh;
   max-height: 60vh;
+  margin-bottom: 5vh;
 }
 .project2Img {
   width: 6em;
@@ -64,15 +66,15 @@
   margin-left: 5vh;
 }
 .project3 {
-  background:rgba(0,0,0,0.7);
+  background:rgba(0,0,0,0.5);
   flex-direction: row;
   min-height: 40vh;
   max-height: 60vh;
   margin-bottom: 5vh;
 }
 .project3Img {
-  width: 9.5em;
-  height: 5em;
+  width: 17em;
+  height: 8em;
   background-image: url("../public/videoPoker.jpeg");
   background-position: center;
   background-repeat: no-repeat;
