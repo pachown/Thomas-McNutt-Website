@@ -1,13 +1,13 @@
 import Head from 'next/head';
 import PokerStyles from '../styles/Poker.module.css';
-import {useState} from 'react';
-import {Start, Winner} from '../videoPokerFiles/gameLogic.js';
+import { useState } from 'react';
+import { Start, Winner } from '../videoPokerFiles/gameLogic.js';
 
 
 export default function Casino() {
 
-  const [money,setMoney] = useState(100);
-  const [cards, setCards] = useState([{image: 'https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', code: undefined},{image: 'https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', code: undefined},{ image: 'https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', code: undefined},{ image: 'https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', code: undefined},{image: 'https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', code: undefined}]);
+  const [money, setMoney] = useState(100);
+  const [cards, setCards] = useState([{ image: 'https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', code: undefined }, { image: 'https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', code: undefined }, { image: 'https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', code: undefined }, { image: 'https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', code: undefined }, { image: 'https://static7.depositphotos.com/1257959/746/v/950/depositphotos_7461948-stock-illustration-playing-card-back-side-62x90.jpg', code: undefined }]);
   const [bet, setBet] = useState(1);
   const [held, setHeld] = useState([false, false, false, false, false]);
   const [deck, setDeck] = useState(undefined);
@@ -15,12 +15,12 @@ export default function Casino() {
   const [betRound, setBetRound] = useState(false);
 
   let handleBet = (num) => {
-    if (bet+num >= 51) {
+    if (bet + num >= 51) {
       setBet(50);
-    } else if (bet+num <= 0) {
+    } else if (bet + num <= 0) {
       setBet(1);
     } else {
-      setBet(bet+num);
+      setBet(bet + num);
     }
   };
 
@@ -38,7 +38,7 @@ export default function Casino() {
 
   let handleDeal = (cardsToDraw, tempDeck) => {
     let cards = [];
-    for(var i = 0; i < cardsToDraw; i++) {
+    for (var i = 0; i < cardsToDraw; i++) {
       cards.push(tempDeck.pop())
     }
     setDeck(tempDeck);
@@ -51,14 +51,14 @@ export default function Casino() {
     let tempDeck = deck.slice();
     let tempHeld = held.slice();
     //insert new cards in the not-held card slots
-   for(var i = 0; i < 5; i++) {
-    if (tempHeld[i] === false) {
-      tempCards[i] = tempDeck.pop();
+    for (var i = 0; i < 5; i++) {
+      if (tempHeld[i] === false) {
+        tempCards[i] = tempDeck.pop();
+      }
     }
-   }
-   setCards(tempCards);
-   //send hand to handleEnd function
-   handleEnd(tempCards);
+    setCards(tempCards);
+    //send hand to handleEnd function
+    handleEnd(tempCards);
   }
 
   let handleHold = (cardPosition) => {
@@ -109,76 +109,76 @@ export default function Casino() {
           Last Hand: {handInfo[0]} Won: {handInfo[1]}
         </div>
         {betRound &&
-        <div className={PokerStyles.holdbtns}>
-          <button className={held[0] ? PokerStyles.clickedHoldBtn : PokerStyles.holdbtn} onClick={()=> handleHold(0)}>HOLD</button>
-          <button className={held[1] ? PokerStyles.clickedHoldBtn : PokerStyles.holdbtn} onClick={()=> handleHold(1)}>HOLD</button>
-          <button className={held[2] ? PokerStyles.clickedHoldBtn : PokerStyles.holdbtn} onClick={()=> handleHold(2)}>HOLD</button>
-          <button className={held[3] ? PokerStyles.clickedHoldBtn : PokerStyles.holdbtn} onClick={()=> handleHold(3)}>HOLD</button>
-          <button className={held[4] ? PokerStyles.clickedHoldBtn : PokerStyles.holdbtn} onClick={()=> handleHold(4)}>HOLD</button>
-        </div>
+          <div className={PokerStyles.holdbtns}>
+            <button className={held[0] ? PokerStyles.clickedHoldBtn : PokerStyles.holdbtn} onClick={() => handleHold(0)}>HOLD</button>
+            <button className={held[1] ? PokerStyles.clickedHoldBtn : PokerStyles.holdbtn} onClick={() => handleHold(1)}>HOLD</button>
+            <button className={held[2] ? PokerStyles.clickedHoldBtn : PokerStyles.holdbtn} onClick={() => handleHold(2)}>HOLD</button>
+            <button className={held[3] ? PokerStyles.clickedHoldBtn : PokerStyles.holdbtn} onClick={() => handleHold(3)}>HOLD</button>
+            <button className={held[4] ? PokerStyles.clickedHoldBtn : PokerStyles.holdbtn} onClick={() => handleHold(4)}>HOLD</button>
+          </div>
         }
         {!betRound &&
-        <div className={PokerStyles.betBar}>
-          <button className={PokerStyles.betBtn}>BET</button>
-          <button className={PokerStyles.betBtn} onClick={() => handleBet(1)}>+</button>
-          <button className={PokerStyles.betBtn} onClick={() => handleBet(-1)}>-</button>
-          <button className={PokerStyles.betBtn} onClick={() => {
-            handleBet(50)
-            handleStart()
+          <div className={PokerStyles.betBar}>
+            <button className={PokerStyles.betBtn}>BET</button>
+            <button className={PokerStyles.betBtn} onClick={() => handleBet(1)}>+</button>
+            <button className={PokerStyles.betBtn} onClick={() => handleBet(-1)}>-</button>
+            <button className={PokerStyles.betBtn} onClick={() => {
+              handleBet(50)
+              handleStart()
             }}>MAX BET</button>
-          <button className={PokerStyles.betBtn} onClick={() => handleStart()}>New Round</button>
-          <div className={PokerStyles.betAmt}>Bet {bet}</div>
-        </div>
+            <button className={PokerStyles.betBtn} onClick={() => handleStart()}>New Round</button>
+            <div className={PokerStyles.betAmt}>Bet {bet}</div>
+          </div>
         }
         {betRound === true &&
-        <div className={PokerStyles.betBar}>
-          <button className={PokerStyles.holdbtn} onClick={() => handleDraw()}>DRAW</button>
-        </div>
+          <div className={PokerStyles.betBar}>
+            <button className={PokerStyles.holdbtn} onClick={() => handleDraw()}>DRAW</button>
+          </div>
         }
       </main>
       <main className={PokerStyles.info}>
         <table className={PokerStyles.table}>
           <tbody>
-          <tr className={PokerStyles.tr}>
-            <th className={PokerStyles.th}>Hand Rank</th>
-            <th className={PokerStyles.th}>Winnings</th>
-          </tr>
-          <tr className={PokerStyles.tr}>
-            <th className={PokerStyles.th}>ROYAL FLUSH</th>
-            <th className={PokerStyles.th}>250</th>
-          </tr>
-          <tr className={PokerStyles.tr}>
-            <th className={PokerStyles.th}>STRAIT FLUSH</th>
-            <th className={PokerStyles.th}>50</th>
-          </tr>
-          <tr className={PokerStyles.tr}>
-            <th className={PokerStyles.th}>FOUR OF A KIND</th>
-            <th className={PokerStyles.th}>25</th>
-          </tr>
-          <tr className={PokerStyles.tr}>
-            <th className={PokerStyles.th}>FULL HOUSE</th>
-            <th className={PokerStyles.th}>10</th>
-          </tr>
-          <tr className={PokerStyles.tr}>
-            <th className={PokerStyles.th}>FLUSH</th>
-            <th className={PokerStyles.th}>6</th>
-          </tr>
-          <tr className={PokerStyles.tr}>
-            <th className={PokerStyles.th}>STRAIT</th>
-            <th className={PokerStyles.th}>4</th>
-          </tr>
-          <tr className={PokerStyles.tr}>
-            <th className={PokerStyles.th}>THREE OF A KIND</th>
-            <th className={PokerStyles.th}>3</th>
-          </tr>
-          <tr className={PokerStyles.tr}>
-            <th className={PokerStyles.th}>TWO PAIR</th>
-            <th className={PokerStyles.th}>2</th>
-          </tr>
-          <tr className={PokerStyles.tr}>
-            <th className={PokerStyles.th}>JACK PAIR OR BETTER</th>
-            <th className={PokerStyles.th}>1</th>
-          </tr>
+            <tr className={PokerStyles.tr}>
+              <th className={PokerStyles.th}>Hand Rank</th>
+              <th className={PokerStyles.th}>Winnings</th>
+            </tr>
+            <tr className={PokerStyles.tr}>
+              <th className={PokerStyles.th}>ROYAL FLUSH</th>
+              <th className={PokerStyles.th}>250</th>
+            </tr>
+            <tr className={PokerStyles.tr}>
+              <th className={PokerStyles.th}>STRAIT FLUSH</th>
+              <th className={PokerStyles.th}>50</th>
+            </tr>
+            <tr className={PokerStyles.tr}>
+              <th className={PokerStyles.th}>FOUR OF A KIND</th>
+              <th className={PokerStyles.th}>25</th>
+            </tr>
+            <tr className={PokerStyles.tr}>
+              <th className={PokerStyles.th}>FULL HOUSE</th>
+              <th className={PokerStyles.th}>10</th>
+            </tr>
+            <tr className={PokerStyles.tr}>
+              <th className={PokerStyles.th}>FLUSH</th>
+              <th className={PokerStyles.th}>6</th>
+            </tr>
+            <tr className={PokerStyles.tr}>
+              <th className={PokerStyles.th}>STRAIT</th>
+              <th className={PokerStyles.th}>4</th>
+            </tr>
+            <tr className={PokerStyles.tr}>
+              <th className={PokerStyles.th}>THREE OF A KIND</th>
+              <th className={PokerStyles.th}>3</th>
+            </tr>
+            <tr className={PokerStyles.tr}>
+              <th className={PokerStyles.th}>TWO PAIR</th>
+              <th className={PokerStyles.th}>2</th>
+            </tr>
+            <tr className={PokerStyles.tr}>
+              <th className={PokerStyles.th}>JACK PAIR OR BETTER</th>
+              <th className={PokerStyles.th}>1</th>
+            </tr>
           </tbody>
         </table>
       </main>

@@ -9,6 +9,7 @@
   border: .1em solid white;
   border-radius: 1em;
 }
+
 .pokerHands {
   margin-top: 6em;
   width: 20em;
@@ -174,18 +175,6 @@ border-bottom: .2em solid white;
 .betAmt:hover {
   background-color: rgb(134, 11, 11);
 }
-
-/* AOS Animations */
-/*
-[data-aos="about1"] {
-  transform: rotate(360deg);
-  opacity: 0;
-  transition-property: transform, opacity;
-  &.aos-animate {
-    transform: rotate(0);
-    opacity: 1;
-  }
-} */
 
 /* Mobile Settings*/
 

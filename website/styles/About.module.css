@@ -1,7 +1,7 @@
 
 .main {
   box-sizing: border-box;
-  background: white;
+  background-color: white;
   padding: 0;
   margin: 2em;
   color: white;
@@ -14,6 +14,7 @@
   color: #000;
   text-shadow: white 0px 0px 6px;
 }
+
 .title {
   margin-top: -1em;
   margin-bottom: .2em;
@@ -33,16 +34,16 @@
 }
 
 .p1 {
-margin-top: 1em;
-height: auto;
-width: 50%;
-background: rgba(0,0,0,0.8);
-text-align: center;
-float: right;
-margin-right: 1.5em;
-max-height: 60vh;
-border: 1px solid white;
-border-radius: .5em;
+  margin-top: 1em;
+  height: auto;
+  width: 50%;
+  background: rgba(0,0,0,0.8);
+  text-align: center;
+  float: right;
+  margin-right: 1.5em;
+  max-height: 60vh;
+  border: 1px solid white;
+  border-radius: .5em;
 }
 
 .p2 {
@@ -212,12 +213,16 @@ border-radius: .5em;
 }
 
 @media (max-width: 1080px) {
+  .clock{
+    display: none;
+  }
   .grid {
     width: 100%;
     flex-direction: column;
   }
   .main {
-    width: 100%;
+    text-align: center;
+    width: 80%;
     flex-direction: column;
   }
   .faceShot {
@@ -250,5 +255,4 @@ border-radius: .5em;
     margin-left: 0em;
     float:none;
   }
-
 }
