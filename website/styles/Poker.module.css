@@ -9,7 +9,13 @@
   border: .1em solid white;
   border-radius: 1em;
 }
-
+.title {
+  text-align: center;
+  color: black;
+  margin-top: -.3em;
+  font-size: 2.5em;
+  margin-bottom: -.02em;
+}
 .pokerHands {
   margin-top: 6em;
   width: 20em;
