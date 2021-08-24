@@ -89,7 +89,6 @@ export default function Casino() {
         <link rel="icon" href="/logo-dark-plain.png" />
         <meta name="keywords" content="web development, programming, portfolio, Thomas McNutt, thomas, mcnutt, software engineer, software, engineer, web, developer" />
       </Head>
-      <div className={PokerStyles.title}>Video Poker</div>
       <main className={PokerStyles.main}>
         <div className={PokerStyles.topBar}>
           <div className={PokerStyles.money}>Cash: ${money}</div>
