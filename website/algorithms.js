@@ -5,6 +5,38 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+	'LeetCode #202 Happy Number':[
+        `Write an algorithm to determine if a number n is happy.
+
+A happy number is a number defined by the following process:
+
+Starting with any positive integer, replace the number by the sum of the squares of its digits.
+Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.
+Those numbers for which this process ends in 1 are happy.
+Return true if n is a happy number, and false if not.`,
+        `var isHappy = function(n) {
+    let storage = {};
+
+    while(n !== 1 && storage[n] === undefined){
+        storage[n] = true;
+        let total = 0;
+        let str = n.toString()
+        for(let i = 0; i < str.length; i++){
+           total += (parseInt(str[i]) * parseInt(str[i]));
+        }
+        n = total;
+    }
+    if (n === 1){
+        return true;
+    }
+    return false;
+};
+        `,
+        `Runtime: 71 ms, faster than 64.62% of JavaScript online submissions.\n
+        Memory Usage: 45 MB, less than 12.75% of JavaScript online submissions`,
+        `Javascript`
+    ],
+	//
     'LeetCode #435 Non-overlapping Intervals':[
         `Given an array of intervals intervals where intervals[i] = [starti, endi], return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.`,
         `var eraseOverlapIntervals = function(intervals) {
