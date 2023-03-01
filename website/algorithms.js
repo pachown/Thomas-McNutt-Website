@@ -5,6 +5,40 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+	'LeetCode #826. Most Profit Assigning Work':[
+        `You have n jobs and m workers. You are given three arrays: difficulty, profit, and worker where:
+
+difficulty[i] and profit[i] are the difficulty and the profit of the ith job, and
+worker[j] is the ability of jth worker (i.e., the jth worker can only complete a job with difficulty at most worker[j]).
+Every worker can be assigned at most one job, but one job can be completed multiple times.
+
+For example, if three workers attempt the same job that pays $1, then the total profit will be $3. If a worker cannot complete any job, their profit is $0.
+Return the maximum profit we can achieve after assigning the workers to the jobs.`,
+        `var maxProfitAssignment = function(difficulty, profit, worker) {
+    //match worker with highest difficulty and add that profit to the total
+    let maxProfit = 0;
+    worker.forEach(function(work){
+        let highestDiff = 0;
+        let highestDiffIndex = -1
+        difficulty.forEach(function(diff, index){
+            if(work >= diff && profit[index] > highestDiff ){
+                highestDiff = profit[index];
+                highestDiffIndex = index;
+            }
+        })
+        if (highestDiffIndex !== -1){
+            maxProfit += profit[highestDiffIndex]
+        }
+    })
+return maxProfit;
+
+};
+        `,
+        `Runtime: 2511 ms, faster than 5.97% of JavaScript online submissions.\n
+        Memory Usage: 46.2 MB, less than 12.75% of JavaScript online submissions`,
+        `Javascript`
+    ],
+	//
 	'LeetCode #202 Happy Number':[
         `Write an algorithm to determine if a number n is happy.
 
@@ -36,7 +70,6 @@ Return true if n is a happy number, and false if not.`,
         Memory Usage: 45 MB, less than 12.75% of JavaScript online submissions`,
         `Javascript`
     ],
-	//
     'LeetCode #435 Non-overlapping Intervals':[
         `Given an array of intervals intervals where intervals[i] = [starti, endi], return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.`,
         `var eraseOverlapIntervals = function(intervals) {
