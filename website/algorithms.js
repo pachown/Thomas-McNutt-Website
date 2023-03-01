@@ -1507,6 +1507,25 @@ Each letter in the magazine string can only be used once in your ransom note.`,
   };`,
         `Runtime: 92 ms, faster than 91.65% of JavaScript online submissions for Ransom Note. \n
   Memory Usage: 42.5 MB, less than 34.61% of JavaScript online submissions for Ransom Note.`, 'Javascript'],
+	//
+    'LeetCode #258 Add Digits':[
+        `Given an integer num, repeatedly add all its digits until the result has only one digit, and return it.`,
+       `var addDigits = function(num) {
+    while(num > 9){
+    let str = num.toString();
+        let ans = 0;
+        for (let i = 0; i < str.length; i++) {
+            ans+= parseInt(str[i]);
+        }
+        num = ans;
+    }
+        return num;
+};
+        `,
+        `Runtime: 56 ms, faster than 99.40% of JavaScript online submissions for Non-overlapping Intervals.\n
+        Memory Usage: 44.1 MB, less than 24.94% of JavaScript online submissions for Non-overlapping Intervals.`,
+        `Javascript`
+    ],
 
 
 };
