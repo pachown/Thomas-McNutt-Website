@@ -1070,8 +1070,8 @@ var isSelfDividing = (num) => {
     })
     return legit;
 }`,
-        `Runtime: 84 ms, faster than 67.29% of JavaScript online submissions for Self Dividing Numbers.
-Memory Usage: 44.4 MB, less than 15.96% of JavaScript online submissions for Self Dividing Numbers.`],
+        `Runtime: 84 ms, faster than 67.29% of JavaScript online submissions.
+Memory Usage: 44.4 MB, less than 15.96% of JavaScript online submissions for.`],
     'LeetCode #136 Single Number': [`Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.
 
   Follow up: Could you implement a solution with a linear runtime complexity and without using extra memory?`,
