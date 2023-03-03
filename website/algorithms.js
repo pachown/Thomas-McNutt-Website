@@ -5,6 +5,40 @@
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
 let algos = {
+		'LeetCode #1854. Maximum Population Year':[
+        `You are given a 2D integer array logs where each logs[i] = [birthi, deathi] indicates the birth and death years of the ith person.
+
+The population of some year x is the number of people alive during that year. The ith person is counted in year x's population if x is in the inclusive range [birthi, deathi - 1]. Note that the person is not counted in the year that they die.
+
+Return the earliest year with the maximum population.`,
+        `var maximumPopulation = function(logs) {
+    let years = {};
+    let maxYears = 0;
+    let earliestYear = logs[0][0];
+    logs.forEach(function(person){
+        for(let i = person[0]; i < person[1]; i++ ){
+            if(years[i] === undefined){
+                years[i] = 1;
+            } else {
+                years[i]++;
+            }
+            if(maxYears < years[i] ){
+                maxYears = years[i];
+                earliestYear = i;
+            }
+            if(maxYears === years[i] && i < earliestYear){
+                earliestYear = i;
+            }
+        }
+    });
+    return earliestYear
+};
+        `,
+        `Runtime: 67 ms, faster than 60.07% of JavaScript online submissions.\n
+        Memory Usage: 44.8 MB, less than 26.72% of JavaScript online submissions`,
+        `Javascript`
+    ],
+	\\
 	'LeetCode #826. Most Profit Assigning Work':[
         `You have n jobs and m workers. You are given three arrays: difficulty, profit, and worker where:
 
