@@ -124,8 +124,8 @@ Return true if n is a happy number, and false if not.`,
             return counter;
         };
         `,
-        `Runtime: 76 ms, faster than 90.33% of JavaScript online submissions for Non-overlapping Intervals.\n
-        Memory Usage: 40.7 MB, less than 33.19% of JavaScript online submissions for Non-overlapping Intervals.`,
+        `Runtime: 76 ms, faster than 90.33% of JavaScript online submissions\n
+        Memory Usage: 40.7 MB, less than 33.19% of JavaScript online submissions `,
         `Javascript`
     ],
     'LeetCode #459 Repeated Substring Pattern':[
