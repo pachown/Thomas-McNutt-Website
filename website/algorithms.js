@@ -756,8 +756,8 @@ Return the number that I picked.`,
     return attempt;
 
 };`,
-        `Runtime: 88 ms, faster than 9.64% of JavaScript online submissions for Guess Number Higher or Lower.\n
-Memory Usage: 38.5 MB, less than 27.13% of JavaScript online submissions for Guess Number Higher or Lower.`,
+        `Runtime: 88 ms, faster than 9.64% of JavaScript online submissions.\n
+Memory Usage: 38.5 MB, less than 27.13% of JavaScript online submissions.`,
         `Javascript`],
     'LeetCode #367 Valid Perfect Square': [`Given a positive integer num, write a function which returns True if num is a perfect square else False.
 
