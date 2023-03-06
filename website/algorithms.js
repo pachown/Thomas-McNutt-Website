@@ -4,7 +4,31 @@
 // Second element is my solution
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
-let algos = {
+let algos = {'LeetCode #1854. Maximum Population Year':[
+        `Given an integer numRows, return the first numRows of Pascal's triangle.
+
+In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:`,
+        `var generate = function(numRows) {
+    if (numRows === 1) {
+        return [[1]];
+    }
+    let ans = [[1], [1, 1]];
+    while (ans.length !== numRows){
+        let row = [1];
+        for(let i = 0; i < ans.length -1; i++){
+            row.push(ans[ans.length-1][i] + ans[ans.length-1][i+1])
+        }
+        row.push(1);
+        ans.push(row);
+    }
+    return ans;
+};
+        `,
+        `Runtime: 62 ms, faster than 60.07% of JavaScript online submissions.\n
+        Memory Usage: 42.6 MB, less than 26.72% of JavaScript online submissions`,
+        `Javascript`
+    ],
+	//
 		'LeetCode #1854. Maximum Population Year':[
         `You are given a 2D integer array logs where each logs[i] = [birthi, deathi] indicates the birth and death years of the ith person.
 
