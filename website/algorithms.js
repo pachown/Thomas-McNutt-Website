@@ -4,27 +4,51 @@
 // Second element is my solution
 // Third element is a basic test
 // Fourth element is the most complicated solution I can find on leetcode with deep description of how it differs from my solution
-let algos = {'LeetCode #1854. Maximum Population Year':[
-        `Given an integer numRows, return the first numRows of Pascal's triangle.
+let algos = {'LeetCode #6. Zigzag Conversion':[
+        `The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows like this: (you may want to display this pattern in a fixed font for better legibility)
 
-In Pascal's triangle, each number is the sum of the two numbers directly above it as shown:`,
-        `var generate = function(numRows) {
-    if (numRows === 1) {
-        return [[1]];
+P   A   H   N
+A P L S I I G
+Y   I   R
+And then read line by line: "PAHNAPLSIIGYIR"
+
+Write the code that will take a string and make this conversion given a number of rows:
+
+string convert(string s, int numRows);`,
+        `var convert = function(s, numRows) {
+    if (numRows === 1){
+        return s
     }
-    let ans = [[1], [1, 1]];
-    while (ans.length !== numRows){
-        let row = [1];
-        for(let i = 0; i < ans.length -1; i++){
-            row.push(ans[ans.length-1][i] + ans[ans.length-1][i+1])
+    let counter = 0
+    let reverse = false
+    let arr = []
+    for (let i = 0; i < numRows; i++){
+        arr.push([])
+    }
+    for (let i = 0; i < s.length; i++) {
+        arr[counter].push(s[i])
+        if (!reverse && counter < numRows -1){
+            counter++
+        } else if(!reverse && counter >= numRows -1) {
+            reverse = true
+            counter--
+        } else if (reverse && counter == 0) {
+            reverse = false
+            counter++
+        } else {
+            counter--
         }
-        row.push(1);
-        ans.push(row);
     }
-    return ans;
+    let ans = ""
+    for(let i = 0; i < numRows; i++) {
+
+        ans += arr[i].join("")
+    }
+
+    return ans
 };
         `,
-        `Runtime: 62 ms, faster than 60.07% of JavaScript online submissions.\n
+        `Runtime: 62 ms, faster than 40.07% of JavaScript online submissions.\n
         Memory Usage: 42.6 MB, less than 26.72% of JavaScript online submissions`,
         `Javascript`
     ],
