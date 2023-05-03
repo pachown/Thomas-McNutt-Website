@@ -32,7 +32,7 @@ const Algorithms = ({ children }) => {
             //</div>
           //</div>
        // )
-      //)}
+      // )}
     </div>
   )
 };
