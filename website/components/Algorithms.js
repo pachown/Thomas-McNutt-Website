@@ -13,8 +13,7 @@ const Algorithms = ({ children }) => {
   return (
     <div className={styles.algos}>
       <h1 className={styles.blog}><em>Welcome to my algorithm blog!</em></h1>
-      <h2 className={styles.blog2}><em> First the question, then my solution, and then my results according to the website</em>
-      </h2>
+      <h2 className={styles.blog2}><em> First the question, then my solution, and then my results according to the website</em></h2>
       //{data && (
         //Object.keys(data).map((algo) =>
           //<div className={styles.algoaday}>
