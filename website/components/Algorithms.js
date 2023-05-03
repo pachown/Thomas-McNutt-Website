@@ -31,8 +31,6 @@ const Algorithms = ({ children }) => {
               //<div className={styles.chevron}></div>
             //</div>
           //</div>
-       // )
-      // )}
     </div>
   )
 };
